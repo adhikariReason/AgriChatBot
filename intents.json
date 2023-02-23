@@ -1,40 +1,91 @@
 {
   "intents": [
     {
+      "tag": "",
+      "patterns": [],
+      "responses": []
+    },
+    {
       "tag": "greetings",
       "patterns": ["hello", "hey", "hi", "what's up?", "how is it going?"],
-      "responses": ["Hello", "hey!", "What can i do for you?"]
+      "responses": ["Hello", "Hey!", "What can I do for you?"]
     },
-		{
-			"tag": "makeFertilizer",
-			"patterns":["How to increase production of organic fertilizer", "develop compost at home", "how to make compost manure", "how to make organic fertilizers?"],
-			"responses":[
-				"There are several ways to increase the production of organic fertilizer and make compost manure at home. Here are some steps to consider:\nCollect organic materials: Collect organic waste such as fruit and vegetable scraps, leaves, grass clippings, eggshells, coffee grounds, and other organic matter.\nChoose a composting method: There are several composting methods you can choose from, such as traditional composting, vermicomposting (using worms), and hot composting. Each method has its own advantages and disadvantages, so choose the one that suits your needs and preferences.\nPrepare the compost bin: You can make a compost bin using a plastic or wooden container or use a pre-made one. Make sure the bin has good drainage and air circulation.\nLayer the organic materials: Add a layer of brown materials (such as leaves or straw) followed by a layer of green materials (such as fruit and vegetable scraps). Keep adding layers until the bin is full.\nKeep the compost moist: The compost pile should be kept moist but not too wet. Water the compost pile regularly to maintain the moisture level.\nTurn the compost pile: Turn the compost pile every few weeks to mix the materials and aerate the pile. This will help speed up the composting process.\nHarvest the compost: After several months, the compost should be ready to use. The finished compost should be dark, crumbly, and have an earthy smell.\nTo make organic fertilizer from the compost, simply spread the finished compost on your garden or mix it with soil to enrich the soil with nutrients. You can also create a compost tea by steeping finished compost in water and using it as a liquid fertilizer."
-			]
-		},
-		{
-			"tag": "compostSmell",
-			"patterns":[
-				"How to get rid of compost smell", 
-				"What are some ways to eliminate the odor of compost?", 
-				"How can you remove the unpleasant scent from your compost?", 
-				"What steps can be taken to eradicate the smell coming from compost?", 
-				"What are some effective methods for neutralizing compost odors?", 
-				"What measures can be taken to reduce the pungent aroma of compost?"
-			],
-			"responses":[
-				"To get rid of compost smell, you can try several methods including adding dry materials such as leaves or sawdust, mixing the compost regularly to aerate it, ensuring proper moisture levels, using a compost bin with a tight-fitting lid, adding baking soda or lime to neutralize the odors, and avoiding adding certain materials such as meat or dairy products which can cause strong odors."
-			]
-		},
-		{
-			"tag": "",
-			"patterns":[],
-			"responses":[]
-		},
-		{
-			"tag": "",
-			"patterns":[],
-			"responses":[]
-		}
+    {
+      "tag": "makeFertilizer",
+      "patterns": [
+        "How to increase production of organic fertilizer",
+        "develop compost at home",
+        "how to make compost manure",
+        "how to make organic fertilizers?"
+      ],
+      "responses": [
+        "There are several ways to increase the production of organic fertilizer and make compost manure at home. Here are some steps to consider:\nCollect organic materials: Collect organic waste such as fruit and vegetable scraps, leaves, grass clippings, eggshells, coffee grounds, and other organic matter.\nChoose a composting method: There are several composting methods you can choose from, such as traditional composting, vermicomposting (using worms), and hot composting. Each method has its own advantages and disadvantages, so choose the one that suits your needs and preferences.\nPrepare the compost bin: You can make a compost bin using a plastic or wooden container or use a pre-made one. Make sure the bin has good drainage and air circulation.\nLayer the organic materials: Add a layer of brown materials (such as leaves or straw) followed by a layer of green materials (such as fruit and vegetable scraps). Keep adding layers until the bin is full.\nKeep the compost moist: The compost pile should be kept moist but not too wet. Water the compost pile regularly to maintain the moisture level.\nTurn the compost pile: Turn the compost pile every few weeks to mix the materials and aerate the pile. This will help speed up the composting process.\nHarvest the compost: After several months, the compost should be ready to use. The finished compost should be dark, crumbly, and have an earthy smell.\nTo make organic fertilizer from the compost, simply spread the finished compost on your garden or mix it with soil to enrich the soil with nutrients. You can also create a compost tea by steeping finished compost in water and using it as a liquid fertilizer."
+      ]
+    },
+    {
+      "tag": "compostSmell",
+      "patterns": [
+        "How to get rid of compost smell",
+        "What are some ways to eliminate the odor of compost?",
+        "How can you remove the unpleasant scent from your compost?",
+        "What steps can be taken to eradicate the smell coming from compost?",
+        "What are some effective methods for neutralizing compost odors?",
+        "What measures can be taken to reduce the pungent aroma of compost?"
+      ],
+      "responses": [
+        "To get rid of compost smell, you can try several methods including adding dry materials such as leaves or sawdust, mixing the compost regularly to aerate it, ensuring proper moisture levels, using a compost bin with a tight-fitting lid, adding baking soda or lime to neutralize the odors, and avoiding adding certain materials such as meat or dairy products which can cause strong odors."
+      ]
+    },
+    {
+      "tag": "corn_planting_time",
+      "patterns": [
+        "When is the optimal time for planting corn?",
+        "What is the recommended planting time for corn?",
+        "At what time of the year should corn be planted?",
+        "What is the most suitable time for planting corn?",
+        "When should I plant corn for optimal yield?"
+      ],
+      "responses": [
+        "The best time to plant corn is typically in the spring when soil temperatures reach around 50°F and all danger of frost has passed. In general, the planting window for corn can vary depending on location and climate, but it's important to aim for a time when the soil is warm and moist for optimal germination."
+      ]
+    },
+    {
+      "tag": "improve_soil_fertility",
+      "patterns": [
+        "What are some ways to improve soil fertility?",
+        "How can I increase the fertility of my soil?",
+        "What are some tips for improving soil fertility?",
+        "What can I do to make my soil more fertile?"
+      ],
+      "responses": [
+        "There are several ways to improve soil fertility, including adding organic matter, using cover crops, and rotating crops. You can also test your soil to determine what nutrients it needs and add fertilizers accordingly."
+      ]
+    },
+
+    {
+      "tag": "intro_crop_rotation",
+      "patterns": [
+        "What is crop rotation and why is it important?",
+        "What are the benefits of crop rotation?",
+        "How do I plan a crop rotation schedule?",
+        "What are some examples of crop rotation plans?"
+      ],
+      "responses": [
+        "Crop rotation is the practice of growing different crops in the same field in successive seasons to help maintain soil health and fertility. Some best practices for crop rotation include selecting crops that have different nutrient requirements and disease susceptibilities, avoiding planting crops from the same family in consecutive years, and using cover crops to improve soil quality."
+      ]
+    },
+    {
+      "tag": "control_pests",
+      "patterns": [
+				"What are some common pest control techniques?",
+        "How can I control pests on my farm?",
+        "What are some natural pest control methods?",
+        "What are some chemical pest control methods?",
+        "What are some cultural pest control practices?"
+      ],
+      "responses": [
+        "There are many different pest control techniques, including biological control (using natural predators to control pests), cultural control (practices that make it less likely for pests to thrive), mechanical control (using physical barriers or traps to control pests), and chemical control (using pesticides or herbicides to control pests). It's important to choose a pest control method that is effective but also safe for the environment and non-target organisms."
+      ]
+    }
   ]
 }
