@@ -1,0 +1,29 @@
+{
+  "redo": [
+    {
+      "tag": "",
+      "patterns": [
+        "What is crop rotation and why is it important?",
+        "What are the benefits of crop rotation?",
+        "How do I plan a crop rotation schedule?",
+        "What are some examples of crop rotation plans?"
+      ],
+      "responses": [
+        "Crop rotation is the practice of growing different crops in the same field in successive seasons to help maintain soil health and fertility. Some best practices for crop rotation include selecting crops that have different nutrient requirements and disease susceptibilities, avoiding planting crops from the same family in consecutive years, and using cover crops to improve soil quality."
+      ]
+    },
+    {
+      "tag": "control_pests",
+      "patterns": [
+        "What are some common pest control techniques?",
+        "How can I control pests on my farm?",
+        "What are some natural pest control methods?",
+        "What are some chemical pest control methods?",
+        "What are some cultural pest control practices?"
+      ],
+      "responses": [
+        "There are many different pest control techniques, including biological control (using natural predators to control pests), cultural control (practices that make it less likely for pests to thrive), mechanical control (using physical barriers or traps to control pests), and chemical control (using pesticides or herbicides to control pests). It's important to choose a pest control method that is effective but also safe for the environment and non-target organisms."
+      ]
+    }
+  ]
+}
