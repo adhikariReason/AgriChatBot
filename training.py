@@ -66,7 +66,7 @@ model.add(Dense(len(train_y[0]), activation ='softmax'))
 sgd = legacy.SGD(learning_rate=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs=1000, batch_size=8)
 model.save('chatbot.h5', hist)
 print("Done1")
 
