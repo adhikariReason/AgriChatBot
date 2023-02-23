@@ -52,13 +52,17 @@ def get_response(intents_list, intents_json):
 	return result
 
 print("Welcome to the chatbot!")
+print("Welcome to the chatbot!")
+print("Welcome to the chatbot!")
+print("Welcome to the chatbot!")
+print("Welcome to the chatbot!")
 
 
 while True:
-	message = input()
+	message = input("You: ")
 	ints = predict_class(message)
 	res = get_response(ints, intents)
-	print(res)
+	print("Reply:" + res)
 
 
 
