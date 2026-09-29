@@ -21,7 +21,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 219,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.31,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_camscanner-18-06-2026-11-1781763099-pdf_1c8d19d7",
@@ -45,7 +48,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.14,
+  "admin_density": 0.36,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1789467413-pdf_8e2b2318",
@@ -69,7 +75,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 171,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.92,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1781508560-pdf_7f184e31",
@@ -93,7 +102,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 50",
   "agri_relevance_hits": 215,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.36,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pcr-2073-2083-pdf_6da06df2",
@@ -128,7 +140,10 @@
   "layer_score": 0.847,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used OCR capped at 40 pages of 153 40/153 pages OCRed",
   "agri_relevance_hits": 171,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.79,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_4b7a877b",
@@ -154,7 +169,10 @@
   "layer_score": 0.032,
   "note": "text layer unreliable (OCR agreement 0.03); OCR used OCR capped at 40 pages of 344 40/344 pages OCRed",
   "agri_relevance_hits": 135,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.86,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_fruit-fly-ppt-1669050009-1701164895-pdf_0e2223b2",
@@ -178,7 +196,10 @@
   "layer_score": null,
   "note": "3/24 pages OCRed",
   "agri_relevance_hits": 16,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_some-efforts-to-control-acp-and-hlb-inva_1d3ad011",
@@ -202,7 +223,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1-1656482571-1701164823-pdf_98a08a12",
@@ -226,7 +250,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 86,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_3-1656482521-1701164804-pdf_c6df1da9",
@@ -250,7 +277,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 70,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_suraj-bhaidya-1656482362-1701164737-pdf_71cd6262",
@@ -274,7 +304,10 @@
   "layer_score": null,
   "note": "1/28 pages OCRed",
   "agri_relevance_hits": 41,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_cold-storage-pdf_23eb6cfe",
@@ -305,7 +338,10 @@
   "layer_score": 0.907,
   "note": "3/34 pages OCRed",
   "agri_relevance_hits": 100,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.29,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_sundar-tiwari-agro-ecology-and-sustainab_bd7690bf",
@@ -329,7 +365,10 @@
   "layer_score": null,
   "note": "4/42 pages OCRed",
   "agri_relevance_hits": 48,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_resham-b-1656482213-1701164680-pdf_e3a2b5fc",
@@ -353,7 +392,10 @@
   "layer_score": null,
   "note": "3/29 pages OCRed",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_5e6d6f0e",
@@ -389,7 +431,10 @@
   "layer_score": 0.968,
   "note": "5/230 pages OCRed",
   "agri_relevance_hits": 264,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.73,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_mandan-subebi-1656482000-1701164670-pdf_fb00b7da",
@@ -413,7 +458,10 @@
   "layer_score": null,
   "note": "17/60 pages OCRed",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_hari-bahadur-kc-1656481858-1701164615-pd_9b49b2b5",
@@ -437,7 +485,10 @@
   "layer_score": null,
   "note": "4/21 pages OCRed",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_f00c3156",
@@ -473,7 +524,10 @@
   "layer_score": 0.913,
   "note": "8/243 pages OCRed",
   "agri_relevance_hits": 106,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.71,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_dr-1656481783-1701164597-pdf_9dcede8e",
@@ -497,7 +551,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 48",
   "agri_relevance_hits": 183,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.4,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_barat-babu-shrestha-1656481683-170116457_b848c663",
@@ -521,7 +578,10 @@
   "layer_score": null,
   "note": "5/40 pages OCRed",
   "agri_relevance_hits": 27,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.86,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_cb74ba05",
@@ -549,7 +609,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 104 40/104 pages OCRed",
   "agri_relevance_hits": 210,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.84,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_2b087c56",
@@ -572,7 +635,10 @@
   "layer_score": null,
   "note": "12/248 pages OCRed",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nros-ippc-and-apppc-yubak-gc-presentatio_059debfe",
@@ -596,7 +662,10 @@
   "layer_score": null,
   "note": "1/15 pages OCRed",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-36-1632653959-1701164392-pdf_6a121b95",
@@ -620,7 +689,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 14,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pmamp-pdf_c6e3f280",
@@ -643,7 +715,10 @@
   "layer_score": null,
   "note": "9/128 pages OCRed",
   "agri_relevance_hits": 55,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-35-management-of-fruit-flies-163265_7f00054e",
@@ -667,7 +742,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 43,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-34-post-entry-quarantine-1632653154_c8691a5f",
@@ -691,7 +769,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-32-catagorization-of-commoditite-16_6a9250e1",
@@ -715,7 +796,10 @@
   "layer_score": null,
   "note": "1/16 pages OCRed",
   "agri_relevance_hits": 62,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-31-sampling-of-consignment-16326527_a6b0e36e",
@@ -739,7 +823,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 55,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_2082-83-pdf_d217a24a",
@@ -775,7 +862,10 @@
   "layer_score": 0.981,
   "note": "2/92 pages OCRed",
   "agri_relevance_hits": 239,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.02,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_nspm-29-recognition-of-pfa-and-alpp-1632_38989ec0",
@@ -799,7 +889,10 @@
   "layer_score": null,
   "note": "1/16 pages OCRed",
   "agri_relevance_hits": 75,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-27diagnostic-protocols-for-pests-16_c4cf37fe",
@@ -823,7 +916,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 77,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-26-pfa-for-fruitflies-1632649608-17_449b6fcc",
@@ -847,7 +943,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 61,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-24-1632649436-1701164178-pdf_b9952ced",
@@ -871,7 +970,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 71,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.09,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-23-guidelines-for-inspection-163264_5540889b",
@@ -895,7 +997,10 @@
   "layer_score": null,
   "note": "1/19 pages OCRed",
   "agri_relevance_hits": 50,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-21-pest-risk-analysis-for-regulated_f0918082",
@@ -919,7 +1024,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 88,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_website-project-booklet-2082-05-06-final_427ec166",
@@ -955,7 +1063,10 @@
   "layer_score": 0.898,
   "note": "text layer unreliable (OCR agreement 0.90); OCR used",
   "agri_relevance_hits": 189,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.8,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_web-pmamp-potato-booklet-2082-05-06-pdf_0d72a972",
@@ -978,7 +1089,10 @@
   "layer_score": null,
   "note": "3/24 pages OCRed",
   "agri_relevance_hits": 106,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-20-1632648974-1701163943-pdf_38706c86",
@@ -1002,7 +1116,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 85,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.77,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-17-pest-reporting-1632648783-170116_82a569df",
@@ -1026,7 +1143,10 @@
   "layer_score": null,
   "note": "1/13 pages OCRed",
   "agri_relevance_hits": 112,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-14-system-approach-for-risk-mgmt-16_e097138e",
@@ -1050,7 +1170,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 60,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-11-1632648052-1701163839-pdf_fc885807",
@@ -1074,7 +1197,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 16,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_nspm-2-framework-for-pra-1632588343-1701_1722cde6",
@@ -1098,7 +1224,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 71,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_large-medium-agricultural-machines-inven_50a33f28",
@@ -1129,7 +1258,10 @@
   "layer_score": 0.832,
   "note": "text layer unreliable (OCR agreement 0.83); OCR used OCR capped at 40 pages of 441 40/441 pages OCRed",
   "agri_relevance_hits": 248,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.53,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_study-report-on-status-effectiveness-of-_8df8802d",
@@ -1155,7 +1287,10 @@
   "layer_score": 0.822,
   "note": "text layer unreliable (OCR agreement 0.82); OCR used OCR capped at 40 pages of 77",
   "agri_relevance_hits": 69,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.17,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_faw-manual-design-final-1610630135-17011_061a6113",
@@ -1179,7 +1314,10 @@
   "layer_score": 0.897,
   "note": "text layer unreliable (OCR agreement 0.90); OCR used OCR capped at 40 pages of 220 40/220 pages OCRed",
   "agri_relevance_hits": 298,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.1,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "pmamp_2080-81-pdf_bf85cb07",
@@ -1215,7 +1353,10 @@
   "layer_score": 0.915,
   "note": "9/248 pages OCRed",
   "agri_relevance_hits": 109,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.64,
+  "admin_density": 0.02,
+  "index_recommended": false
  },
  {
   "id": "pmamp_2080-81-pdf_5bfc71ec",
@@ -1251,7 +1392,10 @@
   "layer_score": null,
   "note": "5/330 pages OCRed",
   "agri_relevance_hits": 138,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.18,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_plant-diseases-and-pests-book-1596071975_07ffaa45",
@@ -1275,7 +1419,10 @@
   "layer_score": 0.836,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used OCR capped at 40 pages of 72",
   "agri_relevance_hits": 189,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.19,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-anudaan-book-2079-80-pdf_15cc19f4",
@@ -1308,7 +1455,10 @@
   "layer_score": 0.03,
   "note": "text layer unreliable (OCR agreement 0.03); OCR used OCR capped at 40 pages of 288 40/288 pages OCRed",
   "agri_relevance_hits": 192,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.24,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_singapore-daisy-1650516052-1701163595-pd_dec6b332",
@@ -1332,7 +1482,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.06,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_mimosa-diplotricha-1650515967-1701163570_27755021",
@@ -1356,7 +1509,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 22,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.46,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_white-fly-1650515364-1701163542-pdf_21a0f463",
@@ -1380,7 +1536,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 27,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.33,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_tuta-1650515305-1701163507-pdf_24cbd400",
@@ -1404,7 +1563,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.46,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_mango-leaf-webber-1650515214-1701163476-_aba23304",
@@ -1428,7 +1590,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 17,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.2,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_false-smut-1650515128-1701163448-pdf_882bf56b",
@@ -1452,7 +1617,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 40,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 11.23,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_brown-plant-hopper-1650514999-1701163417_7251a0fb",
@@ -1476,7 +1644,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 37,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.62,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-annual-book-207980-pdf_626a0ef9",
@@ -1511,7 +1682,10 @@
   "layer_score": 0.894,
   "note": "text layer unreliable (OCR agreement 0.89); OCR used OCR capped at 40 pages of 248 40/248 pages OCRed",
   "agri_relevance_hits": 123,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.74,
+  "admin_density": 0.23,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_fact-sheet-udated-1591247206-1701163350-_09acbd67",
@@ -1535,7 +1709,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 52,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.37,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_fact-sheet-fpsm-final-4-dec-0-pdf_619553e2",
@@ -1562,7 +1739,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 75,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.21,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-inventory-book-2080-pdf_20802a92",
@@ -1588,7 +1768,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 586 40/586 pages OCRed",
   "agri_relevance_hits": 196,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.1,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_annual-program-and-statistics-book-2075-_069c27f9",
@@ -1612,7 +1795,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used OCR capped at 40 pages of 146 40/146 pages OCRed",
   "agri_relevance_hits": 196,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.99,
+  "admin_density": 0.19,
+  "index_recommended": true
  },
  {
   "id": "pmamp_final-pmamp-annual-book-2078-79-pdf_f1e43964",
@@ -1642,7 +1828,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 232 40/232 pages OCRed",
   "agri_relevance_hits": 144,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.93,
+  "admin_density": 0.11,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_barsik-pustika-1545809267-1632588874-170_2c788514",
@@ -1666,7 +1855,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 246 40/246 pages OCRed",
   "agri_relevance_hits": 177,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.32,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_book-barshik-karyakram-tatha-tathynka-pu_b0250fd3",
@@ -1690,7 +1882,10 @@
   "layer_score": null,
   "note": "4/140 pages OCRed",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.14,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_fact-sheet-on-faw-1569562031-1701162981-_61817a95",
@@ -1714,7 +1909,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 100,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.07,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_bali-roga-kira-1501047140-1565752191-170_ed98dcc2",
@@ -1738,7 +1936,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 114 40/114 pages OCRed",
   "agri_relevance_hits": 160,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.16,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_cabbage-disorders-1550760067-1701162557-_71ed41e4",
@@ -1762,7 +1963,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 16,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_tomato-disorders-1550759916-1-1701162522_6cebaf97",
@@ -1786,7 +1990,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_potato-disorders-1550759746-1701162495-p_643a6999",
@@ -1810,7 +2017,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_onion-disorders-1550759669-1701162459-pd_0ef001af",
@@ -1834,7 +2044,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_mango-disorders-1550759528-1-1701162406-_a1e2a992",
@@ -1858,7 +2071,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 22,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_rice-disorders-1550759358-1701162320-pdf_b9edaa0d",
@@ -1882,7 +2098,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1549033035-1-1701162217-jpg_7dda86c2",
@@ -1905,7 +2124,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 25,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 12.54,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1549004697-1701162176-jpg_d9f064e3",
@@ -1928,7 +2150,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.84,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1549004410-1701162137-jpg_f9ba39c0",
@@ -1951,7 +2176,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.46,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1549004280-1701162109-jpg_a76347f2",
@@ -1974,7 +2202,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 15,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.66,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1549004046-1701162065-jpg_8ff6c83d",
@@ -1997,7 +2228,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 25,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 13.21,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_final-namp-diary-2083-pdf_ec311c46",
@@ -2030,7 +2264,10 @@
   "layer_score": 0.527,
   "note": "text layer unreliable (OCR agreement 0.53); OCR used OCR capped at 40 pages of 308 40/308 pages OCRed",
   "agri_relevance_hits": 200,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.73,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_final-bulletin-1591776097-1701161702-pdf_4397d2f0",
@@ -2054,7 +2291,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 192,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.51,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-syste_6e9dc553",
@@ -2078,7 +2318,10 @@
   "layer_score": null,
   "note": "2/18 pages OCRed",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-pra-o_7f1a7495",
@@ -2102,7 +2345,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 73,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-post-_4986437b",
@@ -2126,7 +2372,10 @@
   "layer_score": null,
   "note": "1/16 pages OCRed",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-measu_f2d9a759",
@@ -2150,7 +2399,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 95,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-frame_841d0c21",
@@ -2174,7 +2426,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 70,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-catag_90fedb4b",
@@ -2198,7 +2453,10 @@
   "layer_score": null,
   "note": "1/16 pages OCRed",
   "agri_relevance_hits": 61,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_national-phytosanitary-standard-on-pest-_ec6f4051",
@@ -2222,7 +2480,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 88,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_survey-protocols-for-the-citrus-pests-16_caff10d9",
@@ -2246,7 +2507,10 @@
   "layer_score": null,
   "note": "11/76 pages OCRed",
   "agri_relevance_hits": 35,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_pest-database-of-amla-shikakai-pakhanved_9aadf69c",
@@ -2270,7 +2534,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.07,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_pest-database-of-attees-satawar-indreni-_1cf35143",
@@ -2294,7 +2561,10 @@
   "layer_score": null,
   "note": "1/10 pages OCRed",
   "agri_relevance_hits": 30,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_pest-database-of-chiraito-kurilo-kutki-t_2ddc479e",
@@ -2318,7 +2588,10 @@
   "layer_score": null,
   "note": "3/125 pages OCRed",
   "agri_relevance_hits": 39,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_technical-guideline-for-detection-survey_531583e5",
@@ -2342,7 +2615,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 95,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_detection-survey-protocol-for-trogogramm_3a6cb0e1",
@@ -2366,7 +2642,10 @@
   "layer_score": null,
   "note": "6/32 pages OCRed",
   "agri_relevance_hits": 41,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_fffolder-pqpmc-finale-printed-1679569642_c8ff9abb",
@@ -2390,7 +2669,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_citrus-greening-and-acp-folder-pqpmc-167_b90fb186",
@@ -2414,7 +2696,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 98,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 12.01,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_surveillance-protocol-final-1603000715-1_1ac18463",
@@ -2438,7 +2723,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 46,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_survey-protocol-for-citrus-canker-154938_ffb4ae77",
@@ -2462,7 +2750,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_survey-protocol-for-asian-citrus-psyllid_7e4e358c",
@@ -2486,7 +2777,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_survey-protocol-for-fruit-flies-2013-154_ca86dc1c",
@@ -2510,7 +2804,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_survey-protocal-for-citrus-greening-dise_31ea1abd",
@@ -2534,7 +2831,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 27,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_ipm-protocol-final-1603000843-1701159999_0c19058d",
@@ -2558,7 +2858,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 86,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_requirements-for-the-establishment-of-ar_9eba5391",
@@ -2582,7 +2885,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 111,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_determination-of-pest-status-in-an-area-_46798499",
@@ -2606,7 +2912,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 145,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_glossary-of-phytosanitary-terms-15493815_c35740bc",
@@ -2630,7 +2939,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 56,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_a-guideline-on-pest-free-area-declaratio_05fbdeeb",
@@ -2654,7 +2966,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 102,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_detection-and-monitoring-techniques-for-_ac610707",
@@ -2678,7 +2993,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_5-1539067215-1701159745-pdf_cec511ed",
@@ -2702,7 +3020,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_6-1539067193-1701159723-pdf_8e50b92f",
@@ -2726,7 +3047,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 77,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 9.43,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1688707238-1-1701158472-pdf_076616e5",
@@ -2750,7 +3074,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 173 40/173 pages OCRed",
   "agri_relevance_hits": 197,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.64,
+  "admin_density": 0.08,
+  "index_recommended": true
  },
  {
   "id": "pmamp_2-pdf_a082efe2",
@@ -2778,7 +3105,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 106 40/106 pages OCRed",
   "agri_relevance_hits": 195,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.1,
+  "admin_density": 0.09,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1688707077-1701158441-pdf_86ecd376",
@@ -2802,7 +3132,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 68,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.18,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_9d2bc356",
@@ -2828,7 +3161,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 86,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.17,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_panjikrit-bisadi-ko-suchi-1543399545-170_d653f8ae",
@@ -2852,7 +3188,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 16,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.92,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_f2ecd83a",
@@ -2881,7 +3220,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 105 40/105 pages OCRed",
   "agri_relevance_hits": 214,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.21,
+  "admin_density": 0.21,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_book-data-book-1666887367-1701158364-pdf_2586ea5c",
@@ -2905,7 +3247,10 @@
   "layer_score": 0.424,
   "note": "text layer unreliable (OCR agreement 0.42); OCR used OCR capped at 40 pages of 130 40/130 pages OCRed",
   "agri_relevance_hits": 108,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.68,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_book-bisadi-samuchit-prayog-bhandaran-an_edd12f0d",
@@ -2929,7 +3274,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 174 40/174 pages OCRed",
   "agri_relevance_hits": 188,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.51,
+  "admin_density": 0.07,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_book-pesticide-2077-1631870998-170115823_edeb964b",
@@ -2953,7 +3301,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 192,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.24,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_restricted-pesticides-in-nepal-157802656_9697cdf8",
@@ -2976,7 +3327,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.69,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_list-of-registered-pesticides-in-nepal-2_f812b3bb",
@@ -3000,7 +3354,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 60,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.4,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_7-1539066109-1701157944-pdf_c88ad97f",
@@ -3024,7 +3381,10 @@
   "layer_score": null,
   "note": "1/101 pages OCRed",
   "agri_relevance_hits": 126,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_11-1539066058-1701157907-pdf_04a64bde",
@@ -3048,7 +3408,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 40,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 9.78,
+  "admin_density": 0.75,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_10-1539066028-1701157841-pdf_a3251b06",
@@ -3072,7 +3435,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_training-manual-on-alph3-fumigation-1549_6e2fee0a",
@@ -3096,7 +3462,10 @@
   "layer_score": null,
   "note": "7/130 pages OCRed",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_sop-for-alph3-fumigation-1549364511-1701_fc61cce1",
@@ -3120,7 +3489,10 @@
   "layer_score": null,
   "note": "12/110 pages OCRed",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_rajpatra-1569599806-1701156876-pdf_95e60603",
@@ -3144,7 +3516,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 15,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_pesticide-rules-2050-1994-1701156482-pdf_5c822c72",
@@ -3168,7 +3543,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 68,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1701156259-pdf_83a8600a",
@@ -3192,7 +3570,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 69,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.45,
+  "admin_density": 0.14,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_pesticides-act-1701156048-pdf_b17f842f",
@@ -3216,7 +3597,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 102,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_plant-protection-process-manual-17011559_ceea5df2",
@@ -3240,7 +3624,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 48",
   "agri_relevance_hits": 80,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.98,
+  "admin_density": 0.03,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_120d2685",
@@ -3266,7 +3653,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 36,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.91,
+  "admin_density": 0.29,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1549430559-1-1701155815-pdf_8395d74b",
@@ -3290,7 +3680,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 45",
   "agri_relevance_hits": 74,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.99,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_0fa7a3fb",
@@ -3315,7 +3708,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 146,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.33,
+  "admin_density": 0.23,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_plant-quarantine-and-protection-act-2007_7c8c6b60",
@@ -3339,7 +3735,10 @@
   "layer_score": 0.867,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used",
   "agri_relevance_hits": 89,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.01,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_2081-pdf_ac018b92",
@@ -3365,7 +3764,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 163,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.48,
+  "admin_density": 0.23,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1-1701155654-pdf_c182c441",
@@ -3389,7 +3791,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 38,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.14,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_5798b368",
@@ -3415,7 +3820,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 155,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.3,
+  "admin_density": 0.24,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1701155520-pdf_1a0a108f",
@@ -3439,7 +3847,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 25,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.66,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_thematic-technical-working-group-pdf_bb709933",
@@ -3464,7 +3875,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 115,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.38,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_internal-quarantine-guidelines-170115538_01b5bb0e",
@@ -3488,7 +3902,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 57,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.63,
+  "admin_density": 0.19,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1788434413-pdf_ac99266d",
@@ -3512,7 +3929,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.44,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_1787824923-png_114572e2",
@@ -3535,7 +3955,10 @@
   "ocr_pages": 1,
   "note": "image (jpg) OCR",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.01,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_soil-pdf_15e8b4c4",
@@ -3561,7 +3984,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 71,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.91,
+  "admin_density": 0.18,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_img-260817163306-001-1786963996-pdf_1ff70453",
@@ -3585,7 +4011,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 1.15,
+  "admin_density": 0.58,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_camscanner-03-04-2026-14-1775206724-pdf_49e0f845",
@@ -3609,7 +4038,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.68,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_img-260323170800-001-1774328995-pdf_458f28a1",
@@ -3633,7 +4065,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.01,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1773314285-pdf_cc5a6fb2",
@@ -3657,7 +4092,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.09,
+  "admin_density": 1.24,
+  "index_recommended": true
  },
  {
   "id": "pmamp_0-pdf_39e6cb18",
@@ -3683,7 +4121,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 109,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.4,
+  "admin_density": 0.49,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1772509707-pdf_45e59633",
@@ -3707,7 +4148,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.92,
+  "admin_density": 0.97,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_clarification-mango-import-from-india-v2_bce0945c",
@@ -3731,7 +4175,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_press-release-1699542283-1708241300-pdf_57d94bd3",
@@ -3755,7 +4202,10 @@
   "layer_score": 0.81,
   "note": "text layer unreliable (OCR agreement 0.81); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.67,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_2-pdf_56e88b32",
@@ -3781,7 +4231,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 72,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.12,
+  "admin_density": 0.2,
+  "index_recommended": true
  },
  {
   "id": "pmamp_2-pdf_0b3c802e",
@@ -3807,7 +4260,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 67,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.28,
+  "admin_density": 0.55,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_2120bdc7",
@@ -3833,7 +4289,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 65,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.4,
+  "admin_density": 0.15,
+  "index_recommended": false
  },
  {
   "id": "pmamp_krishi-intern-parichalan-karyebidhi-2074_f8db46f1",
@@ -3858,7 +4317,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 77,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.34,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_4447bee4",
@@ -3884,7 +4346,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 108,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.42,
+  "admin_density": 0.31,
+  "index_recommended": false
  },
  {
   "id": "pmamp_compressed-pdf_149fbc9d",
@@ -3913,7 +4378,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 119,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.1,
+  "admin_density": 0.16,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_1-1781510435-pdf_787de192",
@@ -3937,7 +4405,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 51",
   "agri_relevance_hits": 215,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.35,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_pdf_fa08f1a7",
@@ -3961,7 +4432,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 57",
   "agri_relevance_hits": 233,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.53,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_form-no-1762327182-pdf_24fabc56",
@@ -3985,7 +4459,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_e7f2831d",
@@ -4021,7 +4498,10 @@
   "layer_score": 0.798,
   "note": "text layer unreliable (OCR agreement 0.80); OCR used OCR capped at 40 pages of 69",
   "agri_relevance_hits": 155,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.82,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_form-no-1762327111-pdf_4c593091",
@@ -4045,7 +4525,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_form-no-1762327052-pdf_0849ac7d",
@@ -4069,7 +4552,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pqpmc_img-250924104826-001-1758707640-pdf_32c9d342",
@@ -4093,7 +4579,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 16,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.69,
+  "admin_density": 0.42,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmu-final-ppt-first-trimester-2080-pdf_7c90a1ce",
@@ -4129,7 +4618,10 @@
   "layer_score": 0.31,
   "note": "text layer unreliable (OCR agreement 0.31); OCR used OCR capped at 40 pages of 51",
   "agri_relevance_hits": 124,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.37,
+  "admin_density": 0.14,
+  "index_recommended": true
  },
  {
   "id": "pqpmc_protocol-of-quarantine-treatment-through_2a32b4ba",
@@ -4153,7 +4645,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 44",
   "agri_relevance_hits": 33,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_0-pmu-final-presentation-for-annual-prog_746d6fab",
@@ -4189,7 +4684,10 @@
   "layer_score": 0.651,
   "note": "text layer unreliable (OCR agreement 0.65); OCR used OCR capped at 40 pages of 216 40/216 pages OCRed",
   "agri_relevance_hits": 144,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.94,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_2080-81-pdf_50a131db",
@@ -4215,7 +4713,10 @@
   "layer_score": 0.82,
   "note": "text layer unreliable (OCR agreement 0.82); OCR used",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.14,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_81101a38",
@@ -4251,7 +4752,10 @@
   "layer_score": 0.438,
   "note": "text layer unreliable (OCR agreement 0.44); OCR used OCR capped at 40 pages of 92 40/92 pages OCRed",
   "agri_relevance_hits": 178,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.62,
+  "admin_density": 0.1,
+  "index_recommended": true
  },
  {
   "id": "faolex_nep159180-pdf_b914cc76",
@@ -4274,7 +4778,10 @@
   "layer_score": null,
   "note": "2/303 pages OCRed",
   "agri_relevance_hits": 44,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_img-0001-z6ckkhi-pdf_45395c40",
@@ -4297,7 +4804,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.45,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "faolex_nep171433-pdf_c09dbb51",
@@ -4320,7 +4830,10 @@
   "layer_score": 0.792,
   "note": "text layer unreliable (OCR agreement 0.79); OCR used OCR capped at 40 pages of 363 40/363 pages OCRed",
   "agri_relevance_hits": 51,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "faolex_nep148989-pdf_affc5041",
@@ -4343,7 +4856,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 80,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_implementation-procedures-for-federal-co_6af24544",
@@ -4369,7 +4885,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 190 40/190 pages OCRed",
   "agri_relevance_hits": 69,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.8,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_narc-special-aab-2083-06-06-tzrezua-pdf_76b6e76b",
@@ -4396,7 +4915,10 @@
   "layer_score": 0.833,
   "note": "text layer unreliable (OCR agreement 0.83); OCR used",
   "agri_relevance_hits": 81,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.82,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_s81crdt-pdf_ab4c08ed",
@@ -4422,7 +4944,10 @@
   "layer_score": 0.79,
   "note": "text layer unreliable (OCR agreement 0.79); OCR used",
   "agri_relevance_hits": 265,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.66,
+  "admin_density": 0.05,
+  "index_recommended": false
  },
  {
   "id": "aitc_final-curriculum-2082-83-1-ur6ef4n-pdf_5521438c",
@@ -4448,7 +4973,10 @@
   "layer_score": 0.727,
   "note": "text layer unreliable (OCR agreement 0.73); OCR used OCR capped at 40 pages of 138 40/138 pages OCRed",
   "agri_relevance_hits": 135,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.86,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_notice-regarding-the-provision-of-opinio_825d63cc",
@@ -4474,7 +5002,10 @@
   "layer_score": 0.748,
   "note": "text layer unreliable (OCR agreement 0.75); OCR used OCR capped at 40 pages of 50",
   "agri_relevance_hits": 126,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.11,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_notice-regarding-nomination-for-b-sc-f-x_a69bd0cf",
@@ -4497,7 +5028,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.97,
+  "index_recommended": false
  },
  {
   "id": "moald_af-eoi-qv2rffs-pdf_f451360c",
@@ -4520,7 +5054,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_photo-2026-09-18-17-27-28-1-akr1uqh-pdf_8a84eeec",
@@ -4543,7 +5080,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.38,
+  "admin_density": 2.27,
+  "index_recommended": false
  },
  {
   "id": "aitc_subhakamana-vaakrcg-pdf_7c2d70ad",
@@ -4568,7 +5108,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.04,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_b-sc-forestry-sdrcs7i-pdf_9965ca9a",
@@ -4593,7 +5136,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 2.51,
+  "index_recommended": false
  },
  {
   "id": "aitc_agriculture-diary-2083-final-2083-05-4-w_c6b9b7e3",
@@ -4629,7 +5175,10 @@
   "layer_score": 0.956,
   "note": "",
   "agri_relevance_hits": 109,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.96,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_3-yokbv26-pdf_1fc6da87",
@@ -4652,7 +5201,10 @@
   "layer_score": 0.607,
   "note": "text layer unreliable (OCR agreement 0.61); OCR used",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.72,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_2-sn4anu7-pdf_0d2e7a3c",
@@ -4688,7 +5240,10 @@
   "layer_score": 0.962,
   "note": "1/380 pages OCRed",
   "agri_relevance_hits": 140,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.8,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "aitc_3-oie6kxk-pdf_df0014e3",
@@ -4724,7 +5279,10 @@
   "layer_score": 0.968,
   "note": "",
   "agri_relevance_hits": 138,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.95,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_6-dmngggq-pdf_6838ba19",
@@ -4760,7 +5318,10 @@
   "layer_score": 0.966,
   "note": "",
   "agri_relevance_hits": 131,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.23,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_7-ey3xwj8-pdf_a7dba239",
@@ -4796,7 +5357,10 @@
   "layer_score": 0.962,
   "note": "1/356 pages OCRed",
   "agri_relevance_hits": 138,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.16,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_8-drkvato-pdf_79e711a7",
@@ -4832,7 +5396,10 @@
   "layer_score": 0.963,
   "note": "1/356 pages OCRed",
   "agri_relevance_hits": 162,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.18,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_qrcode-vg2jakb-zebclqy-pdf_8f313336",
@@ -4855,7 +5422,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_eia-for-hotel-view-bhrikuti-upgrading-to_02629370",
@@ -4883,7 +5453,10 @@
   "layer_score": 0.62,
   "note": "text layer unreliable (OCR agreement 0.62); OCR used OCR capped at 40 pages of 444 40/444 pages OCRed",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.27,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "aitc_9-ucr05dw-pdf_6b6bcaee",
@@ -4919,7 +5492,10 @@
   "layer_score": 0.967,
   "note": "3/359 pages OCRed",
   "agri_relevance_hits": 151,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.15,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_notice-regarding-the-drafting-of-the-car_2eb3fbf3",
@@ -4944,7 +5520,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.54,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_4-frljjhf-pdf_ab14c88d",
@@ -4980,7 +5559,10 @@
   "layer_score": 0.964,
   "note": "1/360 pages OCRed",
   "agri_relevance_hits": 109,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.47,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_k31tiy7-pdf_fa93c739",
@@ -5006,7 +5588,10 @@
   "layer_score": 0.842,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used OCR capped at 40 pages of 506 40/506 pages OCRed",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.14,
+  "admin_density": 0.26,
+  "index_recommended": false
  },
  {
   "id": "aitc_5-6xv3e3u-pdf_ebdea88e",
@@ -5042,7 +5627,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 200,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.19,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_the-historic-first-general-assembly-of-t_cca37b75",
@@ -5068,7 +5656,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.37,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_ban-rakshyk-sali-eignoae-pdf_0215cb1f",
@@ -5093,7 +5684,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 87 40/87 pages OCRed",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.15,
+  "admin_density": 1.94,
+  "index_recommended": false
  },
  {
   "id": "moald_document-59-ngdpwtn-pdf_0fcab2ef",
@@ -5116,7 +5710,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 3.19,
+  "index_recommended": false
  },
  {
   "id": "moald_5-24-lwaakqy-pdf_5ef13fe4",
@@ -5139,7 +5736,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 1.03,
+  "index_recommended": false
  },
  {
   "id": "moald_narc-ansldvw-pdf_6cf220bf",
@@ -5162,7 +5762,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 17.2,
+  "index_recommended": false
  },
  {
   "id": "moald_ejyzwxx-pdf_ec6ee107",
@@ -5188,7 +5791,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 9,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.04,
+  "admin_density": 0.04,
+  "index_recommended": false
  },
  {
   "id": "moald_ldc-group-2026-dili-ministerial-declarat_c3c8482e",
@@ -5211,7 +5817,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_notice-regarding-the-cancellation-of-the_17c56a6a",
@@ -5236,7 +5845,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 3.28,
+  "index_recommended": false
  },
  {
   "id": "moald_k1uewqa-pdf_455e842b",
@@ -5259,7 +5871,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 8,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.12,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_oqicnu4-pdf_cda1d8e9",
@@ -5282,7 +5897,10 @@
   "layer_score": 0.974,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.04,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_photo-2026-08-26-19-12-36-al0qpoz-pdf_cc2ae5e8",
@@ -5305,7 +5923,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.44,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_photo-2026-08-26-18-26-11-qwz0d7i-pdf_89dce412",
@@ -5328,7 +5949,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_traimasik-2083-baisahka-asar-vmk033m-pdf_53e72e71",
@@ -5362,7 +5986,10 @@
   "layer_score": 0.507,
   "note": "text layer unreliable (OCR agreement 0.51); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 114,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.58,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_eia-hotel-mystic-mountain-jmyi1qd-pdf_e9d7667e",
@@ -5388,7 +6015,10 @@
   "layer_score": 0.849,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used OCR capped at 40 pages of 434 40/434 pages OCRed",
   "agri_relevance_hits": 17,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.2,
+  "admin_density": 0.06,
+  "index_recommended": false
  },
  {
   "id": "moald_image-167-nczuya5-pdf_86549634",
@@ -5413,7 +6043,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 28,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.52,
+  "admin_density": 3.11,
+  "index_recommended": false
  },
  {
   "id": "moald_image-166-mo892sy-pdf_55596f3e",
@@ -5436,7 +6069,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_image-165-w4bhndx-pdf_69ae0ee8",
@@ -5459,7 +6095,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 19,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_traimasik-2082-magh-fagun-web-7gfmfvc-pd_d400273c",
@@ -5495,7 +6134,10 @@
   "layer_score": 0.492,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 208,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.19,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_2083-84-21-omngzqg-pdf_0713ff98",
@@ -5518,7 +6160,10 @@
   "layer_score": 0.623,
   "note": "text layer unreliable (OCR agreement 0.62); OCR used",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.7,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_doc2-ui0pbvn-pdf_7e308b94",
@@ -5541,7 +6186,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_doc3-ing7my4-pdf_33644678",
@@ -5564,7 +6212,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_f63f56ca",
@@ -5600,7 +6251,10 @@
   "layer_score": 0.116,
   "note": "text layer unreliable (OCR agreement 0.12); OCR used",
   "agri_relevance_hits": 86,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.77,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_doc4-2njqkym-pdf_804ae013",
@@ -5623,7 +6277,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_doc1-4k2aivk-pdf_e2494207",
@@ -5646,7 +6303,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 8,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_ilovepdf-merged-2-onifb7k-pdf_24f7e20c",
@@ -5672,7 +6332,10 @@
   "layer_score": 0.907,
   "note": "",
   "agri_relevance_hits": 15,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pmu-pdf_8b012fec",
@@ -5695,7 +6358,10 @@
   "layer_score": 0.131,
   "note": "text layer unreliable (OCR agreement 0.13); OCR used",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.25,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_ee544767",
@@ -5718,7 +6384,10 @@
   "layer_score": 0.157,
   "note": "text layer unreliable (OCR agreement 0.16); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.72,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_traimasik-2082-karthik-poush-xbkwtrt-pdf_6480cff7",
@@ -5754,7 +6423,10 @@
   "layer_score": 0.502,
   "note": "text layer unreliable (OCR agreement 0.50); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 158,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.0,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-pdf_47792c66",
@@ -5777,7 +6449,10 @@
   "layer_score": 0.381,
   "note": "text layer unreliable (OCR agreement 0.38); OCR used",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_fy-2078-79-pocket-and-block-pmamp-pdf_ce8a2893",
@@ -5802,7 +6477,10 @@
   "layer_score": 0.241,
   "note": "text layer unreliable (OCR agreement 0.24); OCR used",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.72,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_2083-04-13-for-website-fmpkso6-pdf_637c9c3c",
@@ -5828,7 +6506,10 @@
   "layer_score": 0.79,
   "note": "text layer unreliable (OCR agreement 0.79); OCR used OCR capped at 40 pages of 59",
   "agri_relevance_hits": 233,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.44,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_ca80bec1",
@@ -5864,7 +6545,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 209 40/209 pages OCRed",
   "agri_relevance_hits": 154,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.15,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_tlknmxl-pdf_895ca38e",
@@ -5891,7 +6575,10 @@
   "layer_score": 0.831,
   "note": "text layer unreliable (OCR agreement 0.83); OCR used",
   "agri_relevance_hits": 250,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.66,
+  "admin_density": 0.05,
+  "index_recommended": false
  },
  {
   "id": "moald_iuh394t-pdf_869faea9",
@@ -5916,7 +6603,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.79,
+  "admin_density": 1.1,
+  "index_recommended": false
  },
  {
   "id": "aitc_kp1-fvz7oya-pdf_0914b17c",
@@ -5951,7 +6641,10 @@
   "layer_score": 0.363,
   "note": "text layer unreliable (OCR agreement 0.36); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 233,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.07,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-annual-book-pdf_319751e0",
@@ -5981,7 +6674,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 264 40/264 pages OCRed",
   "agri_relevance_hits": 217,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.54,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pmamp-pmu-1-pdf_2ad41244",
@@ -6017,7 +6713,10 @@
   "layer_score": 0.486,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 61",
   "agri_relevance_hits": 137,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.55,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_4-hotel-karma-draft-eia-report-a2jdkoy-p_fb60c53b",
@@ -6044,7 +6743,10 @@
   "layer_score": 0.851,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used OCR capped at 40 pages of 235 40/235 pages OCRed",
   "agri_relevance_hits": 17,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.29,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_image-144-rh9ki0n-pdf_109fcd7c",
@@ -6067,7 +6769,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_2-p7ln4ai-pdf_284608ca",
@@ -6098,7 +6803,10 @@
   "layer_score": 0.514,
   "note": "text layer unreliable (OCR agreement 0.51); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 239,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.65,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_5-eia-draft-ebc-combine-report-2-9cokcxb_9fd3e879",
@@ -6125,7 +6833,10 @@
   "layer_score": 0.901,
   "note": "OCR capped at 40 pages of 783 40/783 pages OCRed",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.37,
+  "admin_density": 0.01,
+  "index_recommended": false
  },
  {
   "id": "aitc_1-6jdmpy9-pdf_602f69b7",
@@ -6161,7 +6872,10 @@
   "layer_score": 0.498,
   "note": "text layer unreliable (OCR agreement 0.50); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 153,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.33,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_e50bd893",
@@ -6195,7 +6909,10 @@
   "layer_score": 0.506,
   "note": "text layer unreliable (OCR agreement 0.51); OCR used OCR capped at 40 pages of 64",
   "agri_relevance_hits": 197,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.64,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_41ff0ea1",
@@ -6218,7 +6935,10 @@
   "layer_score": 0.655,
   "note": "text layer unreliable (OCR agreement 0.66); OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.76,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_nervic-hospital-seia-tws4auu-pdf_b7b1c3f1",
@@ -6244,7 +6964,10 @@
   "layer_score": 0.768,
   "note": "text layer unreliable (OCR agreement 0.77); OCR used OCR capped at 40 pages of 241 40/241 pages OCRed",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.28,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_3-24-icymdow-pdf_b6a55f85",
@@ -6267,7 +6990,10 @@
   "layer_score": 0.604,
   "note": "text layer unreliable (OCR agreement 0.60); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.79,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "pmamp_pdf_4e8936d0",
@@ -6293,7 +7019,10 @@
   "layer_score": 0.592,
   "note": "text layer unreliable (OCR agreement 0.59); OCR used",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.31,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-111-p7jljvq-pdf_2d746a38",
@@ -6318,7 +7047,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.97,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "pmamp_pdf_7e34ad08",
@@ -6343,7 +7075,10 @@
   "layer_score": 0.833,
   "note": "text layer unreliable (OCR agreement 0.83); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_urn5l4r-pdf_38cd4dbe",
@@ -6374,7 +7109,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 188,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.76,
+  "admin_density": 0.09,
+  "index_recommended": true
  },
  {
   "id": "moald_image-108-nz8rgeb-pdf_c9146e5c",
@@ -6397,7 +7135,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_4-jba9ukl-pdf_11835cf8",
@@ -6433,7 +7174,10 @@
   "layer_score": 0.383,
   "note": "text layer unreliable (OCR agreement 0.38); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 188,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.05,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-102-zl2sjto-pdf_b2a30c76",
@@ -6458,7 +7202,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 37,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.77,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_camscanner-28-06-2026-15-40-1-ioinesy-pd_89053291",
@@ -6483,7 +7230,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 24,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.57,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-104-f1me6gp-pdf_38831a20",
@@ -6506,7 +7256,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.71,
+  "index_recommended": false
  },
  {
   "id": "moald_image-103-gd8oz2b-pdf_27fb9fc7",
@@ -6529,7 +7282,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.35,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-094-wwauwi2-pdf_a3182006",
@@ -6554,7 +7310,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.51,
+  "admin_density": 1.89,
+  "index_recommended": false
  },
  {
   "id": "moald_mdgoimw-pdf_9d0db56c",
@@ -6579,7 +7338,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 27,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.64,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_3-paiznfo-pdf_9d1b8ada",
@@ -6610,7 +7372,10 @@
   "layer_score": 0.468,
   "note": "text layer unreliable (OCR agreement 0.47); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 177,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.36,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_sef5d7s-pdf_a7eb4416",
@@ -6639,7 +7404,10 @@
   "layer_score": 0.816,
   "note": "text layer unreliable (OCR agreement 0.82); OCR used OCR capped at 40 pages of 215 40/215 pages OCRed",
   "agri_relevance_hits": 189,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.07,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_photo-2026-06-09-15-50-36-a7omih6-pdf_8b357ab4",
@@ -6664,7 +7432,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 2.38,
+  "index_recommended": false
  },
  {
   "id": "moald_3-18-1-mm918kh-pdf_c0713e4c",
@@ -6687,7 +7458,10 @@
   "layer_score": 0.558,
   "note": "text layer unreliable (OCR agreement 0.56); OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.5,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_6-6w8g7nc-pdf_2de3ecd2",
@@ -6723,7 +7497,10 @@
   "layer_score": 0.359,
   "note": "text layer unreliable (OCR agreement 0.36); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 276,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.04,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_o-m-samiti-1bphg4q-pdf_ad312743",
@@ -6746,7 +7523,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_tvttn17-pdf_770762ee",
@@ -6769,7 +7549,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.25,
+  "admin_density": 1.13,
+  "index_recommended": true
  },
  {
   "id": "moald_camscanner-27-05-2026-14-24-qyzh8t2-pdf_7c929b86",
@@ -6792,7 +7575,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.89,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_meat-act-for-publication-kgvn9bz-pdf_25d7b88c",
@@ -6815,7 +7601,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 22,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_5-qkdwp32-pdf_209eba07",
@@ -6851,7 +7640,10 @@
   "layer_score": 0.485,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 232,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.19,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "moald_wmlhj3c-pdf_6d5bab6f",
@@ -6877,7 +7669,10 @@
   "layer_score": 0.827,
   "note": "text layer unreliable (OCR agreement 0.83); OCR used OCR capped at 40 pages of 292 40/292 pages OCRed",
   "agri_relevance_hits": 149,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.73,
+  "admin_density": 0.06,
+  "index_recommended": true
  },
  {
   "id": "aitc_11-pszh9lk-pdf_59b314a0",
@@ -6912,7 +7707,10 @@
   "layer_score": 0.517,
   "note": "text layer unreliable (OCR agreement 0.52); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 211,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.28,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_camscanner-20-05-2026-10-56-php9mnl-pdf_53733fdf",
@@ -6946,7 +7744,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 136,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.63,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-079-dqt9rpb-pdf_86b6deaa",
@@ -6972,7 +7773,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 32,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.08,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_photo-2026-04-20-16-32-59-mopowa2-pdf_8494d3ea",
@@ -6995,7 +7799,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 8,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_4xo7tlk-pdf_fbebc2a1",
@@ -7018,7 +7825,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_2082-2082-12-27-6lr704d-od695le-pdf_a3aac34d",
@@ -7041,7 +7851,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.45,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_photo-2026-04-02-16-45-44-rdepvgi-pdf_d3175ddd",
@@ -7064,7 +7877,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 7,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_7-hcplvgz-pdf_da5e6a08",
@@ -7100,7 +7916,10 @@
   "layer_score": 0.474,
   "note": "text layer unreliable (OCR agreement 0.47); OCR used OCR capped at 40 pages of 50",
   "agri_relevance_hits": 192,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.81,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_kn9krgf-1-l4dle8e-pdf_0c63c57d",
@@ -7126,7 +7945,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.18,
+  "admin_density": 0.15,
+  "index_recommended": false
  },
  {
   "id": "moald_30-snkc4px-pdf_247db220",
@@ -7149,7 +7971,10 @@
   "layer_score": 0.612,
   "note": "text layer unreliable (OCR agreement 0.61); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.67,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_10-lgnu39k-pdf_3353fa21",
@@ -7185,7 +8010,10 @@
   "layer_score": 0.356,
   "note": "text layer unreliable (OCR agreement 0.36); OCR used OCR capped at 40 pages of 80 40/80 pages OCRed",
   "agri_relevance_hits": 186,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.09,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_extension-of-deadline-bw8vx3k-pdf_8ff8fb66",
@@ -7208,7 +8036,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 5,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_new-microsoft-word-document-7-xkkn2z3-pd_b16276bc",
@@ -7231,7 +8062,10 @@
   "layer_score": 0.608,
   "note": "text layer unreliable (OCR agreement 0.61); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.7,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-009-yjbm9pd-pdf_09039040",
@@ -7254,7 +8088,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_pfifm1t-pdf_97efb99e",
@@ -7280,7 +8117,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 40,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.05,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_image-008-trtjiax-pdf_7eb34303",
@@ -7306,7 +8146,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 175,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.16,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_call-for-manuscript-kodvyqc-pdf_cd46f225",
@@ -7329,7 +8172,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 24,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_9-uzmh4is-pdf_fcc77c57",
@@ -7364,7 +8210,10 @@
   "layer_score": 0.499,
   "note": "text layer unreliable (OCR agreement 0.50); OCR used OCR capped at 40 pages of 50",
   "agri_relevance_hits": 253,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.91,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_pllt5cm-pdf_8e9a0f12",
@@ -7387,7 +8236,10 @@
   "layer_score": 0.739,
   "note": "text layer unreliable (OCR agreement 0.74); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.86,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-006-ehpu2ny-pdf_6de91665",
@@ -7412,7 +8264,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.94,
+  "index_recommended": false
  },
  {
   "id": "moald_e-copy-2082-10-22-moald-book-final-2081-_00f186ab",
@@ -7448,7 +8303,10 @@
   "layer_score": 0.944,
   "note": "31/316 pages OCRed",
   "agri_relevance_hits": 234,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.13,
+  "admin_density": 0.08,
+  "index_recommended": true
  },
  {
   "id": "moald_image-004-hkxtjh2-pdf_e9cdbbae",
@@ -7471,7 +8329,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_nwcvey1-pdf_35c6be8e",
@@ -7494,7 +8355,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 9,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.33,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_15-9wjixug-pdf_bc417e90",
@@ -7530,7 +8394,10 @@
   "layer_score": 0.501,
   "note": "text layer unreliable (OCR agreement 0.50); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 185,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.12,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-336-3o812yf-pdf_e0703a54",
@@ -7555,7 +8422,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 58,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.26,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_ngp8k8t-pdf_9a982c5a",
@@ -7580,7 +8450,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 37,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.18,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-320-m7bbyko-pdf_4c0caf2e",
@@ -7605,7 +8478,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 32,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.63,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_moald-kmanwmy-pdf_b36fdaf7",
@@ -7638,7 +8514,10 @@
   "layer_score": 0.949,
   "note": "1/18 pages OCRed",
   "agri_relevance_hits": 188,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.81,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_1-mdur2gk-pdf_1cd0c2dd",
@@ -7664,7 +8543,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 48,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.78,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_12-xky5yfl-pdf_48958e3d",
@@ -7700,7 +8582,10 @@
   "layer_score": 0.323,
   "note": "text layer unreliable (OCR agreement 0.32); OCR used OCR capped at 40 pages of 52",
   "agri_relevance_hits": 256,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.05,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-318-ygjjaj8-pdf_f4352dd8",
@@ -7725,7 +8610,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 23,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.04,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_8vimyck-pdf_6723c12b",
@@ -7748,7 +8636,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 49,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 10.23,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-293-tf9z0sd-pdf_f77c5258",
@@ -7771,7 +8662,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_image-292-azkc1xf-pdf_1895d5cd",
@@ -7796,7 +8690,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.28,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_img-0001-2-5jpuqqk-pdf_1ae230e7",
@@ -7821,7 +8718,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 31,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_28-7ftsrpf-pdf_926911e5",
@@ -7844,7 +8744,10 @@
   "layer_score": 0.616,
   "note": "text layer unreliable (OCR agreement 0.62); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.81,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_1-1-ivnko4q-pdf_d507fe70",
@@ -7867,7 +8770,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.49,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-253-6wcj6oj-pdf_5fac287f",
@@ -7890,7 +8796,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 6,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_14-2ex1gp8-pdf_1c433e74",
@@ -7926,7 +8835,10 @@
   "layer_score": 0.263,
   "note": "text layer unreliable (OCR agreement 0.26); OCR used",
   "agri_relevance_hits": 287,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.42,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-245-jbu2yx0-pdf_ba26cb4f",
@@ -7954,7 +8866,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 132,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.6,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_c9pd5qm-pdf_2cd67499",
@@ -7977,7 +8892,10 @@
   "layer_score": 0.636,
   "note": "text layer unreliable (OCR agreement 0.64); OCR used",
   "agri_relevance_hits": 12,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.82,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_website-publish-1-rhzbtva-pdf_97d27349",
@@ -8004,7 +8922,10 @@
   "layer_score": 0.862,
   "note": "text layer unreliable (OCR agreement 0.86); OCR used",
   "agri_relevance_hits": 277,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.9,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-227-kb1rn49-pdf_994386c2",
@@ -8029,7 +8950,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.63,
+  "admin_density": 4.41,
+  "index_recommended": false
  },
  {
   "id": "moald_26-qnqbrbq-pdf_a34d9fad",
@@ -8052,7 +8976,10 @@
   "layer_score": 0.598,
   "note": "text layer unreliable (OCR agreement 0.60); OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.58,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-i7q46qf-pdf_b1d9c3ed",
@@ -8077,7 +9004,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.46,
+  "admin_density": 6.93,
+  "index_recommended": false
  },
  {
   "id": "aitc_18-vem9pzd-pdf_cd0d6d79",
@@ -8113,7 +9043,10 @@
   "layer_score": 0.491,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 44",
   "agri_relevance_hits": 244,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.01,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_image-2-1-qq25qdm-pdf_9bb6e1bb",
@@ -8136,7 +9069,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 11,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_scanned-documents-1-v55b9ya-pdf_5f53a857",
@@ -8161,7 +9097,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.2,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_rnomqki-pdf_07f8f504",
@@ -8189,7 +9128,10 @@
   "layer_score": 0.839,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used OCR capped at 40 pages of 47",
   "agri_relevance_hits": 341,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.68,
+  "admin_density": 0.03,
+  "index_recommended": true
  },
  {
   "id": "moald_1nzwqz9-pdf_16d1a9fe",
@@ -8214,7 +9156,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_16-hhiqyju-pdf_ea94880a",
@@ -8250,7 +9195,10 @@
   "layer_score": 0.486,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 165,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.08,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_3gjyygo-pdf_780d1936",
@@ -8273,7 +9221,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_bqop19p-pdf_f2829625",
@@ -8300,7 +9251,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 46",
   "agri_relevance_hits": 256,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.72,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_8sv4ax7-pdf_97e23abe",
@@ -8326,7 +9280,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 168,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.74,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_17-z8nyrp0-pdf_dcdf368a",
@@ -8362,7 +9319,10 @@
   "layer_score": 0.489,
   "note": "text layer unreliable (OCR agreement 0.49); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 164,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.59,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_tlvhta4-pdf_15fa5e50",
@@ -8393,7 +9353,10 @@
   "layer_score": 0.973,
   "note": "1/164 pages OCRed",
   "agri_relevance_hits": 200,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.52,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_beekeeping-mannual-for-tot-officer-level_4ce83208",
@@ -8416,7 +9379,10 @@
   "layer_score": null,
   "note": "2/378 pages OCRed",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_vegetable-book-1-1696484473-m3ppeab-pdf_8676ddfe",
@@ -8444,7 +9410,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 206 40/206 pages OCRed",
   "agri_relevance_hits": 198,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.79,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_merz-1-1691126876-m5vwvxs-pdf_ff3e50ea",
@@ -8476,7 +9445,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 65",
   "agri_relevance_hits": 107,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.52,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_44-3zvsdap-pdf_6895782f",
@@ -8511,7 +9483,10 @@
   "layer_score": 0.576,
   "note": "text layer unreliable (OCR agreement 0.58); OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 290,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.74,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "moald_suu8n8l-pdf_60fdffaf",
@@ -8539,7 +9514,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 112,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.06,
+  "admin_density": 0.17,
+  "index_recommended": true
  },
  {
   "id": "moald_x6y9pqg-pdf_3606320d",
@@ -8566,7 +9544,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 127,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.76,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "moald_ccrwjv2-pdf_758064a3",
@@ -8589,7 +9570,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 2,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_45-m8let6k-pdf_4e04aa8b",
@@ -8622,7 +9606,10 @@
   "layer_score": 0.386,
   "note": "text layer unreliable (OCR agreement 0.39); OCR used OCR capped at 40 pages of 44",
   "agri_relevance_hits": 248,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.5,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_krishi-bazar-bazar-profile-2072-73-16908_4ac0208f",
@@ -8649,7 +9636,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 324 40/324 pages OCRed",
   "agri_relevance_hits": 173,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.11,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_krishi-upajharuko-byabsaya-yojana-final-_102806a6",
@@ -8677,7 +9667,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 249 40/249 pages OCRed",
   "agri_relevance_hits": 211,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.15,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_47-ltqx8j2-pdf_5bbaffc6",
@@ -8713,7 +9706,10 @@
   "layer_score": 0.334,
   "note": "text layer unreliable (OCR agreement 0.33); OCR used OCR capped at 40 pages of 44",
   "agri_relevance_hits": 258,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.17,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "moald_ginger-booklet-naes-final-2024-173088537_6d283897",
@@ -8736,7 +9732,10 @@
   "layer_score": null,
   "note": "5/96 pages OCRed",
   "agri_relevance_hits": 51,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_cop-cereals-81-1764747487-ty2n5wd-pdf_5921c72a",
@@ -8759,7 +9758,10 @@
   "layer_score": 0.898,
   "note": "text layer unreliable (OCR agreement 0.90); OCR used OCR capped at 40 pages of 123 40/123 pages OCRed",
   "agri_relevance_hits": 156,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.18,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_baseline-survey-report-fansep-june-2025-_5b954c7a",
@@ -8782,7 +9784,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 59,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_48-l9kpps2-pdf_cd2ee54c",
@@ -8818,7 +9823,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 44",
   "agri_relevance_hits": 277,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.89,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_5vksibt-pdf_5c1a74cf",
@@ -8843,7 +9851,10 @@
   "layer_score": 0.872,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used",
   "agri_relevance_hits": 193,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.97,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_temperate-and-warm-book-1-r33ioff-pdf_489c8375",
@@ -8866,7 +9877,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_25-uur1lvw-pdf_2ba0d73c",
@@ -8891,7 +9905,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.01,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_tropical-and-sub-tropical-book-2-snd8jcy_af4daadf",
@@ -8914,7 +9931,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 15,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_okhar-book-toioscy-pdf_fd2c73f9",
@@ -8941,7 +9961,10 @@
   "layer_score": 0.881,
   "note": "text layer unreliable (OCR agreement 0.88); OCR used OCR capped at 40 pages of 86 40/86 pages OCRed",
   "agri_relevance_hits": 139,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.2,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_kubi-book-oebverx-pdf_e1ecc1ff",
@@ -8970,7 +9993,10 @@
   "layer_score": 0.965,
   "note": "5/67 pages OCRed",
   "agri_relevance_hits": 145,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.29,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_31-d9sko0s-pdf_90523a3d",
@@ -9006,7 +10032,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 43",
   "agri_relevance_hits": 156,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.5,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_banana-book-euinnp3-pdf_8bf496f0",
@@ -9032,7 +10061,10 @@
   "layer_score": 0.969,
   "note": "5/62 pages OCRed",
   "agri_relevance_hits": 122,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.02,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_avocado-book-yvfzqhk-pdf_a730e162",
@@ -9059,7 +10091,10 @@
   "layer_score": 0.949,
   "note": "5/62 pages OCRed",
   "agri_relevance_hits": 92,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.63,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_27-0zhhmv0-pdf_8d4b43ee",
@@ -9084,7 +10119,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 9,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.01,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_32-dgk7try-pdf_59e5b7cc",
@@ -9120,7 +10158,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 42",
   "agri_relevance_hits": 229,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.67,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_33-z6clcdw-pdf_f027d1d4",
@@ -9156,7 +10197,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 42",
   "agri_relevance_hits": 190,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.41,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_dcfwqvz-pdf_8c543c7e",
@@ -9191,7 +10235,10 @@
   "layer_score": 0.95,
   "note": "4/52 pages OCRed",
   "agri_relevance_hits": 291,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.06,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_web-4ejiyje-pdf_dcf2ca88",
@@ -9227,7 +10274,10 @@
   "layer_score": 0.969,
   "note": "4/40 pages OCRed",
   "agri_relevance_hits": 294,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 10.19,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_yzoxu34-pdf_d4156430",
@@ -9252,7 +10302,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 42,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.05,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_teumgda-pdf_df9d8cd2",
@@ -9280,7 +10333,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 103,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.3,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_biu-utpadan-prabidi-jshz94j-pdf_936cd2ef",
@@ -9310,7 +10366,10 @@
   "layer_score": 0.968,
   "note": "3/44 pages OCRed",
   "agri_relevance_hits": 399,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 12.56,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_3-tkvtcwa-pdf_dbf377d6",
@@ -9341,7 +10400,10 @@
   "layer_score": 0.981,
   "note": "4/44 pages OCRed",
   "agri_relevance_hits": 106,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.06,
+  "admin_density": 0.06,
+  "index_recommended": true
  },
  {
   "id": "aitc_1-abd5u03-pdf_d069f9ca",
@@ -9369,7 +10431,10 @@
   "layer_score": 0.977,
   "note": "2/36 pages OCRed",
   "agri_relevance_hits": 101,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.45,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "aitc_2-r09rxio-pdf_9d4ba523",
@@ -9401,7 +10466,10 @@
   "layer_score": 0.972,
   "note": "2/44 pages OCRed",
   "agri_relevance_hits": 104,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.79,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_6-zf6r7p8-pdf_73d83a29",
@@ -9437,7 +10505,10 @@
   "layer_score": 0.973,
   "note": "1/36 pages OCRed",
   "agri_relevance_hits": 47,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.88,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_5-qwluux8-pdf_dc1a50d9",
@@ -9464,7 +10535,10 @@
   "layer_score": 0.973,
   "note": "",
   "agri_relevance_hits": 131,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 6.69,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_4-c5keahh-pdf_b02b030b",
@@ -9493,7 +10567,10 @@
   "layer_score": 0.975,
   "note": "2/56 pages OCRed",
   "agri_relevance_hits": 90,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 3.56,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_3-dmh2m0n-pdf_1d7f25e8",
@@ -9521,7 +10598,10 @@
   "layer_score": 0.95,
   "note": "1/24 pages OCRed",
   "agri_relevance_hits": 171,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.2,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_gwjvxet-pdf_41a9ebbd",
@@ -9548,7 +10628,10 @@
   "layer_score": 0.97,
   "note": "4/30 pages OCRed",
   "agri_relevance_hits": 43,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.55,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_2ryu9bt-pdf_e607a180",
@@ -9577,7 +10660,10 @@
   "layer_score": 0.982,
   "note": "3/34 pages OCRed",
   "agri_relevance_hits": 230,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.78,
+  "admin_density": 0.08,
+  "index_recommended": true
  },
  {
   "id": "aitc_tqtlwg4-pdf_8e5ceaac",
@@ -9608,7 +10694,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 48",
   "agri_relevance_hits": 172,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 7.35,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_2-lcnpuw1-pdf_0da4fe76",
@@ -9644,7 +10733,10 @@
   "layer_score": 0.918,
   "note": "3/40 pages OCRed",
   "agri_relevance_hits": 262,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 10.0,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "aitc_46-jd2156k-pdf_b253fdbe",
@@ -9676,7 +10768,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 238,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.86,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_49-sxtilgm-pdf_65350efd",
@@ -9703,7 +10798,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 189,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.62,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_50-cutirm3-pdf_327be54c",
@@ -9737,7 +10835,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 48,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.37,
+  "admin_density": 0.02,
+  "index_recommended": true
  },
  {
   "id": "aitc_52-fa4hzsd-pdf_6dab90ae",
@@ -9770,7 +10871,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 114,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.19,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_w3qgqfd-pdf_cce9730d",
@@ -9806,7 +10910,10 @@
   "layer_score": 0.873,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used OCR capped at 40 pages of 383 40/383 pages OCRed",
   "agri_relevance_hits": 368,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 8.94,
+  "admin_density": 0.03,
+  "index_recommended": true
  },
  {
   "id": "moald_a-e-journal-27th-vol-1-avxssz0-pdf_0d0c28fe",
@@ -9829,7 +10936,10 @@
   "layer_score": null,
   "note": "1/120 pages OCRed",
   "agri_relevance_hits": 88,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_7-day-notice-for-comments-and-suggestion_ce9df69c",
@@ -9856,7 +10966,10 @@
   "layer_score": 0.86,
   "note": "text layer unreliable (OCR agreement 0.86); OCR used OCR capped at 40 pages of 789 40/789 pages OCRed",
   "agri_relevance_hits": 28,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.4,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_seia-oa5cajc-pdf_d1daa472",
@@ -9879,7 +10992,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_sdtor-x9aju15-pdf_0df76a8b",
@@ -9902,7 +11018,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_eia-1-e1i3awy-pdf_a4f8da1e",
@@ -9925,7 +11044,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_proactive-disclosure-on-rti-2082-kartik-_e30c88ea",
@@ -9951,7 +11073,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.05,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "aitc_st1-qpnk1ts-pdf_ac64657d",
@@ -9978,7 +11103,10 @@
   "layer_score": 0.81,
   "note": "text layer unreliable (OCR agreement 0.81); OCR used",
   "agri_relevance_hits": 282,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.89,
+  "admin_density": 0.05,
+  "index_recommended": false
  },
  {
   "id": "moald_proactive-disclosure-on-rti-2082-sau-rke_e1ce1ebc",
@@ -10004,7 +11132,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 19,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.08,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "moald_proactive-disclosure-on-rti-2082-baisakh_ad7f384d",
@@ -10030,7 +11161,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.03,
+  "admin_density": 0.05,
+  "index_recommended": false
  },
  {
   "id": "moald_eis-mk3748w-pdf_1f1b2851",
@@ -10053,7 +11187,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_eis-rcdw2gd-pdf_10ed00eb",
@@ -10076,7 +11213,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 0,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_nepal-forest-corporation-limited-managem_75478ee4",
@@ -10099,7 +11239,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 10,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.1,
+  "index_recommended": false
  },
  {
   "id": "moald_ruj6wsi-pdf_62aed4ea",
@@ -10132,7 +11275,10 @@
   "layer_score": 0.846,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used",
   "agri_relevance_hits": 204,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.75,
+  "admin_density": 0.22,
+  "index_recommended": true
  },
  {
   "id": "moald_9bmtuep-pdf_ef4710d4",
@@ -10165,7 +11311,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used",
   "agri_relevance_hits": 204,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.68,
+  "admin_density": 0.23,
+  "index_recommended": true
  },
  {
   "id": "aitc_aitc-journal-2026-website-nktooby-pdf_0a95ffd8",
@@ -10188,7 +11337,10 @@
   "layer_score": null,
   "note": "3/150 pages OCRed",
   "agri_relevance_hits": 41,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_ba1esoz-pdf_c03886e6",
@@ -10218,7 +11370,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used",
   "agri_relevance_hits": 203,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.64,
+  "admin_density": 0.12,
+  "index_recommended": true
  },
  {
   "id": "aitc_journal-18-th-aitc-jhvlkfy-pdf_aaa58a40",
@@ -10241,7 +11396,10 @@
   "layer_score": null,
   "note": "3/100 pages OCRed",
   "agri_relevance_hits": 131,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_adjv17-vwxd7wa-pdf_0ea88071",
@@ -10266,7 +11424,10 @@
   "layer_score": null,
   "note": "5/154 pages OCRed",
   "agri_relevance_hits": 56,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.03,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_adjv16-4yk9pf7-pdf_ef3f2a5c",
@@ -10289,7 +11450,10 @@
   "layer_score": null,
   "note": "4/128 pages OCRed",
   "agri_relevance_hits": 112,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_adjv15-kvjvxbi-pdf_4bda35f2",
@@ -10312,7 +11476,10 @@
   "layer_score": null,
   "note": "4/156 pages OCRed",
   "agri_relevance_hits": 72,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_adjv11-akotjgc-pdf_543864f1",
@@ -10335,7 +11502,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 44,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_3avtx1u-pdf_20cd8488",
@@ -10366,7 +11536,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used",
   "agri_relevance_hits": 203,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.84,
+  "admin_density": 0.14,
+  "index_recommended": true
  },
  {
   "id": "moald_iu4efan-pdf_dea80d91",
@@ -10397,7 +11570,10 @@
   "layer_score": 0.846,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used",
   "agri_relevance_hits": 204,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.87,
+  "admin_density": 0.14,
+  "index_recommended": true
  },
  {
   "id": "aitc_adjv8-avollx6-pdf_33c4a6a1",
@@ -10420,7 +11596,10 @@
   "layer_score": null,
   "note": "1/136 pages OCRed",
   "agri_relevance_hits": 121,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_k2-2sx3p3u-pdf_e2f7887b",
@@ -10443,7 +11622,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 103,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_k3-dnwm64k-pdf_8019b044",
@@ -10466,7 +11648,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 31,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_k4-cgqbvus-pdf_0d41e5a9",
@@ -10489,7 +11674,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 1,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_pdf-1-2-ugcipn6-pdf_8df3dfa3",
@@ -10525,7 +11713,10 @@
   "layer_score": 0.87,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used",
   "agri_relevance_hits": 255,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.68,
+  "admin_density": 0.11,
+  "index_recommended": true
  },
  {
   "id": "moald_cgylmii-pdf_74cb7fe1",
@@ -10558,7 +11749,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used",
   "agri_relevance_hits": 204,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.88,
+  "admin_density": 0.11,
+  "index_recommended": true
  },
  {
   "id": "moald_pdf-ocifmla-pdf_1cd422be",
@@ -10589,7 +11783,10 @@
   "layer_score": 0.837,
   "note": "text layer unreliable (OCR agreement 0.84); OCR used",
   "agri_relevance_hits": 204,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.43,
+  "admin_density": 0.13,
+  "index_recommended": true
  },
  {
   "id": "moald_url-stat-book-2083-03-16-blzj7t6-pdf_7cc265cf",
@@ -10612,7 +11809,10 @@
   "layer_score": null,
   "note": "29/224 pages OCRed",
   "agri_relevance_hits": 70,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_final1-0zl2ki7-pdf_9972e9a0",
@@ -10637,7 +11837,10 @@
   "layer_score": 0.631,
   "note": "text layer unreliable (OCR agreement 0.63); OCR used OCR capped at 40 pages of 92 40/92 pages OCRed",
   "agri_relevance_hits": 127,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.34,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_1-2x42nqx-pdf_d59e94ba",
@@ -10664,7 +11867,10 @@
   "layer_score": 0.636,
   "note": "text layer unreliable (OCR agreement 0.64); OCR used OCR capped at 40 pages of 85 40/85 pages OCRed",
   "agri_relevance_hits": 86,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.67,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "aitc_2-yxzanvv-pdf_ab4ecc17",
@@ -10687,7 +11893,10 @@
   "layer_score": 0.652,
   "note": "text layer unreliable (OCR agreement 0.65); OCR used OCR capped at 40 pages of 55",
   "agri_relevance_hits": 98,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.01,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "aitc_3-gokdlli-pdf_53803823",
@@ -10713,7 +11922,10 @@
   "layer_score": 0.506,
   "note": "text layer unreliable (OCR agreement 0.51); OCR used OCR capped at 40 pages of 106 40/106 pages OCRed",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.18,
+  "admin_density": 0.08,
+  "index_recommended": false
  },
  {
   "id": "aitc_k1-fudsili-pdf_a79115a8",
@@ -10739,7 +11951,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 124,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.34,
+  "admin_density": 0.06,
+  "index_recommended": false
  },
  {
   "id": "aitc_n2-fajxnhs-pdf_81562617",
@@ -10766,7 +11981,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 183,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.6,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "moald_mofe-progress-report-2081-82-dbqgzb4-1-o_a18feb1e",
@@ -10792,7 +12010,10 @@
   "layer_score": 0.926,
   "note": "1/88 pages OCRed",
   "agri_relevance_hits": 23,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.26,
+  "admin_density": 0.01,
+  "index_recommended": false
  },
  {
   "id": "moald_annual-report-208081-y276qn5-xftinyb-pdf_2efd4c0a",
@@ -10818,7 +12039,10 @@
   "layer_score": 0.945,
   "note": "",
   "agri_relevance_hits": 24,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.31,
+  "admin_density": 0.02,
+  "index_recommended": false
  },
  {
   "id": "moald_annual-report-079-80-zju7fyl-ohqfjb4-pdf_3d6db23d",
@@ -10845,7 +12069,10 @@
   "layer_score": 0.952,
   "note": "1/90 pages OCRed",
   "agri_relevance_hits": 30,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.37,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "moald_annual-report-078-79-s12eosc-ikk2ssb-pdf_639f798b",
@@ -10871,7 +12098,10 @@
   "layer_score": 0.845,
   "note": "text layer unreliable (OCR agreement 0.85); OCR used OCR capped at 40 pages of 79",
   "agri_relevance_hits": 23,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.25,
+  "admin_density": 0.04,
+  "index_recommended": false
  },
  {
   "id": "moald_fy-76-77-4nygich-ze10l4m-pdf_5b48de0c",
@@ -10897,7 +12127,10 @@
   "layer_score": 0.749,
   "note": "text layer unreliable (OCR agreement 0.75); OCR used OCR capped at 40 pages of 134 40/134 pages OCRed",
   "agri_relevance_hits": 23,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.24,
+  "admin_density": 0.05,
+  "index_recommended": false
  },
  {
   "id": "moald_1597223196pdf-2475-986-1658828952-okqtwu_c37a86a4",
@@ -10924,7 +12157,10 @@
   "layer_score": 0.974,
   "note": "",
   "agri_relevance_hits": 17,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.27,
+  "admin_density": 0.02,
+  "index_recommended": false
  },
  {
   "id": "moald_e-copy-2082-11-28-moald-book-final-2081-_4b5f8dca",
@@ -10960,7 +12196,10 @@
   "layer_score": 0.944,
   "note": "31/316 pages OCRed",
   "agri_relevance_hits": 234,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.13,
+  "admin_density": 0.08,
+  "index_recommended": true
  },
  {
   "id": "moald_1-1-xe5fikf-pdf_ea96773c",
@@ -10994,7 +12233,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 47",
   "agri_relevance_hits": 197,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.39,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_1-ndugaw6-pdf_32002205",
@@ -11024,7 +12266,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 87,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.76,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_moald-annual-book-2080-81-q9vebju-pdf_a0214804",
@@ -11060,7 +12305,10 @@
   "layer_score": null,
   "note": "13/306 pages OCRed",
   "agri_relevance_hits": 217,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.96,
+  "admin_density": 0.06,
+  "index_recommended": true
  },
  {
   "id": "moald_xc1ol3x-pdf_cecf7cfc",
@@ -11086,7 +12334,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 160,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.77,
+  "admin_density": 0.09,
+  "index_recommended": false
  },
  {
   "id": "moald_moald-annual-book-web-copy-gebr9o9-pdf_51947f97",
@@ -11115,7 +12366,10 @@
   "layer_score": 0.865,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used OCR capped at 40 pages of 268 40/268 pages OCRed",
   "agri_relevance_hits": 242,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.73,
+  "admin_density": 0.1,
+  "index_recommended": true
  },
  {
   "id": "moald_evaluation-of-the-performance-of-veterin_168bd0bc",
@@ -11138,7 +12392,10 @@
   "layer_score": null,
   "note": "1/203 pages OCRed",
   "agri_relevance_hits": 29,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_2077-compressed-scymtgr-pdf_231cfa9f",
@@ -11170,7 +12427,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 205 40/205 pages OCRed",
   "agri_relevance_hits": 212,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.82,
+  "admin_density": 0.1,
+  "index_recommended": true
  },
  {
   "id": "moald_1-4tbzcuy-pdf_54519316",
@@ -11203,7 +12463,10 @@
   "layer_score": 0.872,
   "note": "text layer unreliable (OCR agreement 0.87); OCR used",
   "agri_relevance_hits": 232,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.78,
+  "admin_density": 0.04,
+  "index_recommended": true
  },
  {
   "id": "moald_statistical-information-on-nepalese-agri_8455e207",
@@ -11226,7 +12489,10 @@
   "layer_score": null,
   "note": "2/252 pages OCRed",
   "agri_relevance_hits": 37,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_statistical-information-on-nepalese-agri_3a8c57b4",
@@ -11249,7 +12515,10 @@
   "layer_score": null,
   "note": "18/224 pages OCRed",
   "agri_relevance_hits": 82,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_pilot-agriculture-integrated-survey-acxc_ab6324d9",
@@ -11272,7 +12541,10 @@
   "layer_score": null,
   "note": "3/188 pages OCRed",
   "agri_relevance_hits": 65,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_statistical-information-on-nepalese-agri_9a5da5ec",
@@ -11295,7 +12567,10 @@
   "layer_score": null,
   "note": "5/219 pages OCRed",
   "agri_relevance_hits": 54,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_statistical-information-on-the-nepalese-_f4bf0eac",
@@ -11318,7 +12593,10 @@
   "layer_score": null,
   "note": "25/437 pages OCRed",
   "agri_relevance_hits": 88,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_statistical-information-on-nepalese-agri_2eda9847",
@@ -11341,7 +12619,10 @@
   "layer_score": null,
   "note": "5/306 pages OCRed",
   "agri_relevance_hits": 101,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_moald-statical-book-magre-2081-final-wgf_58f9ebbb",
@@ -11364,7 +12645,10 @@
   "layer_score": null,
   "note": "27/242 pages OCRed",
   "agri_relevance_hits": 100,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_agricultural-statistics-pocket-book-2023_997a73fa",
@@ -11387,7 +12671,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 46,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_statistical-information-on-nepalese-agri_7aa34931",
@@ -11423,7 +12710,10 @@
   "layer_score": 0.936,
   "note": "2/269 pages OCRed",
   "agri_relevance_hits": 144,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.11,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-journal-of-agriculture-and-environme_41da96ab",
@@ -11446,7 +12736,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 69,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-journal-of-agriculture-and-environme_5429fcfc",
@@ -11469,7 +12762,10 @@
   "layer_score": null,
   "note": "5/222 pages OCRed",
   "agri_relevance_hits": 64,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-journal-of-agriculture-and-environme_a58ca2d4",
@@ -11492,7 +12788,10 @@
   "layer_score": null,
   "note": "2/224 pages OCRed",
   "agri_relevance_hits": 95,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-journal-of-agriculture-and-environme_1a0a5a38",
@@ -11515,7 +12814,10 @@
   "layer_score": null,
   "note": "1/286 pages OCRed",
   "agri_relevance_hits": 74,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-agriculture-and-environment-vol-22-e_a76e26ab",
@@ -11538,7 +12840,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 121,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_the-agriculture-and-environment-vol-21-2_5c08b2a9",
@@ -11561,7 +12866,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 100,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_project-implementation-manual-for-food-a_46ee792a",
@@ -11584,7 +12892,10 @@
   "layer_score": null,
   "note": "OCR capped at 40 pages of 218 40/218 pages OCRed",
   "agri_relevance_hits": 36,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_business-profile-of-commodity-associatio_2e79406b",
@@ -11607,7 +12918,10 @@
   "layer_score": 0.816,
   "note": "text layer unreliable (OCR agreement 0.82); OCR used OCR capped at 40 pages of 43",
   "agri_relevance_hits": 157,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.09,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_image-312-fcnxdko-pdf_cc28e11d",
@@ -11632,7 +12946,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 13.46,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_suywkcj-pdf_2d72f786",
@@ -11663,7 +12980,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 163,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 4.81,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_img-0001-2-wrxu1gx-pdf_1db8cf95",
@@ -11686,7 +13006,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 28,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_gedsi-strategy-mofe-path-2-fopfssy-rjyfi_a04eb7b6",
@@ -11713,7 +13036,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 64",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.55,
+  "admin_density": 0.03,
+  "index_recommended": false
  },
  {
   "id": "moald_strategic-action-plan-for-improving-2078_d830a5a1",
@@ -11739,7 +13065,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 20,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.2,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_conserv-4zafw8w-snfxajp-pdf_e2d4d0e6",
@@ -11764,7 +13093,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.11,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_zy6srk5-ofbhw5a-pdf_3ad9b4d6",
@@ -11791,7 +13123,10 @@
   "layer_score": 0.996,
   "note": "OCR capped at 40 pages of 68",
   "agri_relevance_hits": 40,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.9,
+  "admin_density": 0.04,
+  "index_recommended": false
  },
  {
   "id": "moald_wyxchfu-uhgu3ug-pdf_b465ee47",
@@ -11817,7 +13152,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 15,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.15,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_cliclimate-change-gender-and-social-incl_0fecb3d3",
@@ -11842,7 +13180,10 @@
   "layer_score": 0.916,
   "note": "5/64 pages OCRed",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.01,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_climatechangepolicye-2076-tglv79f-sv9ikm_9ffb0d01",
@@ -11865,7 +13206,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 19,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_chronologynationalagroforestrypolicy-207_aefd6746",
@@ -11888,7 +13232,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 21,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_national-agroforestry-policy-2019-nxc6mq_453980de",
@@ -11911,7 +13258,10 @@
   "layer_score": null,
   "note": "",
   "agri_relevance_hits": 59,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_national-environment-policy-2076-ua8ecbg_96fbd43a",
@@ -11937,7 +13287,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 26,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.25,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_ban-niti-indd-gs8bxmj-rky4uxa-pdf_eefdfed2",
@@ -11963,7 +13316,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 32,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.59,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_national-ramsar-strategy-and-action-plan_2b729d85",
@@ -11986,7 +13342,10 @@
   "layer_score": null,
   "note": "6/44 pages OCRed",
   "agri_relevance_hits": 4,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_forestry-sector-strategy-2016-2025-deph7_af0b8565",
@@ -12009,7 +13368,10 @@
   "layer_score": null,
   "note": "4/94 pages OCRed",
   "agri_relevance_hits": 3,
-  "agri_relevant": false
+  "agri_relevant": false,
+  "agro_density": 0.0,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_wetland-policy-2069-cth4q7y-tyrs330-pdf_b8c195a0",
@@ -12035,7 +13397,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 18,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.41,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_herbs-and-non-timber-forest-products-dev_48ba0708",
@@ -12061,7 +13426,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 64,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.78,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_samrathit-chhetra-bhitra-2065-lzpud3w-sl_68d5b093",
@@ -12086,7 +13454,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 13,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.11,
+  "admin_density": 0.0,
+  "index_recommended": false
  },
  {
   "id": "moald_bee-promotion-policy-2073-ypp0ukt-pdf_2d056b32",
@@ -12112,7 +13483,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 227,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.23,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_r4snabk-pdf_ce5ecbec",
@@ -12138,7 +13512,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 132,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 5.85,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_dix4z3e-pdf_3c4348bb",
@@ -12169,7 +13546,10 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used OCR capped at 40 pages of 386 40/386 pages OCRed",
   "agri_relevance_hits": 309,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 2.86,
+  "admin_density": 0.01,
+  "index_recommended": true
  },
  {
   "id": "moald_1obfgsa-pdf_d0b5b887",
@@ -12195,7 +13575,10 @@
   "layer_score": 0.784,
   "note": "text layer unreliable (OCR agreement 0.78); OCR used",
   "agri_relevance_hits": 245,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 1.05,
+  "admin_density": 0.0,
+  "index_recommended": true
  },
  {
   "id": "moald_ag511rq-pdf_c181a292",
@@ -12221,6 +13604,9 @@
   "layer_score": null,
   "note": "legacy-font text layer detected; OCR used",
   "agri_relevance_hits": 35,
-  "agri_relevant": true
+  "agri_relevant": true,
+  "agro_density": 0.1,
+  "admin_density": 0.0,
+  "index_recommended": false
  }
 ]
