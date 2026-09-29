@@ -40,7 +40,7 @@ is built for reviewing the retrieval rather than just using it:
   detected, the three collapsed keys the query was reduced to, and the top
   five intents with scores. Typing a question in Devanagari and again in
   Roman Nepali shows the two collapsing to the same keys.
-- **Knowledge base** — all 45 intents, filterable, with answers, pattern
+- **Knowledge base** — all 49 intents, filterable, with answers, pattern
   counts and sources.
 - **Evaluation** — runs all 149 test cases in the browser and lists every
   miss, marked confident or unsure.
@@ -70,14 +70,14 @@ python eval/evaluate.py --dump /tmp/py.json
 node eval/verify_web_port.js /tmp/py.json            # fails on any drift
 ```
 
-It currently agrees with Python on 149/149 cases, with a maximum score
-difference of 2.2e-16. Re-run it after any change to `agrichat/nepali_text.py`
+It currently agrees with Python on 160/160 cases, with a maximum score
+difference of 6.7e-16. Re-run it after any change to `agrichat/nepali_text.py`
 or `agrichat/engine.py`, and regenerate the bundle after any change to
 `data/kb/`.
 
 ## What it knows
 
-45 intents across the topics Nepali farmers actually ask about:
+49 intents across the topics Nepali farmers actually ask about:
 
 | Area | Covered |
 |---|---|
@@ -95,8 +95,8 @@ agriculture directorates); each entry carries its `sources`.
 
 ## Accuracy
 
-Measured on `eval/testset.json` — 149 held-out queries in both scripts, none
-copied verbatim from the knowledge base, including 12 out-of-scope questions:
+Measured on `eval/testset.json` — 160 held-out queries in both scripts,
+including 12 out-of-scope questions:
 
 ```bash
 python eval/evaluate.py            # report
@@ -113,11 +113,11 @@ unless both the absolute score and the margin over the runner-up clear a bar.
 Current numbers:
 
 ```
-top-1 accuracy        91.2%   correct intent ranked first
-top-3 accuracy        96.4%   correct intent in the top 3
-coverage              89.1%   answered confidently
-answer precision      96.7%   of those, correct
-CONFIDENT-WRONG        2.9%   <-- the number that hurts farmers
+top-1 accuracy        91.9%   correct intent ranked first
+top-3 accuracy        95.9%   correct intent in the top 3
+coverage              89.9%   answered confidently
+answer precision      97.0%   of those, correct
+CONFIDENT-WRONG        2.7%   <-- the number that hurts farmers
 out-of-scope refused  91.7%   junk questions correctly declined
 ```
 
@@ -126,6 +126,25 @@ out-of-scope refused  91.7%   junk questions correctly declined
 > selects thresholds against this same set, so both the phrasing and the
 > settings are optimistic. Real farmer phrasing will be messier. Before
 > deploying, collect actual farmer questions and re-measure on those.
+
+Every run checks whether any test query has become a verbatim copy of a
+knowledge-base pattern and warns if so. Such a case is a guaranteed hit that
+silently inflates all six numbers, and they creep in easily: adding patterns
+to close a coverage gap is exactly how six of them appeared here once.
+
+### One intent per question, not per crop
+
+The knowledge base is organised by **the question a farmer asks**, not by
+crop. This matters more than it sounds. An intent that bundles season,
+spacing, fertiliser, pests and rotation into one answer will match any
+question about that crop and then reply with all of it — so
+`kauli ko full ma kira lagyo` ("insects in my cauliflower curd") came back
+with a planting-season guide, with the pest advice buried six paragraphs
+down. Retrieval was right; the answer was not.
+
+When adding a topic, keep answers to roughly one question each, and split
+pests and disease away from cultivation. A useful smell test: if an answer
+needs more than about three section headings, it is probably two intents.
 
 ## How it works
 

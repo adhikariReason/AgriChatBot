@@ -1,195 +1,646 @@
 {
-  "note": "Held-out queries. None is copied verbatim from data/kb patterns -- these are paraphrases, misspellings, Roman Nepali variants and farmer-style phrasing. expected=null means out-of-scope: the engine must refuse rather than answer.",
+  "note": "Held-out queries. None is copied verbatim from data/kb patterns -- these are paraphrases, misspellings, Roman Nepali variants and farmer-style phrasing. expected=null means out-of-scope: the engine must refuse rather than answer. Cases marked source=real-user came from someone actually using the console.",
   "cases": [
-    {"q": "धान कुन बेला रोप्नु राम्रो हुन्छ?", "expected": "dhan_ropai_samaya"},
-    {"q": "असारमा धान लगाउन पाइन्छ कि पाइँदैन", "expected": "dhan_ropai_samaya"},
-    {"q": "dhaan ropne best time kahile ho", "expected": "dhan_ropai_samaya"},
-    {"q": "dhan ko berna kati din ma sarne", "expected": "dhan_ropai_samaya"},
-    {"q": "मेरो धानको बेर्ना बूढो भयो अब के गर्ने", "expected": "dhan_ropai_samaya"},
-
-    {"q": "एक बिघा धानमा कति बीउ चाहिन्छ", "expected": "dhan_biu_dar"},
-    {"q": "dhan ko biu nun pani ma kasari jachne", "expected": "dhan_biu_dar"},
-    {"q": "धानको बीउ छर्नु अघि के उपचार गर्ने", "expected": "dhan_biu_dar"},
-
-    {"q": "धानलाई कति किलो युरिया चाहिन्छ", "expected": "dhan_mal_matra"},
-    {"q": "dhan ma urea kaile ra kati halne", "expected": "dhan_mal_matra"},
-    {"q": "धानमा मल तीन पटक हाल्नु पर्छ?", "expected": "dhan_mal_matra"},
-    {"q": "dhaan lai npk kati chahincha", "expected": "dhan_mal_matra"},
-
-    {"q": "धानको पातमा आँखा जस्तो दाग आयो", "expected": "dhan_maruwa_rog"},
-    {"q": "धानको बाला सेतो भएर सुक्यो", "expected": "dhan_maruwa_rog"},
-    {"q": "dhan ma blast lagyo kasari bachaune", "expected": "dhan_maruwa_rog"},
-    {"q": "maruwa rog ko upachar k cha", "expected": "dhan_maruwa_rog"},
-
-    {"q": "धानको बीचको मुन्टा सुक्यो", "expected": "dhan_kira"},
-    {"q": "धानमा भुसुना लाग्यो के गर्ने", "expected": "dhan_kira"},
-    {"q": "dhan ko paat berine kira ko upaya", "expected": "dhan_kira"},
-
-    {"q": "मकै कुन महिनामा लगाउने", "expected": "makai_ropai_samaya"},
-    {"q": "makai ropda line ko duri kati", "expected": "makai_ropai_samaya"},
-    {"q": "मकैमा कति मल हाल्ने", "expected": "makai_ropai_samaya"},
-
-    {"q": "मकैको मुन्टामा धुलो जस्तो गोबर देखियो", "expected": "makai_fauji_kira"},
-    {"q": "makai ko paat kirale khayo pwal pwal", "expected": "makai_fauji_kira"},
-    {"q": "फौजी किराको लार्भा कसरी चिन्ने", "expected": "makai_fauji_kira"},
-    {"q": "armyworm control garne jaivik upaya", "expected": "makai_fauji_kira"},
-
-    {"q": "गहुँ कुन महिनामा छर्नु राम्रो", "expected": "gahu_kheti"},
-    {"q": "gahu ma pahilo pani kaile dine", "expected": "gahu_kheti"},
-    {"q": "गहुँमा सिन्दुरे रोग लाग्यो", "expected": "gahu_kheti"},
-
-    {"q": "कोदो लगाउने तरिका भन्नुस", "expected": "kodo_fapar"},
-    {"q": "fapar kati din ma pakcha", "expected": "kodo_fapar"},
-
-    {"q": "गोलभेँडाको पातमा नक्सा जस्तो लाइन आयो", "expected": "golbheda_tuta_rog"},
-    {"q": "tomato ko fal bhitra bata kuhiyo", "expected": "golbheda_tuta_rog"},
-    {"q": "टुटाको लागि फेरोमोन ट्रयाप कति राख्ने", "expected": "golbheda_tuta_rog"},
-    {"q": "golbheda ma kira lagyo k garne", "expected": "golbheda_tuta_rog"},
-
-    {"q": "आलुको पातमा कालो दाग आएर बोट सुक्यो", "expected": "alu_dadhuwa_rog"},
-    {"q": "aalu ko bot bihana sweto dhusi dekhincha", "expected": "alu_dadhuwa_rog"},
-    {"q": "आलुमा लाग्ने मुख्य रोग कुन हो", "expected": "alu_dadhuwa_rog"},
-
-    {"q": "आलु कसरी जोगाएर राख्ने", "expected": "alu_bhandaran"},
-    {"q": "alu hariyo bhayo khana huncha", "expected": "alu_bhandaran"},
-    {"q": "बीउ आलुमा टुसा आयो के गर्ने", "expected": "alu_bhandaran"},
-
-    {"q": "काउलीको फूल सानो आयो", "expected": "kauli_banda_kheti"},
-    {"q": "kauli kun sijan ma lagaune", "expected": "kauli_banda_kheti"},
-    {"q": "बन्दामा लाही लाग्यो", "expected": "kauli_banda_kheti"},
-    {"q": "काउलीको डाँठ भित्र खैरो भयो", "expected": "kauli_banda_kheti"},
-
-    {"q": "प्लास्टिक घरमा तरकारी लगाउन कस्तो प्लास्टिक चाहिन्छ", "expected": "tunnel_kheti"},
-    {"q": "tunnel bhitra garmi dherai bhayo k garne", "expected": "tunnel_kheti"},
-    {"q": "बेमौसमी खेती गर्दा फाइदा हुन्छ?", "expected": "tunnel_kheti"},
-
-    {"q": "बेर्ना फेदबाट कालो भएर ढल्यो", "expected": "birwa_nursery"},
-    {"q": "berna sardaa maryo kina", "expected": "birwa_nursery"},
-    {"q": "नर्सरीको ब्याड कति अग्लो बनाउने", "expected": "birwa_nursery"},
-
-    {"q": "खुर्सानीको पात मुडिएर खुम्चियो", "expected": "khursani_kheti"},
-    {"q": "khursani ko ful jharera fal lagena", "expected": "khursani_kheti"},
-    {"q": "डल्ले खुर्सानी कहिले सार्ने", "expected": "khursani_kheti"},
-
-    {"q": "प्याजको गाँठो ठूलो भएन", "expected": "pyaj_lasun"},
-    {"q": "lasun ko choya kati thulo rojne", "expected": "pyaj_lasun"},
-    {"q": "प्याज टिप्ने सही बेला कुन हो", "expected": "pyaj_lasun"},
-
-    {"q": "कम्पोस्ट खाडल कति ठूलो बनाउने", "expected": "compost_banaune"},
-    {"q": "gobar ra parale mal kasari banaune", "expected": "compost_banaune"},
-    {"q": "कम्पोस्ट कति पटक पल्टाउने", "expected": "compost_banaune"},
-    {"q": "compost tayar bhayo bhanne kasari thaha paune", "expected": "compost_banaune"},
-
-    {"q": "मलको थुप्रोबाट नराम्रो गन्ध आउँछ", "expected": "compost_gandha"},
-    {"q": "compost ma jhinga ra musa aayo", "expected": "compost_gandha"},
-
-    {"q": "जीवामृत बनाउन के के चाहिन्छ", "expected": "jivamrit"},
-    {"q": "gahut ra gobar ko ghol kasari banaune", "expected": "jivamrit"},
-
-    {"q": "माटोको नमुना कति गहिरोबाट लिने", "expected": "mato_parikshan"},
-    {"q": "mato amliyo cha chun kati halne", "expected": "mato_parikshan"},
-    {"q": "माटो जाँच गराउन कहाँ जाने", "expected": "mato_parikshan"},
-
-    {"q": "डीएपी र युरियामा के फरक हुन्छ", "expected": "mal_prayog_niyam"},
-    {"q": "mal bot ko feda ma halda huncha", "expected": "mal_prayog_niyam"},
-    {"q": "धेरै युरिया हाल्दा बोट लड्छ?", "expected": "mal_prayog_niyam"},
-
-    {"q": "थोपा सिँचाइको ड्रिपर बन्द भयो", "expected": "thopa_sinchai"},
-    {"q": "pani kam cha kasari bachaune", "expected": "thopa_sinchai"},
-    {"q": "परालले माटो छोप्दा फाइदा के हुन्छ", "expected": "thopa_sinchai"},
-
-    {"q": "एउटै बाली हरेक वर्ष लगाउँदा हुन्छ?", "expected": "bali_ferbadal"},
-    {"q": "aalu pachi k bali lagaune", "expected": "bali_ferbadal"},
-    {"q": "मकैसँग भटमास लगाउन मिल्छ?", "expected": "bali_ferbadal"},
-
-    {"q": "विषादी नछरी कीरा हटाउने उपाय", "expected": "jaivik_kira_niyantran"},
-    {"q": "neem tel kati matra ma chharne", "expected": "jaivik_kira_niyantran"},
-    {"q": "पहेँलो टाँसिने कार्ड केका लागि हो", "expected": "jaivik_kira_niyantran"},
-    {"q": "lasun khursani ko ghol banaera chharda huncha", "expected": "jaivik_kira_niyantran"},
-
-    {"q": "बाख्राको खोर भुइँबाट कति उठाउने", "expected": "bakhra_palan"},
-    {"q": "bakhra lai dana kati dine", "expected": "bakhra_palan"},
-    {"q": "कुन जातको बोका किन्नु राम्रो", "expected": "bakhra_palan"},
-    {"q": "बाख्रा दुब्लो भयो खाँदैन", "expected": "bakhra_palan"},
-
-    {"q": "बाख्राको पाठा जन्मेपछि मर्यो", "expected": "bakhra_khop"},
-    {"q": "ppr ko sui kati barsa ma lagaune", "expected": "bakhra_khop"},
-    {"q": "बाख्रालाई जुकाको औषधि वर्षमा कति पटक", "expected": "bakhra_khop"},
-
-    {"q": "चल्लालाई पहिलो हप्ता कति तातो चाहिन्छ", "expected": "kukhura_palan"},
-    {"q": "kukhura ko khor ma amonia ko gandha aayo", "expected": "kukhura_palan"},
-    {"q": "रानीखेत रोगको खोप कहिले लगाउने", "expected": "kukhura_palan"},
-    {"q": "broiler kati din ma bikri garne", "expected": "kukhura_palan"},
-
-    {"q": "गाईको दूध अचानक घट्यो", "expected": "gai_bhaisi_dudh"},
-    {"q": "gai ko thun sunniyo ra dudh ma dallo aayo", "expected": "gai_bhaisi_dudh"},
-    {"q": "भैंसीलाई दैनिक कति पानी चाहिन्छ", "expected": "gai_bhaisi_dudh"},
-    {"q": "gai byayepachi sal khasena", "expected": "gai_bhaisi_dudh"},
-
-    {"q": "हिउँदमा पशुलाई घाँस पुगेन", "expected": "ghans_bali"},
-    {"q": "napier ko dandi kasari gadne", "expected": "ghans_bali"},
-    {"q": "साइलेज बिग्रेको कसरी थाहा पाउने", "expected": "ghans_bali"},
-    {"q": "paral ma urea halera khuwauda huncha", "expected": "ghans_bali"},
-
-    {"q": "मौरीको घार कहाँ राख्ने", "expected": "mauri_palan"},
-    {"q": "mauri ghar chhodera gayo kina", "expected": "mauri_palan"},
-    {"q": "मह कहिले काढ्ने", "expected": "mauri_palan"},
-
-    {"q": "पोखरीमा माछा बिहान मुख निकाल्छ", "expected": "machha_palan"},
-    {"q": "machha lai dana kati pratishat dine", "expected": "machha_palan"},
-    {"q": "पोखरीमा कुन कुन जातको माछा सँगै राख्ने", "expected": "machha_palan"},
-
-    {"q": "अदुवाको गानो कुहियो", "expected": "aduwa_besar"},
-    {"q": "aduwa ko biu kasari upachar garne", "expected": "aduwa_besar"},
-    {"q": "बेसार कहिले खन्ने", "expected": "aduwa_besar"},
-
-    {"q": "अलैंचीको पातमा पहेँलो धर्सो आयो", "expected": "alaichi_kheti"},
-    {"q": "alaichi ko lagi kun rukh ko chahari ramro", "expected": "alaichi_kheti"},
-    {"q": "फुर्के रोग लागेको बोट के गर्ने", "expected": "alaichi_kheti"},
-
-    {"q": "केराको थाममा कति सकर राख्ने", "expected": "kera_kheti"},
-    {"q": "kera ko paat tala bata pahelo huda gayo", "expected": "kera_kheti"},
-    {"q": "केराको घरीलाई झोलाले किन छोप्ने", "expected": "kera_kheti"},
-
-    {"q": "सरकारबाट टनेलको लागि पैसा पाइन्छ?", "expected": "krishi_anudan"},
-    {"q": "anudan lina farm darta garnu parcha", "expected": "krishi_anudan"},
-    {"q": "बाली बीमाको प्रिमियम कति तिर्नुपर्छ", "expected": "krishi_anudan"},
-    {"q": "krishi anudan ko lagi kun kagajat chahincha", "expected": "krishi_anudan"},
-
-    {"q": "रोग चिन्न प्राविधिक कहाँ भेटिन्छ", "expected": "krishi_gyan_kendra"},
-    {"q": "pashu birami bhayo kaha lagne", "expected": "krishi_gyan_kendra"},
-    {"q": "कृषि सल्लाह कसलाई सोध्ने", "expected": "krishi_gyan_kendra"},
-
-    {"q": "तरकारी कहाँ लगेर बेच्ने", "expected": "bajar_mulya"},
-    {"q": "kalimati ko bhau kaha herne", "expected": "bajar_mulya"},
-    {"q": "बिचौलियाले सस्तोमा किन्छ के गर्ने", "expected": "bajar_mulya"},
-
-    {"q": "धानमा घुन लाग्यो", "expected": "bhandaran_nokshan"},
-    {"q": "anna kati sukhha bhayepachi rakhne", "expected": "bhandaran_nokshan"},
-    {"q": "बीउ उम्रिन्छ कि उम्रिँदैन कसरी जाँच्ने", "expected": "bhandaran_nokshan"},
-
-    {"q": "असिनाले बाली भाँचियो अब के गर्ने", "expected": "mausam_jokhim"},
-    {"q": "khet ma pani jamyo bali marcha ki", "expected": "mausam_jokhim"},
-    {"q": "सुक्खा परेको बेला बाली कसरी जोगाउने", "expected": "mausam_jokhim"},
-
-    {"q": "नमस्ते हजुर", "expected": "abhivadan"},
-    {"q": "k cha khabar", "expected": "abhivadan"},
-    {"q": "तपाईंले के के मा सहयोग गर्न सक्नुहुन्छ", "expected": "bot_parichaya"},
-    {"q": "timi kun kura ko jankari dinxau", "expected": "bot_parichaya"},
-    {"q": "धेरै धन्यवाद है", "expected": "dhanyabad"},
-    {"q": "la ma gaye", "expected": "bidai"},
-
-    {"q": "नेपालको राजधानी कहाँ हो?", "expected": null},
-    {"q": "मलाई मोबाइल किन्नु छ कुन राम्रो", "expected": null},
-    {"q": "aajako sunko bhau kati ho", "expected": null},
-    {"q": "फुटबल खेल कहिले छ", "expected": null},
-    {"q": "bank bata loan kasari line ghar banauna", "expected": null},
-    {"q": "मेरो टाउको दुखेको छ के औषधि खाने", "expected": null},
-    {"q": "python ma code kasari lekhne", "expected": null},
-    {"q": "नेपालको प्रधानमन्त्री को हो", "expected": null},
-    {"q": "bhisa kasari banaune foreign jana", "expected": null},
-    {"q": "आज मौसम कस्तो छ काठमाडौंमा", "expected": null},
-    {"q": "छोरालाई कुन स्कुलमा भर्ना गर्ने", "expected": null},
-    {"q": "gadi chalauna license chahincha", "expected": null}
+    {
+      "q": "धान कुन बेला रोप्नु राम्रो हुन्छ?",
+      "expected": "dhan_ropai_samaya"
+    },
+    {
+      "q": "असारमा धान लगाउन पाइन्छ कि पाइँदैन",
+      "expected": "dhan_ropai_samaya"
+    },
+    {
+      "q": "dhaan ropne best time kahile ho",
+      "expected": "dhan_ropai_samaya"
+    },
+    {
+      "q": "dhan ko berna kati din ma sarne",
+      "expected": "dhan_ropai_samaya"
+    },
+    {
+      "q": "मेरो धानको बेर्ना बूढो भयो अब के गर्ने",
+      "expected": "dhan_ropai_samaya"
+    },
+    {
+      "q": "एक बिघा धानमा कति बीउ चाहिन्छ",
+      "expected": "dhan_biu_dar"
+    },
+    {
+      "q": "dhan ko biu nun pani ma kasari jachne",
+      "expected": "dhan_biu_dar"
+    },
+    {
+      "q": "धानको बीउ छर्नु अघि के उपचार गर्ने",
+      "expected": "dhan_biu_dar"
+    },
+    {
+      "q": "धानलाई कति किलो युरिया चाहिन्छ",
+      "expected": "dhan_mal_matra"
+    },
+    {
+      "q": "dhan ma urea kaile ra kati halne",
+      "expected": "dhan_mal_matra"
+    },
+    {
+      "q": "धानमा मल तीन पटक हाल्नु पर्छ?",
+      "expected": "dhan_mal_matra"
+    },
+    {
+      "q": "dhaan lai npk kati chahincha",
+      "expected": "dhan_mal_matra"
+    },
+    {
+      "q": "धानको पातमा आँखा जस्तो दाग आयो",
+      "expected": "dhan_maruwa_rog"
+    },
+    {
+      "q": "धानको बाला सेतो भएर सुक्यो",
+      "expected": "dhan_maruwa_rog"
+    },
+    {
+      "q": "dhan ma blast lagyo kasari bachaune",
+      "expected": "dhan_maruwa_rog"
+    },
+    {
+      "q": "maruwa rog ko upachar k cha",
+      "expected": "dhan_maruwa_rog"
+    },
+    {
+      "q": "धानको बीचको मुन्टा सुक्यो",
+      "expected": "dhan_kira"
+    },
+    {
+      "q": "धानमा भुसुना लाग्यो के गर्ने",
+      "expected": "dhan_kira"
+    },
+    {
+      "q": "dhan ko paat berine kira ko upaya",
+      "expected": "dhan_kira"
+    },
+    {
+      "q": "मकै कुन महिनामा लगाउने",
+      "expected": "makai_ropai_samaya"
+    },
+    {
+      "q": "makai ropda line ko duri kati",
+      "expected": "makai_ropai_samaya"
+    },
+    {
+      "q": "मकैमा कति मल हाल्ने",
+      "expected": "makai_ropai_samaya"
+    },
+    {
+      "q": "मकैको मुन्टामा धुलो जस्तो गोबर देखियो",
+      "expected": "makai_fauji_kira"
+    },
+    {
+      "q": "makai ko paat kirale khayo pwal pwal",
+      "expected": "makai_fauji_kira"
+    },
+    {
+      "q": "फौजी किराको लार्भा कसरी चिन्ने",
+      "expected": "makai_fauji_kira"
+    },
+    {
+      "q": "armyworm control garne jaivik upaya",
+      "expected": "makai_fauji_kira"
+    },
+    {
+      "q": "गहुँ कुन महिनामा छर्नु राम्रो",
+      "expected": "gahu_kheti"
+    },
+    {
+      "q": "gahu ma pahilo pani kaile dine",
+      "expected": "gahu_kheti"
+    },
+    {
+      "q": "गहुँमा सिन्दुरे रोग लाग्यो",
+      "expected": "gahu_kheti"
+    },
+    {
+      "q": "कोदो लगाउने तरिका भन्नुस",
+      "expected": "kodo_fapar"
+    },
+    {
+      "q": "fapar kati din ma pakcha",
+      "expected": "kodo_fapar"
+    },
+    {
+      "q": "गोलभेँडाको पातमा नक्सा जस्तो लाइन आयो",
+      "expected": "golbheda_tuta_rog"
+    },
+    {
+      "q": "tomato ko fal bhitra bata kuhiyo",
+      "expected": "golbheda_tuta_rog"
+    },
+    {
+      "q": "टुटाको लागि फेरोमोन ट्रयाप कति राख्ने",
+      "expected": "golbheda_tuta_rog"
+    },
+    {
+      "q": "golbheda ma kira lagyo k garne",
+      "expected": "golbheda_tuta_rog"
+    },
+    {
+      "q": "आलुको पातमा कालो दाग आएर बोट सुक्यो",
+      "expected": "alu_dadhuwa_rog"
+    },
+    {
+      "q": "aalu ko bot bihana sweto dhusi dekhincha",
+      "expected": "alu_dadhuwa_rog"
+    },
+    {
+      "q": "आलुमा लाग्ने मुख्य रोग कुन हो",
+      "expected": "alu_dadhuwa_rog"
+    },
+    {
+      "q": "आलु कसरी जोगाएर राख्ने",
+      "expected": "alu_bhandaran"
+    },
+    {
+      "q": "alu hariyo bhayo khana huncha",
+      "expected": "alu_bhandaran"
+    },
+    {
+      "q": "बीउ आलुमा टुसा आयो के गर्ने",
+      "expected": "alu_bhandaran"
+    },
+    {
+      "q": "काउलीको फूल सानो आयो",
+      "expected": "kauli_banda_kheti"
+    },
+    {
+      "q": "kauli kun bela lagaunu ramro huncha",
+      "expected": "kauli_banda_kheti"
+    },
+    {
+      "q": "बन्दाको मुन्टामा साना कीरा झुम्मिएका छन्",
+      "expected": "kauli_banda_kira"
+    },
+    {
+      "q": "काउलीको डाँठ भित्र खैरो भयो",
+      "expected": "kauli_banda_kheti"
+    },
+    {
+      "q": "प्लास्टिक घरमा तरकारी लगाउन कस्तो प्लास्टिक चाहिन्छ",
+      "expected": "tunnel_kheti"
+    },
+    {
+      "q": "tunnel bhitra garmi dherai bhayo k garne",
+      "expected": "tunnel_kheti"
+    },
+    {
+      "q": "बेमौसमी खेती गर्दा फाइदा हुन्छ?",
+      "expected": "tunnel_kheti"
+    },
+    {
+      "q": "बेर्नाको फेद कालो भई एकपछि अर्को ढल्दै छ",
+      "expected": "birwa_nursery"
+    },
+    {
+      "q": "berna sardaa maryo kina",
+      "expected": "birwa_nursery"
+    },
+    {
+      "q": "नर्सरीको ब्याड कति अग्लो बनाउने",
+      "expected": "birwa_nursery"
+    },
+    {
+      "q": "खुर्सानीको पात मुडिएर खुम्चियो",
+      "expected": "khursani_kheti"
+    },
+    {
+      "q": "khursani ko ful jharera fal lagena",
+      "expected": "khursani_kheti"
+    },
+    {
+      "q": "डल्ले खुर्सानी कहिले सार्ने",
+      "expected": "khursani_kheti"
+    },
+    {
+      "q": "प्याजको गाँठो ठूलो भएन",
+      "expected": "pyaj_lasun"
+    },
+    {
+      "q": "lasun ko choya kati thulo rojne",
+      "expected": "pyaj_lasun"
+    },
+    {
+      "q": "प्याज टिप्ने सही बेला कुन हो",
+      "expected": "pyaj_lasun"
+    },
+    {
+      "q": "कम्पोस्ट खाडल कति ठूलो बनाउने",
+      "expected": "compost_banaune"
+    },
+    {
+      "q": "gobar ra parale mal kasari banaune",
+      "expected": "compost_banaune"
+    },
+    {
+      "q": "कम्पोस्ट कति पटक पल्टाउने",
+      "expected": "compost_banaune"
+    },
+    {
+      "q": "compost tayar bhayo bhanne kasari thaha paune",
+      "expected": "compost_banaune"
+    },
+    {
+      "q": "मलको थुप्रोबाट नराम्रो गन्ध आउँछ",
+      "expected": "compost_gandha"
+    },
+    {
+      "q": "compost ma jhinga ra musa aayo",
+      "expected": "compost_gandha"
+    },
+    {
+      "q": "जीवामृत बनाउन के के चाहिन्छ",
+      "expected": "jivamrit"
+    },
+    {
+      "q": "gahut ra gobar ko ghol kasari banaune",
+      "expected": "jivamrit"
+    },
+    {
+      "q": "माटोको नमुना कति गहिरोबाट लिने",
+      "expected": "mato_parikshan"
+    },
+    {
+      "q": "mato amliyo cha chun kati halne",
+      "expected": "mato_parikshan"
+    },
+    {
+      "q": "माटो जाँच गराउन कहाँ जाने",
+      "expected": "mato_parikshan"
+    },
+    {
+      "q": "डीएपी र युरियामा के फरक हुन्छ",
+      "expected": "mal_prayog_niyam"
+    },
+    {
+      "q": "mal bot ko feda ma halda huncha",
+      "expected": "mal_prayog_niyam"
+    },
+    {
+      "q": "धेरै युरिया हाल्दा बोट लड्छ?",
+      "expected": "mal_prayog_niyam"
+    },
+    {
+      "q": "थोपा सिँचाइको ड्रिपर बन्द भयो",
+      "expected": "thopa_sinchai"
+    },
+    {
+      "q": "pani kam cha kasari bachaune",
+      "expected": "thopa_sinchai"
+    },
+    {
+      "q": "परालले माटो छोप्दा फाइदा के हुन्छ",
+      "expected": "thopa_sinchai"
+    },
+    {
+      "q": "एउटै बाली हरेक वर्ष लगाउँदा हुन्छ?",
+      "expected": "bali_ferbadal"
+    },
+    {
+      "q": "aalu pachi k bali lagaune",
+      "expected": "bali_ferbadal"
+    },
+    {
+      "q": "मकैसँग भटमास लगाउन मिल्छ?",
+      "expected": "bali_ferbadal"
+    },
+    {
+      "q": "विषादी नछरी कीरा हटाउने उपाय",
+      "expected": "jaivik_kira_niyantran"
+    },
+    {
+      "q": "neem tel kati matra ma chharne",
+      "expected": "jaivik_kira_niyantran"
+    },
+    {
+      "q": "पहेँलो टाँसिने कार्ड केका लागि हो",
+      "expected": "jaivik_kira_niyantran"
+    },
+    {
+      "q": "lasun khursani ko ghol banaera chharda huncha",
+      "expected": "jaivik_kira_niyantran"
+    },
+    {
+      "q": "बाख्राको खोर भुइँबाट कति उठाउने",
+      "expected": "bakhra_palan"
+    },
+    {
+      "q": "bakhra lai dana kati dine",
+      "expected": "bakhra_palan"
+    },
+    {
+      "q": "कुन जातको बोका किन्नु राम्रो",
+      "expected": "bakhra_palan"
+    },
+    {
+      "q": "बाख्रा दुब्लो भयो खाँदैन",
+      "expected": "bakhra_palan"
+    },
+    {
+      "q": "बाख्राको पाठा जन्मेपछि मर्यो",
+      "expected": "bakhra_khop"
+    },
+    {
+      "q": "ppr ko sui kati barsa ma lagaune",
+      "expected": "bakhra_khop"
+    },
+    {
+      "q": "बाख्रालाई जुकाको औषधि वर्षमा कति पटक",
+      "expected": "bakhra_khop"
+    },
+    {
+      "q": "चल्लालाई पहिलो हप्ता कति तातो चाहिन्छ",
+      "expected": "kukhura_palan"
+    },
+    {
+      "q": "kukhura ko khor ma amonia ko gandha aayo",
+      "expected": "kukhura_palan"
+    },
+    {
+      "q": "रानीखेत रोगको खोप कहिले लगाउने",
+      "expected": "kukhura_palan"
+    },
+    {
+      "q": "broiler kati din ma bikri garne",
+      "expected": "kukhura_palan"
+    },
+    {
+      "q": "गाईको दूध अचानक घट्यो",
+      "expected": "gai_bhaisi_dudh"
+    },
+    {
+      "q": "gai ko thun sunniyo ra dudh ma dallo aayo",
+      "expected": "gai_bhaisi_dudh"
+    },
+    {
+      "q": "भैंसीलाई दैनिक कति पानी चाहिन्छ",
+      "expected": "gai_bhaisi_dudh"
+    },
+    {
+      "q": "gai byayepachi sal khasena",
+      "expected": "gai_bhaisi_dudh"
+    },
+    {
+      "q": "हिउँदमा पशुलाई घाँस पुगेन",
+      "expected": "ghans_bali"
+    },
+    {
+      "q": "napier ko dandi kasari gadne",
+      "expected": "ghans_bali"
+    },
+    {
+      "q": "साइलेज बिग्रेको कसरी थाहा पाउने",
+      "expected": "ghans_bali"
+    },
+    {
+      "q": "paral ma urea halera khuwauda huncha",
+      "expected": "ghans_bali"
+    },
+    {
+      "q": "मौरीको घार कहाँ राख्ने",
+      "expected": "mauri_palan"
+    },
+    {
+      "q": "mauri ghar chhodera gayo kina",
+      "expected": "mauri_palan"
+    },
+    {
+      "q": "मह कहिले काढ्ने",
+      "expected": "mauri_palan"
+    },
+    {
+      "q": "पोखरीमा माछा बिहान मुख निकाल्छ",
+      "expected": "machha_palan"
+    },
+    {
+      "q": "machha lai dana kati pratishat dine",
+      "expected": "machha_palan"
+    },
+    {
+      "q": "पोखरीमा कुन कुन जातको माछा सँगै राख्ने",
+      "expected": "machha_palan"
+    },
+    {
+      "q": "जमिनमुनिको अदुवा नरम भएर सडेको छ",
+      "expected": "aduwa_gano_kuhine"
+    },
+    {
+      "q": "aduwa ko biu kasari upachar garne",
+      "expected": "aduwa_besar"
+    },
+    {
+      "q": "बेसार टिप्ने समय कहिले हो",
+      "expected": "aduwa_besar"
+    },
+    {
+      "q": "अलैंचीको पातमा लामो पहेँलो लाइन देखियो",
+      "expected": "alaichi_rog"
+    },
+    {
+      "q": "alaichi ko lagi kun rukh ko chahari ramro",
+      "expected": "alaichi_kheti"
+    },
+    {
+      "q": "फुर्के रोग लागेको बोट के गर्ने",
+      "expected": "alaichi_rog"
+    },
+    {
+      "q": "केराको थाममा कति सकर राख्ने",
+      "expected": "kera_kheti"
+    },
+    {
+      "q": "kera ko paat tala bata pahelo huda gayo",
+      "expected": "kera_rog"
+    },
+    {
+      "q": "केराको घरीलाई झोलाले किन छोप्ने",
+      "expected": "kera_kheti"
+    },
+    {
+      "q": "सरकारबाट टनेलको लागि पैसा पाइन्छ?",
+      "expected": "krishi_anudan"
+    },
+    {
+      "q": "anudan lina farm darta garnu parcha",
+      "expected": "krishi_anudan"
+    },
+    {
+      "q": "बाली बीमाको प्रिमियम कति तिर्नुपर्छ",
+      "expected": "krishi_anudan"
+    },
+    {
+      "q": "krishi anudan ko lagi kun kagajat chahincha",
+      "expected": "krishi_anudan"
+    },
+    {
+      "q": "रोग चिन्न प्राविधिक कहाँ भेटिन्छ",
+      "expected": "krishi_gyan_kendra"
+    },
+    {
+      "q": "pashu birami bhayo kaha lagne",
+      "expected": "krishi_gyan_kendra"
+    },
+    {
+      "q": "कृषि सल्लाह कसलाई सोध्ने",
+      "expected": "krishi_gyan_kendra"
+    },
+    {
+      "q": "तरकारी कहाँ लगेर बेच्ने",
+      "expected": "bajar_mulya"
+    },
+    {
+      "q": "kalimati ko bhau kaha herne",
+      "expected": "bajar_mulya"
+    },
+    {
+      "q": "बिचौलियाले सस्तोमा किन्छ के गर्ने",
+      "expected": "bajar_mulya"
+    },
+    {
+      "q": "धानमा घुन लाग्यो",
+      "expected": "bhandaran_nokshan"
+    },
+    {
+      "q": "anna kati sukhha bhayepachi rakhne",
+      "expected": "bhandaran_nokshan"
+    },
+    {
+      "q": "बीउ उम्रिन्छ कि उम्रिँदैन कसरी जाँच्ने",
+      "expected": "bhandaran_nokshan"
+    },
+    {
+      "q": "असिनाले बाली भाँचियो अब के गर्ने",
+      "expected": "mausam_jokhim"
+    },
+    {
+      "q": "khet ma pani jamyo bali marcha ki",
+      "expected": "mausam_jokhim"
+    },
+    {
+      "q": "सुक्खा परेको बेला बाली कसरी जोगाउने",
+      "expected": "mausam_jokhim"
+    },
+    {
+      "q": "नमस्ते हजुर",
+      "expected": "abhivadan"
+    },
+    {
+      "q": "k cha khabar",
+      "expected": "abhivadan"
+    },
+    {
+      "q": "तपाईंले के के मा सहयोग गर्न सक्नुहुन्छ",
+      "expected": "bot_parichaya"
+    },
+    {
+      "q": "timi kun kura ko jankari dinxau",
+      "expected": "bot_parichaya"
+    },
+    {
+      "q": "धेरै धन्यवाद है",
+      "expected": "dhanyabad"
+    },
+    {
+      "q": "la ma gaye",
+      "expected": "bidai"
+    },
+    {
+      "q": "नेपालको राजधानी कहाँ हो?",
+      "expected": null
+    },
+    {
+      "q": "मलाई मोबाइल किन्नु छ कुन राम्रो",
+      "expected": null
+    },
+    {
+      "q": "aajako sunko bhau kati ho",
+      "expected": null
+    },
+    {
+      "q": "फुटबल खेल कहिले छ",
+      "expected": null
+    },
+    {
+      "q": "bank bata loan kasari line ghar banauna",
+      "expected": null
+    },
+    {
+      "q": "मेरो टाउको दुखेको छ के औषधि खाने",
+      "expected": null
+    },
+    {
+      "q": "python ma code kasari lekhne",
+      "expected": null
+    },
+    {
+      "q": "नेपालको प्रधानमन्त्री को हो",
+      "expected": null
+    },
+    {
+      "q": "bhisa kasari banaune foreign jana",
+      "expected": null
+    },
+    {
+      "q": "आज मौसम कस्तो छ काठमाडौंमा",
+      "expected": null
+    },
+    {
+      "q": "छोरालाई कुन स्कुलमा भर्ना गर्ने",
+      "expected": null
+    },
+    {
+      "q": "gadi chalauna license chahincha",
+      "expected": null
+    },
+    {
+      "q": "kauli ko full ma kira lagyo, k garne?",
+      "expected": "kauli_banda_kira",
+      "source": "real-user"
+    },
+    {
+      "q": "काउलीको फूलभित्र सानो हरियो सुन्डा छ",
+      "expected": "kauli_banda_kira"
+    },
+    {
+      "q": "banda ko gedo bhitra kira khayo",
+      "expected": "kauli_banda_kira"
+    },
+    {
+      "q": "काउली टिप्न लागेको छ औषधि छर्दा हुन्छ?",
+      "expected": "kauli_banda_kira"
+    },
+    {
+      "q": "केराको थाम चिर्दा भित्र खैरो धर्सो देखियो",
+      "expected": "kera_rog"
+    },
+    {
+      "q": "kera ko naya paat sano ra jhuppa jasto bhayo",
+      "expected": "kera_rog"
+    },
+    {
+      "q": "अदुवाको डाँठ फेदबाट नरम भयो",
+      "expected": "aduwa_gano_kuhine"
+    },
+    {
+      "q": "alaichi ko munta bata jhutro jasto tusa niskyo",
+      "expected": "alaichi_rog"
+    },
+    {
+      "q": "केरामा मल कति हाल्ने",
+      "expected": "kera_kheti"
+    },
+    {
+      "q": "alaichi kati barsa ma fal dincha",
+      "expected": "alaichi_kheti"
+    },
+    {
+      "q": "काउली कुन महिनामा सार्ने",
+      "expected": "kauli_banda_kheti"
+    }
   ]
 }

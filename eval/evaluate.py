@@ -30,6 +30,20 @@ def load_cases(path: str = TESTSET) -> list:
         return json.load(fh)["cases"]
 
 
+def check_leakage(engine: AgriEngine, cases: list) -> list:
+    """Test queries that are verbatim knowledge-base patterns.
+
+    Such a case is a guaranteed hit and silently inflates every number here.
+    They creep in whenever patterns are added to close a coverage gap, so this
+    runs on every evaluation rather than on request.
+    """
+    patterns = {}
+    for entry in engine.entries:
+        for pattern in entry.patterns:
+            patterns.setdefault(pattern.strip(), entry.id)
+    return [(c["q"], patterns[c["q"].strip()]) for c in cases if c["q"].strip() in patterns]
+
+
 def snapshot(engine: AgriEngine, cases: list) -> list:
     """Score every case once.
 
@@ -194,6 +208,15 @@ def main() -> int:
         tune(cases)
         return 0
     engine = AgriEngine()
+
+    leaked = check_leakage(engine, cases)
+    if leaked:
+        print(f"WARNING: {len(leaked)} test quer{'y is' if len(leaked) == 1 else 'ies are'} "
+              f"a verbatim knowledge-base pattern -- these inflate every number below:")
+        for q, intent in leaked:
+            print(f"    {q}   (pattern of {intent})")
+        print()
+
     rows = snapshot(engine, cases)
     if args.dump:
         with open(args.dump, "w", encoding="utf-8") as fh:
