@@ -19,14 +19,61 @@ All three reach the same answer.
 ```bash
 pip install -r requirements.txt
 
-python chatbot.py                                  # interactive
+python chatbot.py                                  # interactive CLI
 python chatbot.py "bakhra lai kun khop lagaune"    # one question
 python chatbot.py --debug "आलुमा कीरा लाग्यो"       # show match scores
+
+python web/server.py                               # web console on :8000
 ```
 
 No training step. The index is built from `data/kb/*.json` at startup in
 well under a second, so editing the knowledge base takes effect on the next
 run.
+
+## Web console
+
+`python web/server.py` serves a review console at `http://127.0.0.1:8000`. It
+is built for reviewing the retrieval rather than just using it:
+
+- **Ask** — chat in either script, with a match inspector showing the
+  confidence verdict, score and margin against their thresholds, the crops
+  detected, the three collapsed keys the query was reduced to, and the top
+  five intents with scores. Typing a question in Devanagari and again in
+  Roman Nepali shows the two collapsing to the same keys.
+- **Knowledge base** — all 45 intents, filterable, with answers, pattern
+  counts and sources.
+- **Evaluation** — runs all 149 test cases in the browser and lists every
+  miss, marked confident or unsure.
+
+The page also runs as a plain static file (`web/index.html` + `web/agri.js` +
+`web/kb-bundle.js`) with no Python at all, which is how it gets hosted for
+review. `web/server.py` additionally answers from the Python engine over
+`POST /api/ask`, reading `data/kb/` live so knowledge-base edits show up on
+refresh:
+
+```bash
+curl -X POST localhost:8000/api/ask -H 'Content-Type: application/json' \
+     -d '{"q":"dhan ma maruwa rog lagyo"}'
+```
+
+### Keeping the two engines honest
+
+The browser build reimplements query collapsing and TF-IDF scoring in
+JavaScript, which is exactly the kind of duplication that drifts. Two things
+hold it in place: pattern keys are collapsed by **Python** and shipped in the
+generated bundle, so only query handling is ported; and the port is checked
+case by case against Python.
+
+```bash
+python -m agrichat.export_web                        # regenerate the bundle
+python eval/evaluate.py --dump /tmp/py.json
+node eval/verify_web_port.js /tmp/py.json            # fails on any drift
+```
+
+It currently agrees with Python on 149/149 cases, with a maximum score
+difference of 2.2e-16. Re-run it after any change to `agrichat/nepali_text.py`
+or `agrichat/engine.py`, and regenerate the bundle after any change to
+`data/kb/`.
 
 ## What it knows
 
@@ -112,13 +159,20 @@ pattern, and max-pools per intent. On top of that:
 ## Layout
 
 ```
-chatbot.py               CLI
-agrichat/nepali_text.py  transliteration, phonetic collapsing, stemming
-agrichat/kb.py           knowledge-base loading and validation
-agrichat/engine.py       retrieval, crop matching, confidence
-data/kb/*.json           the knowledge base (edit this to add topics)
-eval/testset.json        held-out queries with gold labels
-eval/evaluate.py         metrics and threshold tuning
+chatbot.py                 CLI
+agrichat/nepali_text.py    transliteration, phonetic collapsing, stemming
+agrichat/kb.py             knowledge-base loading and validation
+agrichat/engine.py         retrieval, crop matching, confidence
+agrichat/export_web.py     generates web/kb-bundle.js
+data/kb/*.json             the knowledge base (edit this to add topics)
+web/index.html             review console
+web/agri.js                browser port of the engine
+web/kb-bundle.js           generated -- do not edit
+web/server.py              stdlib server + /api/ask
+eval/testset.json          held-out queries with gold labels
+eval/evaluate.py           metrics and threshold tuning
+eval/test_nepali_text.py   text-layer property tests
+eval/verify_web_port.js    checks the JS port against Python
 ```
 
 ### Adding a topic
@@ -141,6 +195,7 @@ variation, but it cannot guess that a farmer says "गाभा मर्‍य�
 `agrichat/kb.py` rejects duplicate ids, empty patterns and dangling
 `followups` at load time. Add a few queries to `eval/testset.json` and re-run
 the evaluation to confirm the new intent does not cannibalise an existing one.
+Then run `python -m agrichat.export_web` so the web console picks it up.
 
 ## Scope and safety
 

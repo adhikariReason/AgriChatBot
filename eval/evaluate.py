@@ -185,13 +185,22 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tune", action="store_true", help="grid-search the settings")
     ap.add_argument("--errors", action="store_true", help="print every mistake")
+    ap.add_argument("--dump", metavar="PATH",
+                    help="write the per-case ranking as JSON, for the web-port verifier")
     args = ap.parse_args()
 
     cases = load_cases()
     if args.tune:
         tune(cases)
         return 0
-    report(evaluate(AgriEngine(), cases), show_errors=args.errors)
+    engine = AgriEngine()
+    rows = snapshot(engine, cases)
+    if args.dump:
+        with open(args.dump, "w", encoding="utf-8") as fh:
+            json.dump(rows, fh, ensure_ascii=False)
+        print(f"wrote {args.dump} ({len(rows)} cases)")
+        return 0
+    report(metrics(rows, engine.MIN_SCORE, engine.MIN_MARGIN), show_errors=args.errors)
     return 0
 
 

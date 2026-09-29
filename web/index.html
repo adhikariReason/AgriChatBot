@@ -1,0 +1,601 @@
+<title>AgriChatBot Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap">
+<style>
+/* Layout: two-pane console -- conversation left, match inspector right, stacked on phones. */
+:root {
+  --bg: #f3f6f4;
+  --surface: #ffffff;
+  --surface-2: #e9edeb;
+  --border: #d3dad6;
+  --fg: #131f1a;
+  --fg-muted: #5a6a63;
+  --accent: #0f7a52;
+  --accent-soft: #e2f1ea;
+  --warn: #9a6205;
+  --warn-soft: #f9eeda;
+  --danger: #ab2f27;
+  --danger-soft: #fae5e3;
+
+  --font-ui: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-ne: "Noto Sans Devanagari", "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --radius: 10px;
+  --gutter: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1412;
+    --surface: #161e1b;
+    --surface-2: #1d2723;
+    --border: #2b3833;
+    --fg: #e5ebe8;
+    --fg-muted: #92a39b;
+    --accent: #4fc38d;
+    --accent-soft: #13302a;
+    --warn: #d8a441;
+    --warn-soft: #312610;
+    --danger: #e8736a;
+    --danger-soft: #381d1b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1412;
+  --surface: #161e1b;
+  --surface-2: #1d2723;
+  --border: #2b3833;
+  --fg: #e5ebe8;
+  --fg-muted: #92a39b;
+  --accent: #4fc38d;
+  --accent-soft: #13302a;
+  --warn: #d8a441;
+  --warn-soft: #312610;
+  --danger: #e8736a;
+  --danger-soft: #381d1b;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-ui);
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 0;
+  padding-inline: var(--gutter);
+  padding-block: 24px 40px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+:lang(ne), .ne { font-family: var(--font-ne); }
+
+/* ---- header ---- */
+header { margin-bottom: 20px; }
+h1 {
+  font-size: 1.5rem; font-weight: 600; margin: 0 0 4px;
+  letter-spacing: -0.015em; text-wrap: balance;
+}
+h1 .np { font-family: var(--font-ne); font-weight: 500; color: var(--fg-muted); font-size: .95em; }
+.tagline { color: var(--fg-muted); margin: 0 0 14px; max-width: 62ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; }
+.stat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 999px; padding: 3px 11px; font-size: .78rem;
+  color: var(--fg-muted); font-variant-numeric: tabular-nums;
+}
+.stat b { color: var(--fg); font-weight: 600; }
+
+/* ---- tabs ---- */
+.tabs { display: flex; gap: 2px; margin: 18px 0 16px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.tab {
+  appearance: none; background: none; border: 0; border-bottom: 2px solid transparent;
+  color: var(--fg-muted); font: inherit; font-size: .92rem; font-weight: 500;
+  padding: 8px 14px; cursor: pointer; margin-bottom: -1px;
+}
+.tab:hover { color: var(--fg); }
+.tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+.tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; border-radius: 4px 4px 0 0; }
+
+/* ---- panels ---- */
+.console { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 860px) { .console { grid-template-columns: 1fr; } }
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px; min-width: 0;
+}
+.card h2 {
+  font-size: .72rem; text-transform: uppercase; letter-spacing: .08em;
+  color: var(--fg-muted); font-weight: 600; margin: 0 0 12px;
+}
+
+/* ---- chat ---- */
+.log { display: flex; flex-direction: column; gap: 12px; max-height: 460px; overflow-y: auto; }
+.msg { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.msg .who { font-size: .7rem; text-transform: uppercase; letter-spacing: .07em; color: var(--fg-muted); font-weight: 600; }
+.bubble {
+  border-radius: var(--radius); padding: 10px 13px; white-space: pre-wrap;
+  word-break: break-word; font-family: var(--font-ne); min-width: 0;
+}
+.msg.user .bubble { background: var(--accent-soft); border: 1px solid var(--border); }
+.msg.bot .bubble { background: var(--surface-2); border: 1px solid var(--border); }
+.msg.bot.unsure .bubble { background: var(--warn-soft); }
+
+form.ask { display: flex; gap: 8px; margin-top: 14px; }
+input[type="text"], input.search {
+  flex: 1; min-width: 0; font: inherit; font-family: var(--font-ne);
+  background: var(--bg); color: var(--fg);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 9px 12px;
+}
+input:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+button.go {
+  font: inherit; font-weight: 500; cursor: pointer;
+  background: var(--accent); color: var(--bg); border: 0;
+  border-radius: var(--radius); padding: 9px 18px;
+}
+button.go:hover { filter: brightness(1.08); }
+
+.samples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.samples .lbl { font-size: .72rem; color: var(--fg-muted); width: 100%; margin-bottom: 2px; }
+.chip {
+  font: inherit; font-size: .82rem; font-family: var(--font-ne); cursor: pointer;
+  background: var(--surface-2); color: var(--fg);
+  border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px;
+}
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---- inspector ---- */
+.verdict {
+  display: inline-flex; align-items: center; gap: 7px; font-size: .8rem; font-weight: 600;
+  border-radius: 999px; padding: 4px 12px; margin-bottom: 14px;
+}
+.verdict.ok { background: var(--accent-soft); color: var(--accent); }
+.verdict.no { background: var(--warn-soft); color: var(--warn); }
+.verdict .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+
+.meter { margin-bottom: 12px; }
+.meter .row { display: flex; justify-content: space-between; font-size: .78rem; color: var(--fg-muted); margin-bottom: 4px; }
+.meter .row b { color: var(--fg); font-family: var(--font-mono); font-weight: 500; font-variant-numeric: tabular-nums; }
+.track { position: relative; height: 6px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.fill { height: 100%; background: var(--accent); border-radius: 3px; }
+.fill.low { background: var(--warn); }
+.thresh { position: absolute; top: -2px; width: 2px; height: 10px; background: var(--fg-muted); opacity: .65; }
+
+.kv { font-size: .8rem; margin-bottom: 12px; }
+.kv .k { color: var(--fg-muted); text-transform: uppercase; letter-spacing: .06em; font-size: .68rem; font-weight: 600; margin-bottom: 3px; }
+.kv .v { font-family: var(--font-mono); font-size: .8rem; word-break: break-all; }
+.kv .v.ne { font-family: var(--font-ne); word-break: normal; }
+.kv .v.empty { color: var(--fg-muted); font-style: italic; }
+
+ol.ranking { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 5px; }
+ol.ranking li { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: baseline; font-size: .81rem; }
+ol.ranking .id { font-family: var(--font-mono); min-width: 0; overflow-wrap: anywhere; }
+ol.ranking .sc { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--fg-muted); }
+ol.ranking li:first-child .id { color: var(--accent); font-weight: 500; }
+
+/* ---- knowledge base ---- */
+.kb-list { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+details.entry { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+details.entry summary {
+  cursor: pointer; padding: 10px 13px; font-family: var(--font-ne);
+  display: flex; justify-content: space-between; gap: 10px; align-items: baseline;
+}
+details.entry summary::-webkit-details-marker { display: none; }
+details.entry .dom { font-family: var(--font-ui); font-size: .7rem; color: var(--fg-muted); white-space: nowrap; }
+details.entry .body { padding: 0 13px 13px; border-top: 1px solid var(--border); margin-top: 2px; padding-top: 11px; }
+details.entry .answer { white-space: pre-wrap; font-family: var(--font-ne); font-size: .9rem; }
+details.entry .pats { margin-top: 11px; font-size: .78rem; color: var(--fg-muted); }
+details.entry .pats code { font-family: var(--font-ne); background: var(--surface-2); border-radius: 4px; padding: 1px 6px; margin: 0 3px 3px 0; display: inline-block; }
+details.entry .src { margin-top: 10px; font-size: .75rem; }
+details.entry .src a { color: var(--accent); overflow-wrap: anywhere; }
+
+/* ---- evaluation ---- */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 14px 0; }
+.tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 12px 14px; }
+.tile .n { font-size: 1.45rem; font-weight: 600; font-family: var(--font-mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.tile .l { font-size: .73rem; color: var(--fg-muted); margin-top: 2px; }
+.tile.key { border-color: var(--accent); }
+.tile.key .n { color: var(--accent); }
+.tile.bad .n { color: var(--danger); }
+
+table.fails { width: 100%; border-collapse: collapse; font-size: .82rem; }
+table.fails th, table.fails td { text-align: left; padding: 7px 9px; border-bottom: 1px solid var(--border); vertical-align: top; }
+table.fails th { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-muted); }
+table.fails .q { font-family: var(--font-ne); min-width: 0; }
+table.fails .id { font-family: var(--font-mono); font-size: .76rem; overflow-wrap: anywhere; }
+table.fails .flag { font-size: .68rem; font-weight: 600; border-radius: 4px; padding: 1px 6px; white-space: nowrap; }
+table.fails .flag.conf { background: var(--danger-soft); color: var(--danger); }
+table.fails .flag.soft { background: var(--warn-soft); color: var(--warn); }
+.scroll-x { overflow-x: auto; }
+
+.note { font-size: .82rem; color: var(--fg-muted); max-width: 70ch; }
+.note strong { color: var(--fg); font-weight: 600; }
+footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="wrap">
+<header>
+  <h1>AgriChatBot <span class="np">कृषि सहयोगी</span></h1>
+  <p class="tagline">A Nepali question-answering assistant for farmers. Ask in Devanagari or Roman Nepali &mdash; both are collapsed to the same phonetic keys before matching. This console shows the match internals so the retrieval can be reviewed, not just used.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="tab-chat" aria-selected="true" aria-controls="panel-chat">Ask</button>
+  <button class="tab" role="tab" id="tab-kb" aria-selected="false" aria-controls="panel-kb">Knowledge base</button>
+  <button class="tab" role="tab" id="tab-eval" aria-selected="false" aria-controls="panel-eval">Evaluation</button>
+</div>
+
+<section id="panel-chat" role="tabpanel" aria-labelledby="tab-chat">
+  <div class="console">
+    <div class="card">
+      <h2>Conversation</h2>
+      <div class="log" id="log"></div>
+      <form class="ask" id="ask">
+        <input type="text" id="q" autocomplete="off" spellcheck="false"
+               placeholder="धानमा कीरा लाग्यो&hellip;  /  dhan ma kira lagyo">
+        <button class="go" type="submit">Ask</button>
+      </form>
+      <div class="samples" id="samples"></div>
+    </div>
+
+    <div class="card">
+      <h2>Match inspector</h2>
+      <div id="inspector"></div>
+    </div>
+  </div>
+</section>
+
+<section id="panel-kb" role="tabpanel" aria-labelledby="tab-kb" hidden>
+  <div class="card">
+    <h2>Knowledge base</h2>
+    <input class="search" type="text" id="kbsearch" autocomplete="off"
+           placeholder="Filter by topic, crop or id&hellip;">
+    <div class="kb-list" id="kblist"></div>
+  </div>
+</section>
+
+<section id="panel-eval" role="tabpanel" aria-labelledby="tab-eval" hidden>
+  <div class="card">
+    <h2>Evaluation</h2>
+    <p class="note" id="evalintro"></p>
+    <p><button class="go" id="runeval" type="button">Run evaluation</button></p>
+    <div id="evalout"></div>
+  </div>
+</section>
+
+<footer id="footer"></footer>
+</div>
+
+<script src="kb-bundle.js"></script>
+<script src="agri.js"></script>
+<script>
+(function () {
+  "use strict";
+
+  var bundle = window.AGRI_KB;
+  var engine = new AgriChat.Engine(bundle);
+  var cfg = engine.config;
+
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, cls, text) {
+    var n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text !== undefined) n.textContent = text;
+    return n;
+  }
+
+  /* ------------------------------------------------------------ header */
+
+  var patternCount = bundle.entries.reduce(function (n, e) { return n + e.keys.length; }, 0);
+  [["intents", bundle.entries.length], ["patterns", patternCount],
+   ["test cases", bundle.testset.length]].forEach(function (pair) {
+    var s = el("span", "stat");
+    s.appendChild(el("b", null, String(pair[1])));
+    s.appendChild(document.createTextNode(" " + pair[0]));
+    $("stats").appendChild(s);
+  });
+
+  /* -------------------------------------------------------------- tabs */
+
+  var TABS = ["chat", "kb", "eval"];
+  function showTab(name) {
+    if (TABS.indexOf(name) === -1) name = "chat";
+    TABS.forEach(function (t) {
+      $("tab-" + t).setAttribute("aria-selected", String(t === name));
+      $("panel-" + t).hidden = t !== name;
+    });
+    try { history.replaceState(null, "", "#" + name); } catch (e) { /* ignore */ }
+  }
+  TABS.forEach(function (t) {
+    $("tab-" + t).addEventListener("click", function () { showTab(t); });
+  });
+
+  /* -------------------------------------------------------------- chat */
+
+  function botReply(result) {
+    if (result.confident) {
+      var text = result.entry.answer;
+      var follow = result.entry.followups
+        .map(function (id) { return engine.byId[id]; })
+        .filter(Boolean).slice(0, 3);
+      if (follow.length) {
+        text += "\n\nसम्बन्धित विषय:\n" + follow.map(function (e) {
+          return "  • " + e.label;
+        }).join("\n");
+      }
+      return text;
+    }
+    if (result.suggestions.length) {
+      return "माफ गर्नुहोस्, मैले तपाईंको प्रश्न राम्ररी बुझिनँ।\n\n" +
+        "तपाईंले यीमध्ये कुनै सोध्न खोज्नुभएको हो?\n" +
+        result.suggestions.map(function (e, i) {
+          return "  " + (i + 1) + ". " + e.label;
+        }).join("\n") +
+        "\n\nहोइन भने बाली वा पशुको नाम र समस्या खुलाएर फेरि सोध्नुहोस्।";
+    }
+    return "माफ गर्नुहोस्, यो विषयमा मसँग जानकारी छैन।\n\n" +
+      "म बाली, तरकारी, नगदे बाली, रोग–कीरा, माटो–मल, सिँचाइ, पशुपन्छी, " +
+      "अनुदान र बजारबारे सोधिएका प्रश्नको जवाफ दिन सक्छु।";
+  }
+
+  function addMessage(who, text, unsure) {
+    var msg = el("div", "msg " + who + (unsure ? " unsure" : ""));
+    msg.appendChild(el("div", "who", who === "user" ? "तपाईं" : "बोट"));
+    msg.appendChild(el("div", "bubble", text));
+    $("log").appendChild(msg);
+    $("log").scrollTop = $("log").scrollHeight;
+  }
+
+  function meter(label, value, threshold, max) {
+    var box = el("div", "meter");
+    var row = el("div", "row");
+    row.appendChild(el("span", null, label));
+    row.appendChild(el("b", null, value.toFixed(3)));
+    box.appendChild(row);
+    var track = el("div", "track");
+    var fill = el("div", "fill" + (value < threshold ? " low" : ""));
+    fill.style.width = Math.max(0, Math.min(100, (value / max) * 100)) + "%";
+    track.appendChild(fill);
+    var mark = el("div", "thresh");
+    mark.style.left = Math.min(100, (threshold / max) * 100) + "%";
+    mark.title = "threshold " + threshold;
+    track.appendChild(mark);
+    box.appendChild(track);
+    return box;
+  }
+
+  function field(label, value, isNepali) {
+    var box = el("div", "kv");
+    box.appendChild(el("div", "k", label));
+    var v = el("div", "v" + (isNepali ? " ne" : "") + (value ? "" : " empty"));
+    v.textContent = value || "(none)";
+    box.appendChild(v);
+    return box;
+  }
+
+  function renderInspector(text, result) {
+    var host = $("inspector");
+    host.textContent = "";
+
+    var verdict = el("div", "verdict " + (result.confident ? "ok" : "no"));
+    verdict.appendChild(el("span", "dot"));
+    verdict.appendChild(document.createTextNode(
+      result.confident ? "Confident — answering" : "Below threshold — asking instead"));
+    host.appendChild(verdict);
+
+    host.appendChild(meter("score (min " + cfg.minScore + ")", result.score, cfg.minScore, 1.2));
+    host.appendChild(meter("margin over runner-up (min " + cfg.minMargin + ")",
+                           result.margin, cfg.minMargin, 0.6));
+
+    host.appendChild(field("Crops detected", result.crops.join(", "), true));
+
+    var k = AgriChat.keys(text);
+    host.appendChild(field("Precision key", AgriChat.flat(k.tight)));
+    host.appendChild(field("Recall key", AgriChat.flat(k.loose)));
+    host.appendChild(field("Content stems", k.stems));
+
+    var h = el("div", "kv");
+    h.appendChild(el("div", "k", "Top intents"));
+    var list = el("ol", "ranking");
+    result.ranked.slice(0, 5).forEach(function (r) {
+      var li = el("li");
+      li.appendChild(el("span", "id", r.entry.id));
+      li.appendChild(el("span", "sc", r.score.toFixed(3)));
+      list.appendChild(li);
+    });
+    h.appendChild(list);
+    host.appendChild(h);
+  }
+
+  function ask(text) {
+    text = (text || "").trim();
+    if (!text) return;
+    addMessage("user", text);
+    var result = engine.answer(text);
+    addMessage("bot", botReply(result), !result.confident);
+    renderInspector(text, result);
+  }
+
+  $("ask").addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    ask($("q").value);
+    $("q").value = "";
+  });
+
+  var SAMPLES = [
+    "धानमा मरुवा रोग लाग्यो, के गर्ने?",
+    "dhan ma maruwa rog lagyo k garne",
+    "makai ma fauji kira lagyo",
+    "बाख्राको पाठा जन्मेपछि मर्यो",
+    "compost mal kasari banaune",
+    "tapailai kasto xa",
+    "गोलभेँडाको पातमा नक्सा जस्तो लाइन आयो",
+    "aalu ma dadhuwa rog",
+    "मोबाइल कसरी किन्ने"
+  ];
+  var lbl = el("div", "lbl", "Try one — the same question in either script lands on the same intent:");
+  $("samples").appendChild(lbl);
+  SAMPLES.forEach(function (s) {
+    var b = el("button", "chip", s);
+    b.type = "button";
+    b.addEventListener("click", function () { ask(s); });
+    $("samples").appendChild(b);
+  });
+
+  /* ---------------------------------------------------- knowledge base */
+
+  function renderKB(filter) {
+    var host = $("kblist");
+    host.textContent = "";
+    var needle = (filter || "").trim().toLowerCase();
+    var shown = 0;
+
+    bundle.entries.forEach(function (entry) {
+      var hay = (entry.id + " " + entry.domain + " " + entry.crops.join(" ") + " " +
+                 entry.label + " " + entry.answer).toLowerCase();
+      if (needle && hay.indexOf(needle) === -1) return;
+      shown++;
+
+      var d = el("details", "entry");
+      var s = el("summary");
+      s.appendChild(el("span", null, entry.label));
+      s.appendChild(el("span", "dom", entry.domain));
+      d.appendChild(s);
+
+      var body = el("div", "body");
+      body.appendChild(el("div", "answer", entry.answer));
+
+      var meta = entry.keys.length + " patterns · id " + entry.id;
+      if (entry.crops.length) meta += " · " + entry.crops.join(", ");
+      body.appendChild(el("div", "pats", meta));
+
+      if (entry.sources.length) {
+        var src = el("div", "src");
+        src.appendChild(document.createTextNode("Sources: "));
+        entry.sources.forEach(function (url, i) {
+          var a = el("a", null, url.replace(/^https?:\/\//, "").slice(0, 60));
+          a.href = url; a.target = "_blank"; a.rel = "noopener noreferrer";
+          src.appendChild(a);
+          if (i < entry.sources.length - 1) src.appendChild(document.createTextNode(" · "));
+        });
+        body.appendChild(src);
+      }
+      d.appendChild(body);
+      host.appendChild(d);
+    });
+
+    if (!shown) host.appendChild(el("p", "note", "No entry matches that filter."));
+  }
+  $("kbsearch").addEventListener("input", function () { renderKB(this.value); });
+  renderKB("");
+
+  /* ---------------------------------------------------------- evaluation */
+
+  var inScope = bundle.testset.filter(function (c) { return c.expected; }).length;
+  $("evalintro").textContent =
+    "Runs all " + bundle.testset.length + " held-out queries (" + inScope +
+    " in scope, " + (bundle.testset.length - inScope) + " out of scope) through the engine in your " +
+    "browser. None is copied verbatim from the knowledge base. The engine here is a port of the " +
+    "Python one, checked case-by-case against it by eval/verify_web_port.js.";
+
+  function tile(n, label, cls) {
+    var t = el("div", "tile" + (cls ? " " + cls : ""));
+    t.appendChild(el("div", "n", n));
+    t.appendChild(el("div", "l", label));
+    return t;
+  }
+
+  $("runeval").addEventListener("click", function () {
+    var out = $("evalout");
+    out.textContent = "";
+
+    var top1 = 0, top3 = 0, answered = 0, answeredRight = 0, refused = 0;
+    var oos = 0, fails = [];
+
+    bundle.testset.forEach(function (c) {
+      var res = engine.answer(c.q);
+      var ids = res.ranked.slice(0, 3).map(function (r) { return r.entry.id; });
+      if (!c.expected) {
+        oos++;
+        if (!res.confident) refused++;
+        else fails.push({ q: c.q, want: "(out of scope)", got: ids[0], confident: true });
+        return;
+      }
+      var hit = ids[0] === c.expected;
+      if (hit) top1++;
+      if (ids.indexOf(c.expected) !== -1) top3++;
+      if (res.confident) {
+        answered++;
+        if (hit) answeredRight++;
+      }
+      if (!hit) fails.push({ q: c.q, want: c.expected, got: ids[0], confident: res.confident });
+    });
+
+    var n = bundle.testset.length - oos;
+    var pct = function (x) { return (100 * x / n).toFixed(1) + "%"; };
+    var confidentWrong = answered - answeredRight;
+
+    var tiles = el("div", "tiles");
+    tiles.appendChild(tile(pct(top1), "top-1 accuracy"));
+    tiles.appendChild(tile(pct(top3), "top-3 accuracy"));
+    tiles.appendChild(tile(pct(answered), "coverage (answered)"));
+    tiles.appendChild(tile(answered ? (100 * answeredRight / answered).toFixed(1) + "%" : "—",
+                           "answer precision"));
+    tiles.appendChild(tile(pct(confidentWrong), "confident-wrong",
+                           confidentWrong ? "bad" : "key"));
+    tiles.appendChild(tile((100 * refused / oos).toFixed(1) + "%", "out-of-scope refused"));
+    out.appendChild(tiles);
+
+    var note = el("p", "note");
+    note.appendChild(el("strong", null, "Confident-wrong is the number that matters. "));
+    note.appendChild(document.createTextNode(
+      "A low-confidence miss becomes “did you mean…?” and costs a farmer one line. " +
+      "A confident miss can cost them a season. Read these as a regression guard, not a field " +
+      "accuracy claim: the same author wrote the knowledge base and this test set, and the " +
+      "thresholds were tuned against it."));
+    out.appendChild(note);
+
+    if (fails.length) {
+      var h = el("h2", null, "Misses (" + fails.length + ")");
+      h.style.marginTop = "18px";
+      out.appendChild(h);
+      var wrapEl = el("div", "scroll-x");
+      var table = el("table", "fails");
+      var thead = el("thead"), hr = el("tr");
+      ["", "Query", "Expected", "Returned"].forEach(function (t) { hr.appendChild(el("th", null, t)); });
+      thead.appendChild(hr);
+      table.appendChild(thead);
+      var tbody = el("tbody");
+      fails.forEach(function (f) {
+        var tr = el("tr");
+        var flagCell = el("td");
+        var flag = el("span", "flag " + (f.confident ? "conf" : "soft"),
+                      f.confident ? "confident" : "unsure");
+        flagCell.appendChild(flag);
+        tr.appendChild(flagCell);
+        tr.appendChild(el("td", "q", f.q));
+        tr.appendChild(el("td", "id", f.want));
+        tr.appendChild(el("td", "id", f.got));
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      wrapEl.appendChild(table);
+      out.appendChild(wrapEl);
+    }
+  });
+
+  /* ------------------------------------------------------------ startup */
+
+  $("footer").textContent =
+    "Engine: TF-IDF over three views (precision key, recall key, content stems) with crop-entity " +
+    "matching. Weights " + JSON.stringify(cfg.weights) + ", min score " + cfg.minScore +
+    ", min margin " + cfg.minMargin + ".";
+
+  showTab((location.hash || "").replace("#", "") || "chat");
+  ask("धानमा मरुवा रोग लाग्यो, के गर्ने?");
+})();
+</script>
