@@ -1,69 +1,83 @@
-import random
-import json
-import pickle
-import numpy as np
-import nltk
-from nltk.stem import WordNetLemmatizer
+# -*- coding: utf-8 -*-
+"""AgriChatBot -- a Nepali-language assistant for farmers in Nepal.
 
-from tensorflow.keras.models import load_model
+Ask in Devanagari or Roman Nepali; both reach the same answer:
 
+    You: धानमा मरुवा रोग लाग्यो, के गर्ने?
+    You: dhan ma maruwa rog lagyo k garne
 
-lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('intents.json').read())
+Usage:
+    python chatbot.py                   interactive
+    python chatbot.py "dhan ma kira"    single question
+    python chatbot.py --debug           show match scores
+"""
 
-words = pickle.load(open('words.pkl', 'rb'))
-classes = pickle.load(open('classes.pkl', 'rb'))
+from __future__ import annotations
 
-model = load_model('chatbot.h5')
+import argparse
+import sys
 
-def clean_up_sentence(sentence):
-	sentence_words = nltk.word_tokenize(sentence)
-	sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
-	return sentence_words
+from agrichat import AgriEngine
 
-def bag_of_words(sentence):
-	sentence_words = clean_up_sentence(sentence)
-	bag = [0] * len(words)
-	for w in sentence_words:
-		for i, word in enumerate(words):
-			if word == w:
-				bag[i] = 1
-	return np.array(bag)
+BANNER = """
+╭──────────────────────────────────────────────────────────╮
+│   कृषि सहयोगी च्याटबोट  ·  AgriChatBot                   │
+│   नेपाली किसानका लागि                                    │
+╰──────────────────────────────────────────────────────────╯
 
-def predict_class(sentence):
-	bow = bag_of_words(sentence)
-	res = model.predict(np.array([bow]))[0]
-	ERROR_THRESHOLD = 0.25
-	results = [[i,r] for i,r in enumerate(res) if r > ERROR_THRESHOLD]
+नेपाली (देवनागरी वा रोमन) मा सोध्नुहोस् — जस्तै:
+    धानमा मरुवा रोग लाग्यो, के गर्ने?
+    bakhra lai kun khop lagaune
+    compost mal kasari banaune
 
-	results.sort(key=lambda x: x[1], reverse=True)
-	return_list = []
-	for r in results:
-		return_list.append({'intent':classes[r[0]], 'probability':str(r[1])})
-	return return_list
+बाहिर निस्कन: बिदा / exit / quit  (वा Ctrl-C)
+"""
 
-def get_response(intents_list, intents_json):
-	tag = intents_list[0]['intent']
-	list_of_intents = intents_json['intents']
-	for i in list_of_intents:
-		if i['tag'] == tag:
-			result =  random.choice(i['responses'])
-			break
-	return result
-
-print("Welcome to the chatbot!")
-print("Welcome to the chatbot!")
-print("Welcome to the chatbot!")
-print("Welcome to the chatbot!")
-print("Welcome to the chatbot!")
+EXIT_WORDS = {"exit", "quit", "q", "बिदा", "बन्द", "band"}
 
 
-while True:
-	message = input("You: ")
-	ints = predict_class(message)
-	res = get_response(ints, intents)
-	print("Reply:" + res)
+def run_once(engine: AgriEngine, question: str, debug: bool = False) -> None:
+    if debug:
+        ranked = engine.rank(question)
+        result = engine.answer(question)
+        print(f"[crops detected: {result.crops or '-'}]")
+        print("[top 5 intents]")
+        for entry, score in ranked[:5]:
+            print(f"    {score:6.3f}  {entry.id}")
+        print(f"[score {result.score:.3f}  margin {result.margin:.3f}  "
+              f"confident {result.confident}]\n")
+    print(engine.reply(question))
 
 
+def main() -> int:
+    ap = argparse.ArgumentParser(description="Nepali agriculture chatbot")
+    ap.add_argument("question", nargs="*", help="ask one question and exit")
+    ap.add_argument("--debug", action="store_true", help="show matching scores")
+    args = ap.parse_args()
+
+    engine = AgriEngine()
+
+    if args.question:
+        run_once(engine, " ".join(args.question), args.debug)
+        return 0
+
+    print(BANNER)
+    print(f"({len(engine.entries)} विषयमा जानकारी उपलब्ध छ)\n")
+    while True:
+        try:
+            message = input("तपाईं: ").strip()
+        except (EOFError, KeyboardInterrupt):
+            print("\nनमस्ते! 🌾")
+            return 0
+        if not message:
+            continue
+        if message.lower() in EXIT_WORDS:
+            print("नमस्ते! खेतीपातीमा सफलता मिलोस्। 🌾")
+            return 0
+        print()
+        run_once(engine, message, args.debug)
+        print()
 
 
+if __name__ == "__main__":
+    sys.exit(main())
