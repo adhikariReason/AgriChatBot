@@ -1,0 +1,532 @@
+[
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/publications?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/test-1776250266.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_test-1776250266-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Form-no-1762327182.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762327182-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Form-no-1762327111.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762327111-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Form-no-1762327052.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762327052-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newdownloadsfiles/Form-no-1762322723.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762322723-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newdownloadsfiles/Form-no-1762322522.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762322522-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newdownloadsfiles/Form-no-1762322300.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_form-no-1762322300-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/img-250924104826-001-1758707640.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_img-250924104826-001-1758707640-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Protocol-of-Quarantine-Treatment-through-application-of-Methyl-Bromide-fumigation-in-Nepal-1754560254.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_protocol-of-quarantine-treatment-through_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/जीवनाशक-विषादी-पञ्जीकरण-कार्यविधि-1752126429.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1752126429-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/FLEX-3+6-1751614473.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_flex-3-6-1751614473-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/cover-book-final-1750934853.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_cover-book-final-1750934853-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Surveillance-instruction-to-be-circulated_Garlic-from-China_FinalHKM-1749709046.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_surveillance-instruction-to-be-circulate_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/book-final-1748330500.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_book-final-1748330500-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Survey-Guidelines-for-Quarantine-,-Potential-Quarantine-insect-pest-,pathogens-of-Apple-&-apple-seedlings-into-Nepal-1747819598.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_survey-guidelines-for-quarantine-potenti_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/इटालीबाट-आयात-गरिने-स्याउको-पोष्ट-इन्ट्री-क्वारेन्टाइन-आचार-संहिता,२०८२-1747807253.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1747807253-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/जीवनाशक-विषादीको-पञ्जीकरण-गर्ने-प्रक्रिया-तथा-कार्यविधि-1747564531.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1747564531-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/जिवनाशक-विषादीको-इजाजतपत्र-प्रदान-गर्नुपूर्वको-सर्तहरू-1747564436.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1747564436-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/MANUAL-ON-LABORATORY-HANDLING-TECHNIQUES-FOR-PLANT-QUARANTINE-SERVICES-1744877388.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_manual-on-laboratory-handling-techniques_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Working-guideline-for-rapid-PRA-in-Nepal-(2)-1743508327.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_working-guideline-for-rapid-pra-in-nepal_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/1997-021-3-1743412037.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1997-021-3-1743412037-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/medicinal-&-aromatic-plants-1741780949.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_medicinal-aromatic-plants-1741780949-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/(Fabricus)-1741780694.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_fabricus-1741780694-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/plant-quarantine-decision-final-minute-with-signature-1739442965.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_plant-quarantine-decision-final-minute-w_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/blank-image-1706851998-1739346503.jpg",
+  "reason": "no usable text"
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/CamScanner-01-20-2025-11-1737419700-1739264775.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_camscanner-01-20-2025-11-1737419700-1739_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newrules/जिवनाशक-विषादीको-व्यावसायिक-इजाजतपत्रका-लागि-तालिम-संचालन-कार्यविधि,२०८१-1733470137.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1733470137-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/MBR-Nepal-publication_compressed-1731833803.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_mbr-nepal-publication-compressed-1731833_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/National-Phytosanitary-standard-on-1720160680.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_national-phytosanitary-standard-on-17201_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/surveillance-guideline-1720085874.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_surveillance-guideline-1720085874-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/surveillance-guideline-1720085711.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_surveillance-guideline-1720085711-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/विषादीको-प्रयोग-विधि-पुस्तिका-1719618354.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1719618354-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/बिरुवा-क्वारेन्टाइन-तथा-संरक्षण-नियमावली-२०६६-1718033096.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1718033096-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Plant-Quarantine-and-Protection-Act-2007-1701155739-1718032985.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_plant-quarantine-and-protection-act-2007_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/थ्रिप्स-पार्भिस्पिनस_-कृषकका-लागि-तथ्य-पत्र-1718017300.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_1718017300-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Plant-Clinic-Operation-Guidance-Doccument,-2081-1718016958.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_plant-clinic-operation-guidance-doccumen_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/2080-8-11-AITC-Approved-Pesticide-Inspec-1716823553.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_2080-8-11-aitc-approved-pesticide-inspec_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/PQPMC-TOR-1716738418.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_pqpmc-tor-1716738418-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/PRA-formats-official-1716430266.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_pra-formats-official-1716430266-pdf_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/FOC-TR4-B5-Booklet-Final-for-print-(1)_1707285876-1716288853.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_foc-tr4-b5-booklet-final-for-print-1-170_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Surveillance-of-Banana-Fusarium-Wilt-TR4-Booklet-for-print_1707287592-1716288087.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_surveillance-of-banana-fusarium-wilt-tr4_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Banana-Flex-3-x-5ft-(1)_1707287735-1716288051.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_banana-flex-3-x-5ft-1-1707287735-1716288_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/Banana-Flyer-for-print-(1)_1707287777-1716287991.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_banana-flyer-for-print-1-1707287777-1716_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/FOC-TR4-B5-Booklet-for-print_1707287873-1716287957.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_foc-tr4-b5-booklet-for-print-1707287873-_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/newprogressfiles/FOC-TR4-A4-Sheet-Color-Sample_1707287993-1716287914.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_foc-tr4-a4-sheet-color-sample-1707287993_f456bb42.pdf' as type pdf."
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/agricultural-diary/?page=3",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/book?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/citrus-disorders_1550726877-1701162292.pdf",
+  "reason": "Cannot open empty file: filename='/home/user/AgriChatBot/data/corpus/raw/pqpmc_citrus-disorders-1550726877-1701162292-p_e3b0c442.pdf'."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/7_1539067175-1701159699.pdf",
+  "reason": "no usable text"
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/8_1539067147-1701159668.pdf",
+  "reason": "no usable text"
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/9_1539067127-1701159643.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_9-1539067127-1701159643-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/10_1539067052-1701159604.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_10-1539067052-1701159604-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/11_1539067015-1701159569.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_11-1539067015-1701159569-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/12_1539066979-1701159537.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_12-1539066979-1701159537-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/13_1539066951-1701159516.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_13-1539066951-1701159516-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/14_1539066779-1701159476.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_14-1539066779-1701159476-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PQPMC",
+  "url": "https://npponepal.gov.np/progressfiles/18_1539066634-1701159364.pdf",
+  "reason": "Failed to open file '/home/user/AgriChatBot/data/corpus/raw/pqpmc_18-1539066634-1701159364-pdf_e992568f.pdf' as type pdf."
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/diary?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/directory?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/journal?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/technical-manual/?page=5",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/procedures?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/reports-and-books/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/yccxr-3d370",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/qtf0y-2ht93",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/rrpvn-g3q31",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/fk7f9-2ha88",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/xgnxk-7e630",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/v9eap-tej42",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/b2tf5-9qr76",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/j2541-mq296",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/d7rjd-p6c60",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/m7771-n3p62",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/ant70-vc710",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/8g9ze-1r153",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/fthht-ma839",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/kcknw-ers18",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/by2rw-jqc19",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/z8bbr-x8v20",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/rbkhb-2yp37",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/r33nm-gxv27",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "ICIMOD",
+  "url": "https://lib.icimod.org/records/5pjqt-nrp07",
+  "reason": "licence excludes derivatives (ND): skipped"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/program-and-progress?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/self-publishing?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/pocket?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/block?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/zone?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/superzone?page=1",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "PMAMP",
+  "url": "https://pmamp.gov.np/technology-developed-promoted-details",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/other-publication/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/content/118/self-published--second-quarterly--a-v-2082-83/",
+  "reason": "HTTP 503"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/self-publication/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/old-publication/",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/journal/?page=3",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/animal-livestock-training-curriculum/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/procedure/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "AITC",
+  "url": "https://aitc.gov.np/category/directives/?page=2",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/category/annual-report-of-office?page=4",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/category/statistics-related-to-agriculture?page=4",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/category/journal--magazine?page=3",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/category/other-publications?page=3",
+  "reason": "HTTP 404"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/content/564/norvik-international-hospital-and-medical-college-seia/",
+  "reason": "ConnectionError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/content/533/fetti/",
+  "reason": "ConnectionError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/content/510/notice-regarding-listing-of-independent-surveyors/",
+  "reason": "HTTP 504"
+ },
+ {
+  "org": "MoALD",
+  "url": "https://moald.gov.np/content/484/suvakama/",
+  "reason": "ConnectionError('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
+ }
+]
