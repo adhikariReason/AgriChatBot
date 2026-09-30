@@ -1,8 +1,10 @@
 name: ci
 
 on:
+  # push is limited to main: a branch with an open PR would otherwise run the
+  # whole suite twice, once per trigger. pull_request covers everything else.
   push:
-    branches: ["**"]
+    branches: [main]
   pull_request:
   workflow_dispatch:
 
