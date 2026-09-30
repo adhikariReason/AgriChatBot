@@ -1,0 +1,420 @@
+[
+ {
+  "id": "q01",
+  "topic": "rice pest",
+  "deva": "धानमा खैरो फड्के कीरा लाग्यो भने के गर्ने?",
+  "roman": "dhan ma khairo phadke kira lagyo bhane ke garne",
+  "terms": [
+   "फड्के"
+  ],
+  "roman_noisy": "dhaan ma khairo fadke keera lageko xa k garne"
+ },
+ {
+  "id": "q02",
+  "topic": "maize pest",
+  "deva": "मकैमा अमेरिकन फौजी कीरा कसरी नियन्त्रण गर्ने?",
+  "roman": "makai ma american fauji kira kasari niyantran garne",
+  "terms": [
+   "फौजी"
+  ],
+  "roman_noisy": "makai ma american fauji kiraa kasari control garne"
+ },
+ {
+  "id": "q03",
+  "topic": "livestock disease",
+  "deva": "कुकुरले टोकेमा रेबिज रोग नलागोस् भनेर के गर्ने?",
+  "roman": "kukur le toke ma rabies rog nalagos bhanera ke garne",
+  "terms": [
+   "रेबिज"
+  ],
+  "roman_noisy": "kukur le tokeko bela rabis na lagos bhanera k garnu parxa"
+ },
+ {
+  "id": "q04",
+  "topic": "livestock disease",
+  "deva": "बंगुरमा अफ्रिकन स्वाइन फिभर रोग के हो र कसरी रोक्ने?",
+  "roman": "bangur ma african swine fever rog ke ho ra kasari rokne",
+  "terms": [
+   "स्वाइन"
+  ],
+  "roman_noisy": "banguur ma african swine fiver rog k ho ani kasari rok ne"
+ },
+ {
+  "id": "q05",
+  "topic": "fruit crop",
+  "deva": "किवी खेती कसरी गर्ने?",
+  "roman": "kiwi kheti kasari garne",
+  "terms": [
+   "किवी"
+  ],
+  "roman_noisy": "kiwi ko kheti kasari garni"
+ },
+ {
+  "id": "q06",
+  "topic": "fruit crop",
+  "deva": "कागती खेती गर्ने तरिका के छ?",
+  "roman": "kagati kheti garne tarika ke chha",
+  "terms": [
+   "कागती"
+  ],
+  "roman_noisy": "kagati kheti gar ne tarika k xa"
+ },
+ {
+  "id": "q07",
+  "topic": "goat",
+  "deva": "बाख्रा पालन गर्दा कस्तो गोठ चाहिन्छ?",
+  "roman": "bakhra palan garda kasto goth chahinchha",
+  "terms": [
+   "बाख्रा",
+   "गोठ"
+  ],
+  "roman_noisy": "bakhra paalan garda kasto goth chaainxa"
+ },
+ {
+  "id": "q08",
+  "topic": "cattle",
+  "deva": "गाईभैंसीलाई दाना कति खुवाउने?",
+  "roman": "gai bhaisi lai dana kati khuwaune",
+  "terms": [
+   "दाना",
+   "गाई"
+  ],
+  "roman_noisy": "gai bhaisi lai daana kati khuwauney"
+ },
+ {
+  "id": "q09",
+  "topic": "pig",
+  "deva": "बंगुर पालन कसरी सुरु गर्ने?",
+  "roman": "bangur palan kasari suru garne",
+  "terms": [
+   "बंगुर"
+  ],
+  "roman_noisy": "bangur paalan kasari surru garne"
+ },
+ {
+  "id": "q10",
+  "topic": "bee disease",
+  "deva": "मौरीमा सुलसुले रोग लागेमा कसरी व्यवस्थापन गर्ने?",
+  "roman": "mauri ma sulsule rog lagema kasari byabasthapan garne",
+  "terms": [
+   "सुलसुले"
+  ],
+  "roman_noisy": "mauri ma sulsule rog lagyo bhane kasari byabasthaapan garne"
+ },
+ {
+  "id": "q11",
+  "topic": "poultry",
+  "deva": "कालिज पालन कसरी गर्ने?",
+  "roman": "kalij palan kasari garne",
+  "terms": [
+   "कालिज"
+  ],
+  "roman_noisy": "kalij paalan kasari garne"
+ },
+ {
+  "id": "q12",
+  "topic": "fruit crop",
+  "deva": "उच्च घनत्वमा स्याउ खेती कसरी गर्ने?",
+  "roman": "uchha ghanatwa ma syau kheti kasari garne",
+  "terms": [
+   "स्याउ"
+  ],
+  "roman_noisy": "uchcha ghanatwa ma syaau kheti kasari garne"
+ },
+ {
+  "id": "q13",
+  "topic": "fruit crop",
+  "deva": "एभोकाडो खेतीका लागि कस्तो हावापानी चाहिन्छ?",
+  "roman": "avocado kheti ko lagi kasto hawapani chahincha",
+  "terms": [
+   "एभोकाडो"
+  ],
+  "roman_noisy": "avocado ko lagi kasto hawa pani chaahinxa"
+ },
+ {
+  "id": "q14",
+  "topic": "fruit crop",
+  "deva": "केरा खेती गर्दा कस्ता बिरुवा रोप्ने?",
+  "roman": "kera kheti garda kasta biruwa ropne",
+  "terms": [
+   "केरा"
+  ],
+  "roman_noisy": "kera kheti garda kasto biruwa ropne"
+ },
+ {
+  "id": "q15",
+  "topic": "pesticide safety",
+  "deva": "विषादी प्रयोग गर्दा कस्ता सावधानी अपनाउने?",
+  "roman": "bisadi prayog garda kasta sabadhani apnaune",
+  "terms": [
+   "विषादी",
+   "सावधानी"
+  ],
+  "roman_noisy": "bishadi prayog garda k k saabdhani apnaune"
+ },
+ {
+  "id": "q16",
+  "topic": "pesticide safety",
+  "deva": "बाँकी रहेको विषादी कसरी भण्डारण र विसर्जन गर्ने?",
+  "roman": "banki raheko bisadi kasari bhandaran ra bisarjan garne",
+  "terms": [
+   "विषादी",
+   "विसर्जन"
+  ],
+  "roman_noisy": "baki bhayeko bisadi kasari bhandaran ra bisarjan garne"
+ },
+ {
+  "id": "q17",
+  "topic": "insurance",
+  "deva": "कृषि तथा पशुपन्छी बिमा कसरी गर्ने?",
+  "roman": "krishi tatha pashupanchhi bima kasari garne",
+  "terms": [
+   "बिमा"
+  ],
+  "roman_noisy": "krisi ra pasupanchi bima kasari garne"
+ },
+ {
+  "id": "q18",
+  "topic": "seed",
+  "deva": "बीउ उत्पादन कसरी गर्ने?",
+  "roman": "biu utpadan kasari garne",
+  "terms": [
+   "बीउ",
+   "उत्पादन"
+  ],
+  "roman_noisy": "biu utpaadan kasari garne"
+ },
+ {
+  "id": "q19",
+  "topic": "citrus disease",
+  "deva": "सुन्तलामा सिट्रस ग्रिनिङ रोग कसरी चिन्ने?",
+  "roman": "suntala ma citrus greening rog kasari chinne",
+  "terms": [
+   "ग्रिनिङ"
+  ],
+  "roman_noisy": "suntala ma citrus greening rog kasari chinney"
+ },
+ {
+  "id": "q20",
+  "topic": "tomato pest",
+  "deva": "गोलभेडामा पात खन्ने कीरा कसरी नियन्त्रण गर्ने?",
+  "roman": "golbheda ma paat khanne kira kasari niyantran garne",
+  "terms": [
+   "गोलभेँडा",
+   "पात खन्ने"
+  ],
+  "roman_noisy": "golveda ma paat khanne kira kasari control garne"
+ },
+ {
+  "id": "q21",
+  "topic": "locust",
+  "deva": "मरुभूमि सलह भनेको के हो?",
+  "roman": "marubhumi salah bhaneko ke ho",
+  "terms": [
+   "सलह"
+  ],
+  "roman_noisy": "marubhumi salaha bhaneko k ho"
+ },
+ {
+  "id": "q22",
+  "topic": "pest",
+  "deva": "सेतो झिँगाको व्यवस्थापन कसरी गर्ने?",
+  "roman": "seto jhinga ko byabasthapan kasari garne",
+  "terms": [
+   "सेतो झिँगा"
+  ],
+  "roman_noisy": "seto jhingaa ko byavasthapan kasari garne"
+ },
+ {
+  "id": "q23",
+  "topic": "weed",
+  "deva": "ठूलो लज्जावती झार कसरी नियन्त्रण गर्ने?",
+  "roman": "thulo lajjawati jhar kasari niyantran garne",
+  "terms": [
+   "लज्जावती"
+  ],
+  "roman_noisy": "thulo lajjawati jhaar kasari niyantran garne"
+ },
+ {
+  "id": "q24",
+  "topic": "silk",
+  "deva": "रेशम खेती कसरी गर्ने?",
+  "roman": "resham kheti kasari garne",
+  "terms": [
+   "रेशम"
+  ],
+  "roman_noisy": "resam kheti kasari garne"
+ },
+ {
+  "id": "q25",
+  "topic": "cereal crop",
+  "deva": "कोदो बालीको खेती प्रविधि के हो?",
+  "roman": "kodo bali ko kheti prabidhi ke ho",
+  "terms": [
+   "कोदो"
+  ],
+  "roman_noisy": "kodo baali ko kheti prabidhi k ho"
+ },
+ {
+  "id": "q26",
+  "topic": "urban farming",
+  "deva": "घरको छतमा तरकारी खेती कसरी गर्ने?",
+  "roman": "ghar ko chhat ma tarkari kheti kasari garne",
+  "terms": [
+   "छत",
+   "तरकारी"
+  ],
+  "roman_noisy": "ghar ko chat ma tarkari kheti kasari garne"
+ },
+ {
+  "id": "q27",
+  "topic": "fish",
+  "deva": "माछा पालनका लागि पोखरी कसरी बनाउने?",
+  "roman": "machha palan ko lagi pokhari kasari banaune",
+  "terms": [
+   "माछा",
+   "पोखरी"
+  ],
+  "roman_noisy": "maacha paalan ko laagi pokhari kasari banaune"
+ },
+ {
+  "id": "q28",
+  "topic": "soil/fertiliser",
+  "deva": "कम्पोस्ट मल कसरी बनाउने?",
+  "roman": "kampost mal kasari banaune",
+  "terms": [
+   "कम्पोस्ट"
+  ],
+  "roman_noisy": "compost mal kasari banaune"
+ },
+ {
+  "id": "q29",
+  "topic": "soil/fertiliser",
+  "deva": "माटो परीक्षण गरेर मल कति हाल्ने?",
+  "roman": "mato pariksan garera mal kati halne",
+  "terms": [
+   "माटो",
+   "परीक्षण"
+  ],
+  "roman_noisy": "maato parikshan garera mal kati halne"
+ },
+ {
+  "id": "q30",
+  "topic": "fertiliser subsidy",
+  "deva": "रासायनिक मलमा अनुदान कसरी पाइन्छ?",
+  "roman": "rasayanik mal ma anudan kasari paincha",
+  "terms": [
+   "अनुदान",
+   "मल"
+  ],
+  "roman_noisy": "rasayanik mal ma anudan kasari pauxa"
+ },
+ {
+  "id": "q31",
+  "topic": "machinery",
+  "deva": "धान रोप्ने मेसिनको बारेमा जानकारी चाहियो",
+  "roman": "dhan ropne machine ko barema jankari chahiyo",
+  "terms": [
+   "रोपाई मेसिन"
+  ],
+  "roman_noisy": "dhaan ropne machine ko baarema jaankari chaiyo"
+ },
+ {
+  "id": "q32",
+  "topic": "mango pest",
+  "deva": "आँपको पातमा जालो बनाउने कीरा कसरी नियन्त्रण गर्ने?",
+  "roman": "aanp ko paat ma jalo banaune kira kasari niyantran garne",
+  "terms": [
+   "आँप",
+   "जालो"
+  ],
+  "roman_noisy": "aanp ko paat ma jaalo banaune kira kasari niyantran garne"
+ },
+ {
+  "id": "q33",
+  "topic": "rice disease",
+  "deva": "धानको कालोपोके रोग र यसको व्यवस्थापन",
+  "roman": "dhan ko kalopoke rog ra yesko byabasthapan",
+  "terms": [
+   "कालोपोके"
+  ],
+  "roman_noisy": "dhaan ko kalopoke rog ra yesko byabasthapan"
+ },
+ {
+  "id": "q34",
+  "topic": "farm calendar",
+  "deva": "मंसिर महिनामा कुन तरकारी लगाउने?",
+  "roman": "mansir mahina ma kun tarkari lagaune",
+  "terms": [
+   "मंसिर",
+   "तरकारी"
+  ],
+  "roman_noisy": "mangsir mahina ma kun tarkari lagaune"
+ },
+ {
+  "id": "q35",
+  "topic": "livestock health",
+  "deva": "पशुपन्छीलाई खोप कहिले लगाउने?",
+  "roman": "pashupanchhi lai khop kahile lagaune",
+  "terms": [
+   "खोप",
+   "पशु"
+  ],
+  "roman_noisy": "pashupanxi lai khop kahile lagaune"
+ },
+ {
+  "id": "q36",
+  "topic": "potato disease",
+  "deva": "आलुमा डढुवा रोग लाग्यो के गर्ने?",
+  "roman": "aalu ma dadhuwa rog lagyo ke garne",
+  "terms": [
+   "आलु",
+   "डढुवा"
+  ],
+  "roman_noisy": "aalu ma dadhuwa rog lagyo k garne"
+ },
+ {
+  "id": "q37",
+  "topic": "maize",
+  "deva": "मकै रोप्ने समय कहिले हो?",
+  "roman": "makai ropne samay kahile ho",
+  "terms": [
+   "मकै",
+   "रोप"
+  ],
+  "roman_noisy": "makai ropney samaya kahile ho"
+ },
+ {
+  "id": "q38",
+  "topic": "rice",
+  "deva": "धानको बीउ प्रति रोपनी कति लाग्छ?",
+  "roman": "dhan ko biu prati ropani kati lagchha",
+  "terms": [
+   "धान",
+   "बीउ",
+   "रोपनी"
+  ],
+  "roman_noisy": "dhaan ko biu prati ropani kati laagxa"
+ },
+ {
+  "id": "q39",
+  "topic": "vegetable",
+  "deva": "खुर्सानीमा कीरा र रोग लागेमा के गर्ने?",
+  "roman": "khursani ma kira ra rog lagema ke garne",
+  "terms": [
+   "खुर्सानी",
+   "रोग"
+  ],
+  "roman_noisy": "khursaani ma kira ra rog lagyo bhane k garne"
+ },
+ {
+  "id": "q40",
+  "topic": "ginger/spice",
+  "deva": "अदुवा खेती कसरी गर्ने?",
+  "roman": "aduwa kheti kasari garne",
+  "terms": [
+   "अदुवा"
+  ],
+  "roman_noisy": "aduwa kheti kasari garney"
+ }
+]

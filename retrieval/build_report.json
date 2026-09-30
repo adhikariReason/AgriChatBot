@@ -1,0 +1,59 @@
+{
+ "documents": 210,
+ "documents_with_kept_passages": 198,
+ "passages_after_chunking": 24469,
+ "passages_after_quality_filter": 16272,
+ "dropped_total": 8197,
+ "dropped_by_reason": {
+  "latin_digit_debris": 3046,
+  "mostly_english": 699,
+  "not_nepali_prose": 2563,
+  "duplicate": 1396,
+  "numeric_table": 291,
+  "malformed_devanagari": 168,
+  "fragmented": 26,
+  "symbol_noise": 8
+ },
+ "by_extraction": {
+  "ocr": {
+   "kept": 8109,
+   "latin_digit_debris": 936,
+   "mostly_english": 259,
+   "not_nepali_prose": 497,
+   "duplicate": 570,
+   "numeric_table": 46,
+   "symbol_noise": 6,
+   "fragmented": 3
+  },
+  "pdf-text": {
+   "not_nepali_prose": 2066,
+   "kept": 8163,
+   "latin_digit_debris": 2110,
+   "numeric_table": 245,
+   "malformed_devanagari": 168,
+   "mostly_english": 440,
+   "fragmented": 23,
+   "duplicate": 826,
+   "symbol_noise": 2
+  }
+ },
+ "kept_flagged_noisy": 5956,
+ "thresholds": {
+  "T_DIGIT": 0.25,
+  "T_LATIN": 0.5,
+  "T_MALFORMED": 0.1,
+  "T_SHORT": 0.45,
+  "T_STRAY": 0.08,
+  "T_SYMBOL": 0.06,
+  "MIN_DEVA": 150
+ },
+ "noisy_flag": {
+  "debris": 0.03,
+  "malformed": 0.05
+ },
+ "debris_tokens_removed_from_kept": 49466,
+ "kept_with_debris_removed": 11065,
+ "lexical_keys_seconds": 77.2,
+ "dense_build_seconds": 2731.4,
+ "note": "dense_build_seconds covers only this run; resumed shards are skipped"
+}

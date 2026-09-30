@@ -1,0 +1,4 @@
+raw/
+text/
+*.tmp
+!text.tar.gz

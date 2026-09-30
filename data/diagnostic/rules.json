@@ -1,0 +1,117 @@
+{
+  "note": "Symptom triage. A farmer types 'मेरो बिरुवा मर्दै छ' -- no retrieval answers that, because the question is underspecified. This asks back instead, the way a plant clinic does, and only asks for the slots that actually change the answer.",
+
+  "triggers": [
+    "मर्यो", "मर्दै", "मरे", "बिग्रियो", "बिग्रिँदै", "समस्या", "सुक्यो", "सुक्दै",
+    "पहेँलो", "पहेलो", "खैरो", "कालो", "दाग", "प्वाल", "कीरा", "किरा", "रोग",
+    "ओइलायो", "कुहियो", "खुम्चियो", "मुडियो", "बढेन", "लाग्यो", "भयो", "देखियो",
+    "maryo", "mardai", "bigriyo", "samasya", "sukyo", "pahelo", "khairo", "kalo",
+    "dag", "pwal", "kira", "rog", "oilayo", "kuhiyo", "khumchiyo", "badhena",
+    "lagyo", "bhayo", "dekhiyo", "biruwa", "bot"
+  ],
+
+  "slots": {
+    "part": {
+      "question": "बोटको कुन भागमा देखिएको हो?",
+      "options": [
+        {"value": "पात",     "label": "पात",              "aliases": ["पात", "पात्", "paat", "pat", "leaf", "patta"]},
+        {"value": "डाँठ",    "label": "डाँठ / थाम",        "aliases": ["डाँठ", "डाठ", "थाम", "दाँठ", "danth", "dath", "tham", "stem"]},
+        {"value": "जरा",     "label": "जरा / फेद",         "aliases": ["जरा", "फेद", "jara", "fed", "pheda", "root"]},
+        {"value": "फल",      "label": "फल",                "aliases": ["फल", "फलमा", "fal", "phal", "fruit"]},
+        {"value": "बाला",    "label": "बाला / घोगा",       "aliases": ["बाला", "घोगा", "bala", "ghoga", "panicle"]},
+        {"value": "फूल",     "label": "फूल",               "aliases": ["फूल", "फुल", "ful", "phul", "full", "phool", "flower", "curd"]},
+        {"value": "गानो",    "label": "गानो / गेडा",       "aliases": ["गानो", "गेडा", "गेडो", "gano", "geda", "gedo", "tuber"]},
+        {"value": "मुन्टा",  "label": "मुन्टा / टुप्पो",   "aliases": ["मुन्टा", "टुप्पो", "गाभा", "munta", "tuppo", "gaba", "gava"]},
+        {"value": "पूरै",    "label": "पूरै बोट",          "aliases": ["पूरै", "पुरै", "सबै", "पूरा", "purai", "pura", "sabai", "whole"]}
+      ]
+    },
+    "symptom": {
+      "question": "त्यहाँ के देखिएको हो?",
+      "options": [
+        {"value": "पहेँलो",  "label": "पहेँलो भयो",              "aliases": ["पहेँलो", "पहेलो", "पहेंलो", "pahelo", "pahenlo", "yellow"]},
+        {"value": "दाग",     "label": "खैरो वा कालो दाग",        "aliases": ["दाग", "खैरो", "कालो", "धब्बा", "dag", "khairo", "kalo", "spot", "dhabba"]},
+        {"value": "सुक्यो",  "label": "सुक्यो",                   "aliases": ["सुक्यो", "सुके", "सुक्दै", "ओइलायो", "sukyo", "suke", "oilayo", "oilaayo", "dry", "wilt"]},
+        {"value": "प्वाल",   "label": "प्वाल परेको",             "aliases": ["प्वाल", "प्वाल्", "खायो", "कोरेको", "pwal", "pwaal", "khayo", "hole"]},
+        {"value": "कीरा",    "label": "कीरा देखिन्छ",            "aliases": ["कीरा", "किरा", "सुन्डा", "लाही", "kira", "keera", "sunda", "lahi", "insect", "worm"]},
+        {"value": "कुहियो",  "label": "कुहियो / गन्हायो",        "aliases": ["कुहियो", "गन्हायो", "सड्यो", "नरम", "kuhiyo", "ganhayo", "sadyo", "naram", "rot"]},
+        {"value": "खुम्चियो","label": "खुम्चियो / मुडियो",       "aliases": ["खुम्चियो", "मुडियो", "बटारियो", "khumchiyo", "mudiyo", "batariyo", "curl"]},
+        {"value": "बढेन",    "label": "बढेन / सानै रह्यो",       "aliases": ["बढेन", "सानै", "सानो", "नबढेको", "badhena", "sanai", "sano", "stunt"]}
+      ]
+    }
+  },
+
+  "crop_question": "कुन बालीमा समस्या भएको हो?",
+  "crop_examples": ["धान", "मकै", "आलु", "गोलभेँडा", "काउली", "केरा", "अदुवा", "खुर्सानी"],
+
+  "rules": [
+    {"crop": "धान", "part": "पात",    "symptom": "दाग",     "intent": "dhan_maruwa_rog"},
+    {"crop": "धान", "part": "बाला",   "symptom": "सुक्यो",  "intent": "dhan_maruwa_rog"},
+    {"crop": "धान", "part": "डाँठ",   "symptom": "दाग",     "intent": "dhan_maruwa_rog"},
+    {"crop": "धान", "part": "मुन्टा", "symptom": "सुक्यो",  "intent": "dhan_kira"},
+    {"crop": "धान", "part": "पात",    "symptom": "प्वाल",   "intent": "dhan_kira"},
+    {"crop": "धान", "part": "*",      "symptom": "कीरा",    "intent": "dhan_kira"},
+    {"crop": "धान", "part": "पात",    "symptom": "पहेँलो",  "intent": "dhan_mal_matra"},
+    {"crop": "धान", "part": "*",      "symptom": "*",       "intent": "dhan_maruwa_rog"},
+
+    {"crop": "मकै", "part": "*",      "symptom": "प्वाल",   "intent": "makai_fauji_kira"},
+    {"crop": "मकै", "part": "*",      "symptom": "कीरा",    "intent": "makai_fauji_kira"},
+    {"crop": "मकै", "part": "मुन्टा", "symptom": "*",       "intent": "makai_fauji_kira"},
+    {"crop": "मकै", "part": "पात",    "symptom": "पहेँलो",  "intent": "makai_ropai_samaya"},
+    {"crop": "मकै", "part": "*",      "symptom": "*",       "intent": "makai_fauji_kira"},
+
+    {"crop": "आलु", "part": "पात",    "symptom": "दाग",     "intent": "alu_dadhuwa_rog"},
+    {"crop": "आलु", "part": "पूरै",   "symptom": "सुक्यो",  "intent": "alu_dadhuwa_rog"},
+    {"crop": "आलु", "part": "गानो",   "symptom": "कुहियो",  "intent": "alu_dadhuwa_rog"},
+    {"crop": "आलु", "part": "*",      "symptom": "कीरा",    "intent": "tarkari_kira_pahichan"},
+    {"crop": "आलु", "part": "*",      "symptom": "प्वाल",   "intent": "tarkari_kira_pahichan"},
+    {"crop": "आलु", "part": "*",      "symptom": "*",       "intent": "alu_dadhuwa_rog"},
+
+    {"crop": "गोलभेँडा", "part": "पात", "symptom": "*",     "intent": "golbheda_tuta_rog"},
+    {"crop": "गोलभेँडा", "part": "फल",  "symptom": "*",     "intent": "golbheda_tuta_rog"},
+    {"crop": "गोलभेँडा", "part": "*",   "symptom": "*",     "intent": "golbheda_tuta_rog"},
+
+    {"crop": "काउली", "part": "फूल",  "symptom": "*",       "intent": "kauli_banda_kira"},
+    {"crop": "काउली", "part": "पात",  "symptom": "प्वाल",   "intent": "kauli_banda_kira"},
+    {"crop": "काउली", "part": "*",    "symptom": "कीरा",    "intent": "kauli_banda_kira"},
+    {"crop": "काउली", "part": "डाँठ", "symptom": "दाग",     "intent": "kauli_banda_kheti"},
+    {"crop": "काउली", "part": "*",    "symptom": "बढेन",    "intent": "kauli_banda_kheti"},
+    {"crop": "काउली", "part": "*",    "symptom": "*",       "intent": "kauli_banda_kira"},
+    {"crop": "बन्दा", "part": "*",    "symptom": "कीरा",    "intent": "kauli_banda_kira"},
+    {"crop": "बन्दा", "part": "*",    "symptom": "*",       "intent": "kauli_banda_kira"},
+
+    {"crop": "केरा", "part": "पात",   "symptom": "पहेँलो",  "intent": "kera_rog"},
+    {"crop": "केरा", "part": "पूरै",  "symptom": "सुक्यो",  "intent": "kera_rog"},
+    {"crop": "केरा", "part": "मुन्टा","symptom": "*",       "intent": "kera_rog"},
+    {"crop": "केरा", "part": "*",     "symptom": "*",       "intent": "kera_rog"},
+
+    {"crop": "अदुवा", "part": "गानो", "symptom": "*",       "intent": "aduwa_gano_kuhine"},
+    {"crop": "अदुवा", "part": "पात",  "symptom": "पहेँलो",  "intent": "aduwa_gano_kuhine"},
+    {"crop": "अदुवा", "part": "*",    "symptom": "कुहियो",  "intent": "aduwa_gano_kuhine"},
+    {"crop": "अदुवा", "part": "*",    "symptom": "*",       "intent": "aduwa_gano_kuhine"},
+    {"crop": "बेसार", "part": "*",    "symptom": "*",       "intent": "aduwa_gano_kuhine"},
+
+    {"crop": "अलैंची", "part": "*",   "symptom": "*",       "intent": "alaichi_rog"},
+
+    {"crop": "खुर्सानी", "part": "पात", "symptom": "खुम्चियो", "intent": "khursani_kheti"},
+    {"crop": "खुर्सानी", "part": "फूल", "symptom": "*",        "intent": "khursani_kheti"},
+    {"crop": "खुर्सानी", "part": "*",   "symptom": "कीरा",     "intent": "tarkari_kira_pahichan"},
+    {"crop": "खुर्सानी", "part": "*",   "symptom": "*",        "intent": "khursani_kheti"},
+
+    {"crop": "प्याज", "part": "*",    "symptom": "*",       "intent": "pyaj_lasun"},
+    {"crop": "लसुन", "part": "*",     "symptom": "*",       "intent": "pyaj_lasun"},
+    {"crop": "गहुँ", "part": "*",     "symptom": "*",       "intent": "gahu_kheti"},
+    {"crop": "तरकारी", "part": "*",   "symptom": "कीरा",    "intent": "tarkari_kira_pahichan"},
+    {"crop": "तरकारी", "part": "*",   "symptom": "*",       "intent": "tarkari_kira_pahichan"},
+
+    {"crop": "बाख्रा", "part": "*",   "symptom": "*",       "intent": "bakhra_khop"},
+    {"crop": "कुखुरा", "part": "*",   "symptom": "*",       "intent": "kukhura_palan"},
+    {"crop": "गाई",   "part": "*",    "symptom": "*",       "intent": "gai_bhaisi_dudh"},
+    {"crop": "भैंसी", "part": "*",    "symptom": "*",       "intent": "gai_bhaisi_dudh"},
+    {"crop": "माछा",  "part": "*",    "symptom": "*",       "intent": "machha_palan"},
+
+    {"crop": "*", "part": "जरा",   "symptom": "कुहियो", "intent": "birwa_nursery"},
+    {"crop": "*", "part": "फेद",   "symptom": "*",      "intent": "birwa_nursery"},
+    {"crop": "*", "part": "*",     "symptom": "कीरा",   "intent": "tarkari_kira_pahichan"},
+    {"crop": "*", "part": "*",     "symptom": "प्वाल",  "intent": "tarkari_kira_pahichan"}
+  ]
+}

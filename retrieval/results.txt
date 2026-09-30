@@ -1,0 +1,129 @@
+questions: 40 (x2 scripts = 80 queries); 39 have >=1 relevant passage in the judged pool
+passages indexed: 16272
+
+--- hit@5 (%), ALL questions ---
+                                dense  lexical    tfidf      RRF
+Devanagari query                 85.0     72.5     72.5     77.5
+Roman, as typed (no translit)     35.0     72.5     72.5     62.5
+Roman -> Devanagari (translit)     87.5     72.5     75.0     80.0
+SLOPPY Roman, as typed           32.5     62.5     75.0     70.0
+SLOPPY Roman -> translit         87.5     65.0     77.5     85.0
+   (lexical/tfidf 'translit' = transliterate the lexical query as well; RRF 'translit' = dense query
+    transliterated, lexical query raw -- the configuration search.py ships)
+
+--- hit@5 (%), ANSWERABLE questions only (>=1 relevant passage exists) ---
+                                dense  lexical    tfidf      RRF
+Devanagari query                 87.2     74.4     74.4     79.5
+Roman, as typed (no translit)     35.9     74.4     74.4     64.1
+Roman -> Devanagari (translit)     89.7     74.4     76.9     82.1
+SLOPPY Roman, as typed           33.3     64.1     76.9     71.8
+SLOPPY Roman -> translit         89.7     66.7     79.5     87.2
+   (lexical/tfidf 'translit' = transliterate the lexical query as well; RRF 'translit' = dense query
+    transliterated, lexical query raw -- the configuration search.py ships)
+
+--- hit@1 and MRR@10 (%), answerable questions ---
+  deva  dense                hit@1  61.5   MRR  74.1
+  deva  lexical              hit@1  33.3   MRR  48.8
+  deva  tfidf                hit@1  43.6   MRR  56.8
+  deva  rrf                  hit@1  66.7   MRR  74.2
+  roman dense|raw            hit@1  17.9   MRR  24.4
+  roman dense|translit       hit@1  61.5   MRR  74.3
+  roman lexical|raw          hit@1  43.6   MRR  53.0
+  roman lexical|translit     hit@1  41.0   MRR  52.5
+  roman tfidf|raw            hit@1  46.2   MRR  59.1
+  roman rrf|raw              hit@1  30.8   MRR  47.6
+  roman rrf|translit         hit@1  61.5   MRR  71.1
+  roman rrf|translit-both    hit@1  61.5   MRR  71.4
+  roman_noisy dense|raw            hit@1  10.3   MRR  20.9
+  roman_noisy dense|translit       hit@1  61.5   MRR  74.4
+  roman_noisy lexical|raw          hit@1  35.9   MRR  47.8
+  roman_noisy rrf|raw              hit@1  17.9   MRR  41.8
+  roman_noisy rrf|translit         hit@1  56.4   MRR  70.8
+
+--- what transliteration is worth (hit@5 points, answerable questions; 95% paired bootstrap CI) ---
+  dense:  Roman translit - Roman raw                                  +53.8  [+38.5, +69.2]
+  RRF:    Roman translit - Roman raw                                  +17.9  [+0.0, +35.9]
+  dense:  Devanagari - Roman translit  (cost of Roman that remains)    -2.6  [-7.7, +0.0]
+  dense:  Devanagari - Roman raw       (total cost of Roman, no fix)  +51.3  [+33.3, +69.2]
+  RRF:    Devanagari - Roman translit                                  -2.6  [-7.7, +0.0]
+  lexical: Devanagari - Roman raw                                      +0.0  [+0.0, +0.0]
+  lexical: Roman translit - Roman raw                                  +0.0  [+0.0, +0.0]
+  SLOPPY dense:  translit - raw                                       +56.4  [+38.5, +71.8]
+  SLOPPY RRF:    translit - raw                                       +15.4  [+0.0, +30.8]
+  SLOPPY vs clean Roman, dense translit                                +0.0  [-7.7, +7.7]
+  SLOPPY dense translit vs Devanagari                                  +2.6  [-5.1, +10.3]
+
+--- does dense beat lexical? (hit@5 points, answerable questions; 95% paired CI) ---
+  Devanagari: dense - lexical                                         +12.8  [-2.6, +28.2]
+  Devanagari: dense - tfidf                                           +12.8  [-2.6, +28.2]
+  Devanagari: RRF - lexical                                            +5.1  [-7.7, +17.9]
+  Devanagari: RRF - dense                                              -7.7  [-23.1, +7.7]
+  Roman: dense(translit) - lexical(raw)                               +15.4  [-2.6, +30.8]
+  Roman: RRF(translit) - lexical(raw)                                  +7.7  [-5.1, +20.5]
+  Roman: RRF(translit) - dense(translit)                               -7.7  [-23.1, +7.7]
+  -- same comparisons on hit@1 (harder, less saturated) --
+  Devanagari: dense - lexical   hit@1                                 +28.2  [+10.3, +46.2]
+  Devanagari: dense - tfidf     hit@1                                 +17.9  [+0.0, +35.9]
+  Devanagari: RRF - dense       hit@1                                  +5.1  [-7.7, +17.9]
+  Devanagari: RRF - lexical     hit@1                                 +33.3  [+15.4, +51.3]
+  Roman: dense(translit) - lexical(raw) hit@1                         +17.9  [+0.0, +35.9]
+  Roman: dense(translit) - dense(raw)   hit@1                         +43.6  [+20.5, +64.1]
+  SLOPPY Roman: dense(translit) - lexical(raw) hit@1                  +25.6  [+5.1, +46.2]
+
+--- transliteration quality: share of the Devanagari query's words recovered from the Roman query ---
+  roman        lexicon+rules     88.9%
+  roman        rules only        38.0%
+  roman_noisy  lexicon+rules     80.3%
+  roman_noisy  rules only        35.0%
+
+--- share of top-5 results that are flagged noisy (OCR debris / malformed) ---
+  deva  dense             33.0%   (corpus base rate 36.6%)
+  deva  lexical           35.5%   (corpus base rate 36.6%)
+  deva  rrf               33.5%   (corpus base rate 36.6%)
+  roman rrf|translit      30.0%   (corpus base rate 36.6%)
+  roman_noisy rrf|translit      30.0%   (corpus base rate 36.6%)
+
+--- judging coverage: top-5 passages not in the judged pool (counted as non-relevant) ---
+  max over systems: 0 of 200 (deva dense); mean 0.0
+
+--- per-question hit@5  (D=dense L=lexical R=rrf; upper = Devanagari, lower = Roman translit) ---
+  q01 rel= 6 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  rice pest
+  q02 rel=14 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  maize pest
+  q03 rel=13 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  livestock disease
+  q04 rel=12 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  livestock disease
+  q05 rel= 5 deva DY L. RY | roman-raw DY L. R. | roman-translit DY RY | sloppy-translit DY RY  fruit crop
+  q06 rel=13 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  fruit crop
+  q07 rel= 4 deva DY L. R. | roman-raw DY L. RY | roman-translit DY R. | sloppy-translit DY R.  goat
+  q08 rel= 3 deva D. L. R. | roman-raw DY L. RY | roman-translit DY RY | sloppy-translit DY RY  cattle
+  q09 rel=12 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  pig
+  q10 rel= 9 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  bee disease
+  q11 rel= 4 deva DY L. RY | roman-raw DY L. RY | roman-translit DY RY | sloppy-translit DY RY  poultry
+  q12 rel= 7 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  fruit crop
+  q13 rel= 3 deva DY L. R. | roman-raw DY L. RY | roman-translit DY R. | sloppy-translit D. RY  fruit crop
+  q14 rel= 4 deva D. LY RY | roman-raw D. LY RY | roman-translit D. RY | sloppy-translit DY RY  fruit crop
+  q15 rel=19 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  pesticide safety
+  q16 rel=14 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  pesticide safety
+  q17 rel= 8 deva DY L. R. | roman-raw D. L. R. | roman-translit DY R. | sloppy-translit DY RY  insurance
+  q18 rel= 7 deva DY LY R. | roman-raw D. LY RY | roman-translit DY R. | sloppy-translit DY R.  seed
+  q19 rel= 6 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  citrus disease
+  q20 rel= 3 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  tomato pest
+  q21 rel= 6 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  locust
+  q22 rel= 7 deva DY L. RY | roman-raw D. L. R. | roman-translit DY RY | sloppy-translit DY RY  pest
+  q23 rel= 5 deva D. LY RY | roman-raw D. LY RY | roman-translit D. RY | sloppy-translit D. RY  weed
+  q24 rel= 6 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  silk
+  q25 rel= 4 deva DY L. R. | roman-raw D. L. R. | roman-translit DY R. | sloppy-translit DY R.  cereal crop
+  q26 rel= 8 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  urban farming
+  q27 rel= 6 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  fish
+  q28 rel=11 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  soil/fertiliser
+  q29 rel= 3 deva DY LY R. | roman-raw D. LY R. | roman-translit DY R. | sloppy-translit DY R.  soil/fertiliser
+  q30 rel= 6 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  fertiliser subsidy
+  q31 rel= 7 deva DY L. RY | roman-raw DY L. R. | roman-translit DY RY | sloppy-translit DY RY  machinery
+  q32 rel= 3 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  mango pest
+  q33 rel= 6 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  rice disease
+  q34 rel= 0 deva D. L. R. | roman-raw D. L. R. | roman-translit D. R. | sloppy-translit D. R.  farm calendar
+  q35 rel= 5 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  livestock health
+  q36 rel= 7 deva DY LY RY | roman-raw D. LY R. | roman-translit DY RY | sloppy-translit DY RY  potato disease
+  q37 rel= 1 deva D. L. R. | roman-raw D. L. R. | roman-translit D. R. | sloppy-translit D. R.  maize
+  q38 rel= 2 deva D. LY RY | roman-raw D. LY R. | roman-translit D. RY | sloppy-translit D. RY  rice
+  q39 rel=10 deva DY LY RY | roman-raw D. LY RY | roman-translit DY RY | sloppy-translit DY RY  vegetable
+  q40 rel= 9 deva DY LY RY | roman-raw DY LY RY | roman-translit DY RY | sloppy-translit DY RY  ginger/spice
