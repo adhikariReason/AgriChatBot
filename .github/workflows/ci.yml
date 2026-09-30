@@ -1,0 +1,73 @@
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: pip install -r requirements.txt
+
+      - name: Nepali text layer (Devanagari / Roman convergence)
+        run: python eval/test_nepali_text.py
+
+      - name: Symptom triage conversations
+        run: python eval/test_diagnostic.py
+
+      - name: Retrieval accuracy, against regression floors
+        run: python eval/evaluate.py --check
+
+      # The web console ships a JavaScript port of the engine. Two
+      # implementations of the same thing drift; this is what stops it.
+      - name: Browser port matches Python
+        run: |
+          python eval/evaluate.py --dump /tmp/py_ranking.json
+          python eval/test_diagnostic.py --dump /tmp/py_diag.json
+          node eval/verify_web_port.js /tmp/py_ranking.json /tmp/py_diag.json
+
+      # Catches "edited data/kb/ but forgot to regenerate the bundle", which
+      # would otherwise ship a stale knowledge base to the web console.
+      - name: Browser bundle is up to date
+        run: |
+          python -m agrichat.export_web
+          if ! git diff --quiet -- web/kb-bundle.js; then
+            echo "::error::web/kb-bundle.js is stale — run: python -m agrichat.export_web"
+            git diff --stat -- web/kb-bundle.js
+            exit 1
+          fi
+
+  deploy-pages:
+    # Publishes the console at https://adhikarireason.github.io/AgriChatBot/
+    needs: test
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+      - id: deployment
+        uses: actions/deploy-pages@v4

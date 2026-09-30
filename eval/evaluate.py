@@ -201,6 +201,8 @@ def main() -> int:
     ap.add_argument("--errors", action="store_true", help="print every mistake")
     ap.add_argument("--dump", metavar="PATH",
                     help="write the per-case ranking as JSON, for the web-port verifier")
+    ap.add_argument("--check", action="store_true",
+                    help="exit non-zero if accuracy has regressed below the floors")
     args = ap.parse_args()
 
     cases = load_cases()
@@ -223,7 +225,29 @@ def main() -> int:
             json.dump(rows, fh, ensure_ascii=False)
         print(f"wrote {args.dump} ({len(rows)} cases)")
         return 0
-    report(metrics(rows, engine.MIN_SCORE, engine.MIN_MARGIN), show_errors=args.errors)
+    m = metrics(rows, engine.MIN_SCORE, engine.MIN_MARGIN)
+    report(m, show_errors=args.errors)
+
+    if args.check:
+        # Floors sit a little below the current numbers: they catch a real
+        # regression without failing the build over one reworded test case.
+        floors = [
+            ("top-1 accuracy", m["top1"], 0.88, False),
+            ("out-of-scope refusal", m["oos_refusal"], 0.80, False),
+            ("confident-wrong rate", m["confident_wrong_rate"], 0.05, True),
+        ]
+        bad = []
+        for name, value, floor, lower_is_better in floors:
+            if (value > floor) if lower_is_better else (value < floor):
+                bad.append(f"{name} {value:.1%} vs floor {floor:.1%}")
+        if check_leakage(engine, cases):
+            bad.append("test queries duplicate knowledge-base patterns")
+        if bad:
+            print("\nREGRESSED:")
+            for b in bad:
+                print("   ", b)
+            return 1
+        print("\nall floors met")
     return 0
 
 

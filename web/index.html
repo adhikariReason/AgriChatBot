@@ -144,6 +144,32 @@ button.go:hover { filter: brightness(1.08); }
   border: 1px solid var(--accent); border-radius: 999px; padding: 4px 13px;
 }
 .opt:hover { background: var(--accent-soft); }
+.flag-btn {
+  align-self: flex-start; font: inherit; font-size: .74rem; font-family: var(--font-ne);
+  cursor: pointer; background: none; border: 0; padding: 2px 0;
+  color: var(--fg-muted); text-decoration: underline; text-underline-offset: 2px;
+}
+.flag-btn:hover { color: var(--danger); }
+.flag-btn[data-flagged="1"] { color: var(--danger); text-decoration: none; }
+.tray {
+  margin-top: 14px; border: 1px solid var(--danger); border-radius: var(--radius);
+  background: var(--danger-soft); padding: 11px 13px;
+}
+.tray .t { font-size: .8rem; font-weight: 600; color: var(--danger); margin-bottom: 4px; }
+.tray .d { font-size: .78rem; color: var(--fg); margin-bottom: 9px; }
+.tray .row { display: flex; gap: 7px; flex-wrap: wrap; }
+.tray button {
+  font: inherit; font-size: .8rem; font-family: var(--font-ne); cursor: pointer;
+  border-radius: var(--radius); padding: 5px 13px; border: 1px solid var(--border);
+  background: var(--surface); color: var(--fg);
+}
+.tray button.primary { background: var(--danger); color: var(--surface); border-color: var(--danger); }
+.report-box {
+  width: 100%; margin-top: 9px; min-height: 90px; font-family: var(--font-mono);
+  font-size: .72rem; background: var(--surface); color: var(--fg);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 8px;
+}
+
 .slotrow { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .slot {
   font-size: .75rem; font-family: var(--font-ne); border-radius: 5px; padding: 2px 8px;
@@ -254,6 +280,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
         <button class="go" type="submit">Ask</button>
       </form>
       <div class="samples" id="samples"></div>
+      <div id="tray"></div>
     </div>
 
     <div class="card">
@@ -357,10 +384,21 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
       "अनुदान र बजारबारे सोधिएका प्रश्नको जवाफ दिन सक्छु।";
   }
 
-  function addMessage(who, text, unsure, options) {
+  function addMessage(who, text, unsure, options, reportOf) {
     var msg = el("div", "msg " + who + (unsure ? " unsure" : ""));
     msg.appendChild(el("div", "who", who === "user" ? "तपाईं" : "बोट"));
     msg.appendChild(el("div", "bubble", text));
+    if (who === "bot" && reportOf) {
+      var flag = el("button", "flag-btn", "⚑ यो जवाफ मिलेन");
+      flag.type = "button";
+      flag.addEventListener("click", function () {
+        if (flag.dataset.flagged === "1") return;
+        flag.dataset.flagged = "1";
+        flag.textContent = "⚑ टिपियो — धन्यवाद";
+        addReport(reportOf);
+      });
+      msg.appendChild(flag);
+    }
     if (options && options.length) {
       var box = el("div", "opts");
       options.forEach(function (label) {
@@ -454,7 +492,12 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     addMessage("user", text);
     var reply = convo.send(text);
     var body = reply.kind === "clarify" ? botReply(reply.result) : reply.text;
-    addMessage("bot", body, reply.kind !== "answer", reply.options);
+    addMessage("bot", body, reply.kind !== "answer", reply.options, {
+      q: text,
+      intent: reply.intent || (reply.result && reply.result.entry && reply.result.entry.id),
+      kind: reply.kind,
+      head: body
+    });
     renderInspector(text, reply.result || engine.answer(text), reply);
   }
 
@@ -485,6 +528,79 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     b.addEventListener("click", function () { ask(s); });
     $("samples").appendChild(b);
   });
+
+  /* ------------------------------------------------------------ feedback */
+
+  // A tester in another country produces nothing usable unless they can send
+  // the misses back. Kept in localStorage (per-browser, never leaves the
+  // device until they copy it) and wrapped, since storage can throw.
+  var REPORT_KEY = "agrichat.reports.v1";
+
+  function loadReports() {
+    try { return JSON.parse(localStorage.getItem(REPORT_KEY) || "[]"); }
+    catch (e) { return []; }
+  }
+  function saveReports(list) {
+    try { localStorage.setItem(REPORT_KEY, JSON.stringify(list)); } catch (e) { /* ignore */ }
+  }
+
+  function addReport(entry) {
+    var list = loadReports();
+    list.push(entry);
+    saveReports(list);
+    renderTray();
+  }
+
+  function reportText() {
+    return loadReports().map(function (r, i) {
+      return (i + 1) + ". सोधेको: " + r.q + "\n" +
+             "   पाएको : " + (r.intent || "(जवाफ आएन)") + "  [" + r.kind + "]\n" +
+             "   सुरु  : " + (r.head || "").slice(0, 80);
+    }).join("\n\n");
+  }
+
+  function renderTray() {
+    var host = $("tray");
+    host.textContent = "";
+    var list = loadReports();
+    if (!list.length) return;
+
+    var box = el("div", "tray");
+    box.appendChild(el("div", "t", "गलत जवाफ: " + list.length + " वटा टिपिएको"));
+    box.appendChild(el("div", "d",
+      "यो सूची कपी गरेर पठाउनुहोस् — यसैबाट बोट सुधारिन्छ।"));
+
+    var row = el("div", "row");
+    var copy = el("button", "primary", "सूची कपी गर्नुहोस्");
+    copy.type = "button";
+    copy.addEventListener("click", function () {
+      var text = reportText();
+      var done = function () { copy.textContent = "कपी भयो ✓";
+        setTimeout(function () { copy.textContent = "सूची कपी गर्नुहोस्"; }, 1800); };
+      try {
+        navigator.clipboard.writeText(text).then(done, function () { showBox(text); });
+      } catch (e) { showBox(text); }
+    });
+    var clear = el("button", null, "सबै हटाउनुहोस्");
+    clear.type = "button";
+    clear.addEventListener("click", function () { saveReports([]); renderTray(); });
+    row.appendChild(copy);
+    row.appendChild(clear);
+    box.appendChild(row);
+
+    function showBox(text) {
+      // clipboard refused (some in-app browsers) -- show it to select by hand
+      if (box.querySelector(".report-box")) return;
+      var ta = el("textarea", "report-box");
+      ta.readOnly = true;
+      ta.value = text;
+      box.appendChild(ta);
+      ta.focus();
+      ta.select();
+    }
+
+    host.appendChild(box);
+  }
 
   /* ---------------------------------------------------- knowledge base */
 
@@ -635,6 +751,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     "matching. Weights " + JSON.stringify(cfg.weights) + ", min score " + cfg.minScore +
     ", min margin " + cfg.minMargin + ".";
 
+  renderTray();
   showTab((location.hash || "").replace("#", "") || "chat");
   ask("मेरो बिरुवा मर्दै छ");
 })();
