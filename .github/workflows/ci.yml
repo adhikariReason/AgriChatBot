@@ -57,12 +57,14 @@ jobs:
   deploy-pages:
     # Publishes the console at https://adhikarireason.github.io/AgriChatBot/
     needs: test
-    # Gate on the ref alone. The github-pages environment only accepts
-    # deployments from the default branch, so dispatching from a feature
-    # branch cannot deploy -- with `|| workflow_dispatch` in this condition it
-    # failed at the environment gate (zero steps, one second) and put a red
-    # check on the PR instead of skipping cleanly.
-    if: github.ref == 'refs/heads/main'
+    # Pushes to main deploy automatically. A manual dispatch also deploys,
+    # from whatever ref it was dispatched on, which the github-pages
+    # environment permits now that its deployment branches are set to all
+    # branches -- if that is ever narrowed back to the default branch, a
+    # dispatch from elsewhere fails at the gate rather than skipping, so
+    # drop the second clause again at the same time.
+    # pull_request runs never match either clause, so PRs do not deploy.
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       pages: write
