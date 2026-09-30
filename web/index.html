@@ -137,6 +137,20 @@ button.go {
 }
 button.go:hover { filter: brightness(1.08); }
 
+.opts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.opt {
+  font: inherit; font-size: .84rem; font-family: var(--font-ne); cursor: pointer;
+  background: var(--surface); color: var(--fg);
+  border: 1px solid var(--accent); border-radius: 999px; padding: 4px 13px;
+}
+.opt:hover { background: var(--accent-soft); }
+.slotrow { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+.slot {
+  font-size: .75rem; font-family: var(--font-ne); border-radius: 5px; padding: 2px 8px;
+  background: var(--accent-soft); color: var(--accent); border: 1px solid var(--border);
+}
+.slot.empty { background: var(--surface-2); color: var(--fg-muted); font-style: italic; }
+
 .samples { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
 .samples .lbl { font-size: .72rem; color: var(--fg-muted); width: 100%; margin-bottom: 2px; }
 .chip {
@@ -279,6 +293,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
   var bundle = window.AGRI_KB;
   var engine = new AgriChat.Engine(bundle);
   var cfg = engine.config;
+  var convo = new AgriChat.Conversation(engine);
 
   var $ = function (id) { return document.getElementById(id); };
   function el(tag, cls, text) {
@@ -342,10 +357,20 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
       "अनुदान र बजारबारे सोधिएका प्रश्नको जवाफ दिन सक्छु।";
   }
 
-  function addMessage(who, text, unsure) {
+  function addMessage(who, text, unsure, options) {
     var msg = el("div", "msg " + who + (unsure ? " unsure" : ""));
     msg.appendChild(el("div", "who", who === "user" ? "तपाईं" : "बोट"));
     msg.appendChild(el("div", "bubble", text));
+    if (options && options.length) {
+      var box = el("div", "opts");
+      options.forEach(function (label) {
+        var b = el("button", "opt", label);
+        b.type = "button";
+        b.addEventListener("click", function () { ask(label); });
+        box.appendChild(b);
+      });
+      msg.appendChild(box);
+    }
     $("log").appendChild(msg);
     $("log").scrollTop = $("log").scrollHeight;
   }
@@ -377,15 +402,27 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     return box;
   }
 
-  function renderInspector(text, result) {
+  function renderInspector(text, result, reply) {
     var host = $("inspector");
     host.textContent = "";
 
-    var verdict = el("div", "verdict " + (result.confident ? "ok" : "no"));
+    var asking = reply && reply.kind === "question";
+    var verdict = el("div", "verdict " + (asking || !result.confident ? "no" : "ok"));
     verdict.appendChild(el("span", "dot"));
     verdict.appendChild(document.createTextNode(
-      result.confident ? "Confident — answering" : "Below threshold — asking instead"));
+      asking ? "Triage — narrowing the symptom"
+             : (result.confident ? "Confident — answering"
+                                 : "Below threshold — asking instead")));
     host.appendChild(verdict);
+
+    var slots = (reply && Object.keys(reply.slots || {}).length) ? reply.slots : convo.slots;
+    var row = el("div", "slotrow");
+    [["crop", "बाली"], ["part", "भाग"], ["symptom", "लक्षण"]].forEach(function (pair) {
+      var v = slots[pair[0]];
+      row.appendChild(el("span", "slot" + (v ? "" : " empty"),
+                         pair[1] + ": " + (v || "—")));
+    });
+    host.appendChild(row);
 
     host.appendChild(meter("score (min " + cfg.minScore + ")", result.score, cfg.minScore, 1.2));
     host.appendChild(meter("margin over runner-up (min " + cfg.minMargin + ")",
@@ -415,9 +452,10 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     text = (text || "").trim();
     if (!text) return;
     addMessage("user", text);
-    var result = engine.answer(text);
-    addMessage("bot", botReply(result), !result.confident);
-    renderInspector(text, result);
+    var reply = convo.send(text);
+    var body = reply.kind === "clarify" ? botReply(reply.result) : reply.text;
+    addMessage("bot", body, reply.kind !== "answer", reply.options);
+    renderInspector(text, reply.result || engine.answer(text), reply);
   }
 
   $("ask").addEventListener("submit", function (ev) {
@@ -427,6 +465,8 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
   });
 
   var SAMPLES = [
+    "मेरो बिरुवा मर्दै छ",
+    "mero bot marna lagyo",
     "धानमा मरुवा रोग लाग्यो, के गर्ने?",
     "dhan ma maruwa rog lagyo k garne",
     "makai ma fauji kira lagyo",
@@ -437,7 +477,7 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     "aalu ma dadhuwa rog",
     "मोबाइल कसरी किन्ने"
   ];
-  var lbl = el("div", "lbl", "Try one — the same question in either script lands on the same intent:");
+  var lbl = el("div", "lbl", "Try one. The first two are deliberately vague — the bot will ask back rather than guess. The rest show the same question in either script landing on the same intent:");
   $("samples").appendChild(lbl);
   SAMPLES.forEach(function (s) {
     var b = el("button", "chip", s);
@@ -596,6 +636,6 @@ footer { margin-top: 28px; font-size: .78rem; color: var(--fg-muted); }
     ", min margin " + cfg.minMargin + ".";
 
   showTab((location.hash || "").replace("#", "") || "chat");
-  ask("धानमा मरुवा रोग लाग्यो, के गर्ने?");
+  ask("मेरो बिरुवा मर्दै छ");
 })();
 </script>

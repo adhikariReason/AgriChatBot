@@ -361,8 +361,214 @@
     };
   };
 
+
+  /* ---------------------------------------------------------- diagnostic */
+
+  // Mirror of agrichat/diagnostic.py and agrichat/conversation.py.  Keep the
+  // two in step; the rules themselves live in the bundle, so only this logic
+  // is duplicated.
+  var WILDCARD = "*";
+  var SLOT_ORDER = ["crop", "part", "symptom"];
+  var QUESTION_WORDS = ["कति", "कसरी", "कहिले", "कहाँ", "किन", "कुन", "के गर्ने",
+                        "kati", "kasari", "kahile", "kaha", "kina", "kun"];
+
+  function Diagnostic(engine, spec) {
+    this.engine = engine;
+    this.spec = spec;
+    this.rules = spec.rules;
+
+    this.alias = {};
+    Object.keys(spec.slots).forEach(function (slot) {
+      var table = Object.create(null);
+      spec.slots[slot].options.forEach(function (option) {
+        option.aliases.forEach(function (a) {
+          var k = flat(collapseLoose(a));
+          if (k) table[k] = option.value;
+        });
+      });
+      this.alias[slot] = table;
+    }, this);
+
+    this.triggers = spec.triggers
+      .map(function (t) { return flat(collapseLoose(t)); })
+      .filter(Boolean);
+  }
+
+  Diagnostic.prototype.looksLikeSymptom = function (text) {
+    var blob = flat(collapseLoose(text));
+    return this.triggers.some(function (t) { return blob.indexOf(t) !== -1; });
+  };
+
+  Diagnostic.prototype.extract = function (text, into) {
+    var slots = Object.assign({}, into || {});
+    var blob = flat(collapseLoose(text));
+
+    if (slots.crop === undefined) {
+      var crops = this.engine.detectCrops(text);
+      if (crops.length) slots.crop = crops.slice().sort()[0];
+    }
+    ["part", "symptom"].forEach(function (slot) {
+      if (slots[slot] !== undefined) return;
+      var best = null, table = this.alias[slot];
+      for (var key in table) {
+        if (key && blob.indexOf(key) !== -1) {
+          if (best === null || key.length > best[0].length) best = [key, table[key]];
+        }
+      }
+      if (best) slots[slot] = best[1];
+    }, this);
+    return slots;
+  };
+
+  Diagnostic.prototype.matching = function (slots) {
+    var out = this.rules.filter(function (rule) {
+      return SLOT_ORDER.every(function (slot) {
+        var known = slots[slot], want = rule[slot] === undefined ? WILDCARD : rule[slot];
+        return known === undefined || want === WILDCARD || want === known;
+      });
+    });
+    // crop-specific knowledge beats the generic fallbacks
+    if (slots.crop) {
+      var specific = out.filter(function (r) { return (r.crop || WILDCARD) !== WILDCARD; });
+      if (specific.length) return specific;
+    }
+    return out;
+  };
+
+  Diagnostic.prototype.resolve = function (slots) {
+    var candidates = this.matching(slots).slice();
+    if (!candidates.length) return null;
+    var spec = function (rule) {
+      return SLOT_ORDER.filter(function (s) {
+        return (rule[s] === undefined ? WILDCARD : rule[s]) !== WILDCARD;
+      }).length;
+    };
+    candidates.sort(function (a, b) { return spec(b) - spec(a); });
+    return candidates[0].intent;
+  };
+
+  Diagnostic.prototype.nextQuestion = function (slots) {
+    var candidates = this.matching(slots);
+    if (!candidates.length) return null;
+    var outcomes = {};
+    candidates.forEach(function (r) { outcomes[r.intent] = true; });
+    if (Object.keys(outcomes).length <= 1) return null;   // asking cannot help
+
+    for (var i = 0; i < SLOT_ORDER.length; i++) {
+      var slot = SLOT_ORDER[i];
+      if (slots[slot] !== undefined) continue;
+      var values = {};
+      candidates.forEach(function (r) { values[r[slot] === undefined ? WILDCARD : r[slot]] = true; });
+      var keys_ = Object.keys(values);
+      if (keys_.length === 1 && keys_[0] === WILDCARD) continue;
+      if (slot === "crop") {
+        return { slot: "crop", text: this.spec.crop_question, options: this.spec.crop_examples };
+      }
+      var cfg = this.spec.slots[slot];
+      var live = {};
+      candidates.forEach(function (r) { live[r[slot] === undefined ? WILDCARD : r[slot]] = true; });
+      var options = cfg.options.filter(function (o) {
+        return live[o.value] || live[WILDCARD];
+      }).map(function (o) { return o.label; });
+      return { slot: slot, text: cfg.question, options: options };
+    }
+    return null;
+  };
+
+  function Conversation(engine, diagnostic) {
+    this.engine = engine;
+    this.diagnostic = diagnostic || new Diagnostic(engine, engine.bundle.diagnostic);
+    this.reset();
+  }
+  Conversation.prototype.reset = function () {
+    this.slots = {};
+    this.pending = null;
+    this.asked = [];
+  };
+
+  Conversation.prototype.send = function (text) {
+    text = (text || "").trim();
+    if (!text) return { kind: "unknown", text: "कृपया आफ्नो प्रश्न लेख्नुहोस्।", options: [], slots: {} };
+
+    if (this.pending !== null) {
+      var cont = this._continue(text);
+      if (cont !== null) return cont;
+      this.reset();
+    }
+
+    var result = this.engine.answer(text);
+    var isSymptom = this.diagnostic.looksLikeSymptom(text);
+    var slots = isSymptom ? this.diagnostic.extract(text) : {};
+    var underspecified = isSymptom && slots.symptom === undefined;
+
+    if (result.confident && !underspecified) {
+      this.reset();
+      return { kind: "answer", text: this._answerText(result.entry), intent: result.entry.id,
+               options: [], slots: {}, score: result.score, confident: true, result: result };
+    }
+    if (isSymptom) {
+      this.slots = slots;
+      return this._advance(result);
+    }
+    return { kind: "clarify", text: null, options: [], slots: {}, result: result };
+  };
+
+  Conversation.prototype._continue = function (text) {
+    var self = this;
+    if (QUESTION_WORDS.some(function (w) { return text.indexOf(w) !== -1; })
+        && this.engine.answer(text).confident) return null;
+
+    var before = JSON.stringify(this.slots);
+    this.slots = this.diagnostic.extract(text, this.slots);
+    if (JSON.stringify(this.slots) === before) {
+      if (this.engine.answer(text).confident || !this.diagnostic.looksLikeSymptom(text)) return null;
+      return { kind: "question", text: "माफ गर्नुहोस्, बुझिनँ। " + this.pending.text,
+               options: this.pending.options, slots: Object.assign({}, this.slots) };
+    }
+    return this._advance(null);
+  };
+
+  Conversation.prototype._advance = function (result) {
+    var question = this.diagnostic.nextQuestion(this.slots);
+    if (question !== null && this.asked.indexOf(question.slot) === -1) {
+      this.pending = question;
+      this.asked.push(question.slot);
+      return { kind: "question", text: question.text, options: question.options,
+               slots: Object.assign({}, this.slots) };
+    }
+    var intentId = this.diagnostic.resolve(this.slots);
+    var entry = intentId ? this.engine.byId[intentId] : null;
+    if (!entry) {
+      this.reset();
+      if (result) return { kind: "clarify", text: null, options: [], slots: {}, result: result };
+      return { kind: "unknown", options: [], slots: {},
+               text: "माफ गर्नुहोस्, यो समस्या पहिचान गर्न सकिनँ। नजिकको कृषि ज्ञान केन्द्रमा बोट वा पात देखाउनुहोस्।" };
+    }
+    var slots = Object.assign({}, this.slots);
+    this.reset();
+    return { kind: "answer", text: this._answerText(entry, slots), intent: entry.id,
+             options: [], slots: slots, confident: true };
+  };
+
+  Conversation.prototype._answerText = function (entry, slots) {
+    var out = "";
+    if (slots) {
+      var said = [slots.crop, slots.part, slots.symptom].filter(Boolean).join(" · ");
+      if (said) out += "[" + said + "]\n\n";
+    }
+    out += entry.answer;
+    var follow = (entry.followups || []).slice(0, 3)
+      .map(function (id) { return this.engine.byId[id]; }, this).filter(Boolean);
+    if (follow.length) {
+      out += "\n\nसम्बन्धित विषय:\n" + follow.map(function (e) { return "  • " + e.label; }).join("\n");
+    }
+    return out;
+  };
+
   return {
     Engine: Engine,
+    Diagnostic: Diagnostic,
+    Conversation: Conversation,
     keys: keys, stems: stems, flat: flat,
     collapseTight: collapseTight, collapseLoose: collapseLoose,
     dropWeakNasal: dropWeakNasal, scriptHasDevanagari: hasDevanagari

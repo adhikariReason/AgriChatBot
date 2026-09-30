@@ -8,7 +8,8 @@
  *
  * Run:
  *     python eval/evaluate.py --dump /tmp/py_ranking.json
- *     node eval/verify_web_port.js /tmp/py_ranking.json
+ *     python eval/test_diagnostic.py --dump /tmp/py_diag.json
+ *     node eval/verify_web_port.js /tmp/py_ranking.json /tmp/py_diag.json
  *
  * Exits non-zero if the two disagree on any top-1 intent, or if the JS
  * accuracy comes out below Python's.
@@ -87,6 +88,35 @@ function main() {
     failed = true;
     console.log(`\nFAIL: js accuracy (${pct(jsTop1)}) is below python (${pct(pyTop1)})`);
   }
+  // ---- diagnostic transcripts -------------------------------------------
+
+  const diagPath = process.argv[3];
+  if (diagPath) {
+    const transcripts = JSON.parse(fs.readFileSync(diagPath, "utf8"));
+    const convoMismatch = [];
+    for (const ref of transcripts) {
+      const convo = new AgriChat.Conversation(engine);
+      let questions = 0, intent = null, reply = null;
+      for (const turn of ref.turns) {
+        reply = convo.send(turn);
+        if (reply.kind === "answer") { intent = reply.intent; break; }
+        questions++;
+      }
+      if (intent !== ref.intent || questions !== ref.questions) {
+        convoMismatch.push({ label: ref.label, py: [ref.intent, ref.questions],
+                             js: [intent, questions] });
+      }
+    }
+    console.log(`\ndiagnostic transcripts ${transcripts.length - convoMismatch.length}/${transcripts.length} match`);
+    if (convoMismatch.length) {
+      failed = true;
+      console.log(`FAIL: ${convoMismatch.length} diagnostic disagreement(s)`);
+      for (const m of convoMismatch) {
+        console.log(`  ${m.label}\n    python ${JSON.stringify(m.py)}\n    js     ${JSON.stringify(m.js)}`);
+      }
+    }
+  }
+
   if (!failed) console.log("\nweb port matches the Python engine");
   return failed ? 1 : 0;
 }

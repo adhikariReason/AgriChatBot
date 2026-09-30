@@ -30,16 +30,55 @@ No training step. The index is built from `data/kb/*.json` at startup in
 well under a second, so editing the knowledge base takes effect on the next
 run.
 
+## Symptom triage
+
+A farmer does not type a well-formed question. They type *"मेरो बिरुवा मर्दै
+छ"* — my plant is dying. No amount of retrieval answers that well, because the
+question is underspecified: the crop, the affected part and the symptom all
+decide the answer and none of them was given.
+
+So the bot asks back, the way a plant clinic does:
+
+```
+तपाईं: mero bot marna lagyo
+बोट:   कुन बालीमा समस्या भएको हो?        → धान · मकै · आलु · गोलभेँडा …
+तपाईं: makai
+बोट:   बोटको कुन भागमा देखिएको हो?       → पात · डाँठ · जरा · मुन्टा …
+तपाईं: munta
+बोट:   [मकै · मुन्टा]  अमेरिकन फौजी कीरा …
+```
+
+The rule that keeps this from being tedious: **it never asks a question whose
+answer cannot change the outcome.** If every rule still in play points at the
+same intent, it answers immediately. `alaichi ma samasya cha` gets an answer
+with no questions at all, because every cardamom rule leads to the same place.
+Across the test conversations it averages **0.9 questions**, and a fully
+specified question like `kauli ko full ma kira lagyo` is answered with none.
+
+Triage only engages for problem reports that do not name a symptom. A how-to
+question (`कम्पोस्ट कसरी बनाउने`) and a report that does name its symptom
+(`आलुको बोट एक हप्तामै सुक्यो`) both go straight to retrieval, so the accuracy
+above is unaffected.
+
+Knowledge lives in `data/diagnostic/rules.json` — 58 rules over 21 crops, with
+the part and symptom vocabularies in both scripts. The logic in
+`agrichat/diagnostic.py` is deliberately small so the browser port stays cheap.
+
+```bash
+python eval/test_diagnostic.py     # conversations + how-to questions kept out
+```
+
 ## Web console
 
 `python web/server.py` serves a review console at `http://127.0.0.1:8000`. It
 is built for reviewing the retrieval rather than just using it:
 
-- **Ask** — chat in either script, with a match inspector showing the
-  confidence verdict, score and margin against their thresholds, the crops
-  detected, the three collapsed keys the query was reduced to, and the top
-  five intents with scores. Typing a question in Devanagari and again in
-  Roman Nepali shows the two collapsing to the same keys.
+- **Ask** — chat in either script. The match inspector shows the confidence
+  verdict, score and margin against their thresholds, the crop/part/symptom
+  slots triage has filled so far, the three collapsed keys the query was
+  reduced to, and the top five intents with scores. Typing a question in
+  Devanagari and again in Roman Nepali shows the two collapsing to the same
+  keys. Vague questions start a triage conversation with clickable answers.
 - **Knowledge base** — all 49 intents, filterable, with answers, pattern
   counts and sources.
 - **Evaluation** — runs all 149 test cases in the browser and lists every
@@ -67,11 +106,13 @@ case by case against Python.
 ```bash
 python -m agrichat.export_web                        # regenerate the bundle
 python eval/evaluate.py --dump /tmp/py.json
-node eval/verify_web_port.js /tmp/py.json            # fails on any drift
+python eval/test_diagnostic.py --dump /tmp/py_diag.json
+node eval/verify_web_port.js /tmp/py.json /tmp/py_diag.json   # fails on drift
 ```
 
-It currently agrees with Python on 160/160 cases, with a maximum score
-difference of 6.7e-16. Re-run it after any change to `agrichat/nepali_text.py`
+It currently agrees with Python on 160/160 retrieval cases (maximum score
+difference 6.7e-16) and 18/18 triage transcripts, matching both the intent
+reached and the number of questions asked. Re-run it after any change to `agrichat/nepali_text.py`
 or `agrichat/engine.py`, and regenerate the bundle after any change to
 `data/kb/`.
 
@@ -182,8 +223,12 @@ chatbot.py                 CLI
 agrichat/nepali_text.py    transliteration, phonetic collapsing, stemming
 agrichat/kb.py             knowledge-base loading and validation
 agrichat/engine.py         retrieval, crop matching, confidence
+agrichat/diagnostic.py     symptom triage: slots, rules, question choice
+agrichat/conversation.py   multi-turn state, mode selection
 agrichat/export_web.py     generates web/kb-bundle.js
 data/kb/*.json             the knowledge base (edit this to add topics)
+data/diagnostic/rules.json symptom -> intent rules
+data/corpus/               collected source documents (see its manifest)
 web/index.html             review console
 web/agri.js                browser port of the engine
 web/kb-bundle.js           generated -- do not edit
@@ -191,6 +236,7 @@ web/server.py              stdlib server + /api/ask
 eval/testset.json          held-out queries with gold labels
 eval/evaluate.py           metrics and threshold tuning
 eval/test_nepali_text.py   text-layer property tests
+eval/test_diagnostic.py    triage conversation tests
 eval/verify_web_port.js    checks the JS port against Python
 ```
 

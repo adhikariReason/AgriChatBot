@@ -18,6 +18,7 @@ import argparse
 import sys
 
 from agrichat import AgriEngine
+from agrichat.conversation import ANSWER, QUESTION, Conversation
 
 BANNER = """
 ╭──────────────────────────────────────────────────────────╮
@@ -30,10 +31,23 @@ BANNER = """
     bakhra lai kun khop lagaune
     compost mal kasari banaune
 
+समस्या के हो थाहा नभए पनि हुन्छ — यसो भन्नुहोस्:
+    मेरो बिरुवा मर्दै छ
+    mero bot marna lagyo
+अनि म केही प्रश्न सोधेर पत्ता लगाउँछु।
+
 बाहिर निस्कन: बिदा / exit / quit  (वा Ctrl-C)
 """
 
 EXIT_WORDS = {"exit", "quit", "q", "बिदा", "बन्द", "band"}
+
+
+def show(reply) -> None:
+    print(reply.text)
+    if reply.kind == QUESTION and reply.options:
+        print()
+        for option in reply.options:
+            print(f"    • {option}")
 
 
 def run_once(engine: AgriEngine, question: str, debug: bool = False) -> None:
@@ -46,7 +60,7 @@ def run_once(engine: AgriEngine, question: str, debug: bool = False) -> None:
             print(f"    {score:6.3f}  {entry.id}")
         print(f"[score {result.score:.3f}  margin {result.margin:.3f}  "
               f"confident {result.confident}]\n")
-    print(engine.reply(question))
+    show(Conversation(engine).send(question))
 
 
 def main() -> int:
@@ -63,6 +77,7 @@ def main() -> int:
 
     print(BANNER)
     print(f"({len(engine.entries)} विषयमा जानकारी उपलब्ध छ)\n")
+    convo = Conversation(engine)
     while True:
         try:
             message = input("तपाईं: ").strip()
@@ -75,7 +90,13 @@ def main() -> int:
             print("नमस्ते! खेतीपातीमा सफलता मिलोस्। 🌾")
             return 0
         print()
-        run_once(engine, message, args.debug)
+        if args.debug:
+            result = engine.answer(message)
+            print(f"[crops {result.crops or '-'}  score {result.score:.3f}  "
+                  f"margin {result.margin:.3f}  confident {result.confident}]")
+            print(f"[slots {convo.slots}  pending "
+                  f"{convo.pending.slot if convo.pending else None}]\n")
+        show(convo.send(message))
         print()
 
 

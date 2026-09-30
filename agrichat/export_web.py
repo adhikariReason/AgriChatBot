@@ -41,6 +41,12 @@ def build() -> dict:
             "keys": pattern_keys,
         })
 
+    diag_path = os.path.join(
+        os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+        "data", "diagnostic", "rules.json")
+    with open(diag_path, encoding="utf-8") as fh:
+        diagnostic = json.load(fh)
+
     testset_path = os.path.join(
         os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
         "eval", "testset.json")
@@ -49,6 +55,7 @@ def build() -> dict:
 
     return {
         "entries": out_entries,
+        "diagnostic": diagnostic,
         # Shipped so the review page can run the evaluation in the browser
         # instead of asking the reviewer to trust a number in the README.
         "testset": cases,
