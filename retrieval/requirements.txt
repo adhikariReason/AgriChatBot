@@ -1,0 +1,6 @@
+# retrieval/ needs these on top of the repo's numpy + scikit-learn.
+# CPU-only is fine:  pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+transformers>=4.40
+numpy>=1.24
+scikit-learn>=1.3

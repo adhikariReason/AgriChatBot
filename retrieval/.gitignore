@@ -1,0 +1,4 @@
+# built artifacts: passages, embeddings (~70 MB), caches.  Rebuild with
+#   python -m retrieval.index
+artifacts/
+__pycache__/
