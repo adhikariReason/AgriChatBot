@@ -56,12 +56,22 @@ def snapshot(engine: AgriEngine, cases: list) -> list:
         ranked = engine.rank(case["q"])
         top_score = ranked[0][1]
         margin = top_score - (ranked[1][1] if len(ranked) > 1 else 0.0)
+        # The engine raises the margin bar for queries carrying almost no
+        # content. Recording that floor here keeps the threshold sweep able to
+        # vary MIN_SCORE / MIN_MARGIN while still measuring what the engine
+        # actually does -- applying fixed thresholds in metrics() alone
+        # silently ignored the rule and scored queries as answered that the
+        # engine refuses.
+        floor = engine.MIN_MARGIN
+        if len(engine.content_stems(case["q"])) < engine.MIN_CONTENT_STEMS:
+            floor = max(floor, engine.SHORT_QUERY_MARGIN)
         rows.append({
             "q": case["q"],
             "expected": case["expected"],
             "ids": [e.id for e, _ in ranked[:3]],
             "score": top_score,
             "margin": margin,
+            "margin_floor": floor,
         })
     return rows
 
@@ -73,9 +83,13 @@ def metrics(rows: list, min_score: float, min_margin: float) -> dict:
     top1 = top3 = answered = answered_right = 0
     confident_wrong, missed, wrong = [], [], []
 
+    def is_confident(r):
+        return (r["score"] >= min_score
+                and r["margin"] >= max(min_margin, r.get("margin_floor", 0.0)))
+
     for r in in_scope:
         hit = r["ids"][0] == r["expected"]
-        confident = r["score"] >= min_score and r["margin"] >= min_margin
+        confident = is_confident(r)
         top1 += hit
         top3 += r["expected"] in r["ids"]
         if confident:
@@ -89,8 +103,7 @@ def metrics(rows: list, min_score: float, min_margin: float) -> dict:
         if not hit:
             wrong.append((r, confident))
 
-    false_answer = [r for r in out_scope
-                    if r["score"] >= min_score and r["margin"] >= min_margin]
+    false_answer = [r for r in out_scope if is_confident(r)]
     n = len(in_scope) or 1
     return {
         "n_in_scope": len(in_scope),

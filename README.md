@@ -110,7 +110,7 @@ python eval/test_diagnostic.py --dump /tmp/py_diag.json
 node eval/verify_web_port.js /tmp/py.json /tmp/py_diag.json   # fails on drift
 ```
 
-It currently agrees with Python on 160/160 retrieval cases (maximum score
+It currently agrees with Python on 165/165 retrieval cases (maximum score
 difference 6.7e-16) and 18/18 triage transcripts, matching both the intent
 reached and the number of questions asked. Re-run it after any change to `agrichat/nepali_text.py`
 or `agrichat/engine.py`, and regenerate the bundle after any change to
@@ -136,8 +136,9 @@ agriculture directorates); each entry carries its `sources`.
 
 ## Accuracy
 
-Measured on `eval/testset.json` — 160 held-out queries in both scripts,
-including 12 out-of-scope questions:
+Measured on `eval/testset.json` — 165 held-out queries in both scripts,
+including 16 out-of-scope questions. Cases marked `source: real-user` came
+from someone actually using the console:
 
 ```bash
 python eval/evaluate.py            # report
@@ -154,12 +155,12 @@ unless both the absolute score and the margin over the runner-up clear a bar.
 Current numbers:
 
 ```
-top-1 accuracy        91.9%   correct intent ranked first
-top-3 accuracy        95.9%   correct intent in the top 3
-coverage              89.9%   answered confidently
-answer precision      97.0%   of those, correct
-CONFIDENT-WRONG        2.7%   <-- the number that hurts farmers
-out-of-scope refused  91.7%   junk questions correctly declined
+top-1 accuracy        94.0%   correct intent ranked first
+top-3 accuracy        98.0%   correct intent in the top 3
+coverage              89.3%   answered confidently
+answer precision      98.5%   of those, correct
+CONFIDENT-WRONG        1.3%   <-- the number that hurts farmers
+out-of-scope refused  81.2%   junk questions correctly declined
 ```
 
 > **Read these as a regression guard, not a field accuracy claim.** The test
@@ -172,6 +173,14 @@ Every run checks whether any test query has become a verbatim copy of a
 knowledge-base pattern and warns if so. Such a case is a guaranteed hit that
 silently inflates all six numbers, and they creep in easily: adding patterns
 to close a coverage gap is exactly how six of them appeared here once.
+
+### Known weakness: adjacent domains
+
+Out-of-scope refusal is the weakest number here. Questions from domains that
+*border* agriculture still slip through — a gold price matches the market-price
+intent, a bank loan matches soil testing. There is no gate asking "is this
+even about farming?", only a confidence threshold, and a neighbouring domain
+can clear it honestly. That gate is the next real piece of work.
 
 ### One intent per question, not per crop
 

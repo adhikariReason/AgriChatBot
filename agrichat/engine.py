@@ -21,7 +21,7 @@ import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 from . import kb
-from .nepali_text import keys, stems
+from .nepali_text import keys, stems, tokenize
 
 # Crop names, written the way the KB writes them, mapped to every spelling a
 # farmer might type.  Matched on the collapsed key so script does not matter.
@@ -85,6 +85,13 @@ class AgriEngine:
     CROP_BONUS = 0.30      # naming a crop is close to decisive in agronomy,
     CROP_PENALTY = 0.30    # so mismatches are pushed down hard
 
+    # Short queries inflate cosine similarity -- "kun tarkari" (which
+    # vegetable) scored 0.758 and was answered with a pest-identification
+    # guide. A question carrying almost no content has not been asked yet,
+    # whatever it scores, so it needs a real margin before we answer.
+    MIN_CONTENT_STEMS = 2
+    SHORT_QUERY_MARGIN = 0.35
+
     def __init__(self, entries=None):
         self.entries = entries if entries is not None else kb.load()
         self.by_id = {e.id: e for e in self.entries}
@@ -120,15 +127,36 @@ class AgriEngine:
     # -- crop detection ----------------------------------------------------
 
     def detect_crops(self, text: str) -> set:
-        """Which crops the user named, matched against stems and raw key."""
-        blob = _flat(keys(text)["loose"])
-        token_keys = {_flat(keys(t)["loose"]) for t in stems(text)}
+        """Which crops the user named.
+
+        Matching is per token, not a substring search over the whole
+        utterance: भात (rice) collapses to "bat", which sits inside
+        "battery", and a raw substring search read "phone ko battery kasto
+        hunxa" as a question about धान and answered it with a rice-planting
+        guide.
+
+        Prefix matching is allowed only for tokens that were written in
+        Devanagari, where morphemes are glued together (धानबाली, धानमा) and a
+        prefix is genuinely the head noun. Roman input is space-separated, so
+        it never needs prefix matching -- and that is exactly where an English
+        word can start with a short alias by accident.
+        """
+        exact = {_flat(keys(t)["loose"]) for t in tokenize(text)}
+        exact |= {_flat(keys(t)["loose"]) for t in stems(text)}
+        exact.discard("")
+
+        deva_tokens = set()
+        for run in re.findall(r"[\u0900-\u097F]+", text or ""):
+            deva_tokens.add(_flat(keys(run)["loose"]))
+            deva_tokens |= {_flat(keys(t)["loose"]) for t in stems(run)}
+        deva_tokens.discard("")
+
         found = set()
         for crop, aliases in self._crop_keys.items():
             for alias in aliases:
                 if len(alias) < 3:
                     continue
-                if alias in token_keys or re.search(re.escape(alias), blob):
+                if alias in exact or any(t.startswith(alias) for t in deva_tokens):
                     found.add(crop)
                     break
         return found
@@ -175,12 +203,22 @@ class AgriEngine:
         order = np.argsort(-per_intent)
         return [(self.entries[i], float(per_intent[i])) for i in order]
 
+    def content_stems(self, text: str) -> list:
+        """Stems that carry topic, ignoring question words."""
+        from .nepali_text import _PROTECTED
+        return [s for s in stems(text) if s not in _PROTECTED]
+
     def answer(self, text: str) -> Result:
         ranked = self.rank(text)
         top, score = ranked[0]
         runner_up = ranked[1][1] if len(ranked) > 1 else 0.0
         margin = score - runner_up
-        confident = score >= self.MIN_SCORE and margin >= self.MIN_MARGIN
+
+        min_margin = self.MIN_MARGIN
+        if len(self.content_stems(text)) < self.MIN_CONTENT_STEMS:
+            min_margin = max(min_margin, self.SHORT_QUERY_MARGIN)
+
+        confident = score >= self.MIN_SCORE and margin >= min_margin
         suggestions = [e for e, s in ranked[:3] if s > 0.12]
         return Result(top, score, margin, confident, suggestions, self.detect_crops(text))
 

@@ -69,6 +69,8 @@ def build() -> dict:
             "minMargin": AgriEngine.MIN_MARGIN,
             "cropBonus": AgriEngine.CROP_BONUS,
             "cropPenalty": AgriEngine.CROP_PENALTY,
+            "minContentStems": AgriEngine.MIN_CONTENT_STEMS,
+            "shortQueryMargin": AgriEngine.SHORT_QUERY_MARGIN,
         },
     }
 

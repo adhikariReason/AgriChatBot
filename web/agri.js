@@ -291,10 +291,24 @@
     this._patternScores = new Float64Array(tight.length);
   }
 
+  // Matching is per token, not a substring search over the whole utterance:
+  // भात (rice) collapses to "bat", which sits inside "battery", and a raw
+  // substring search read "phone ko battery kasto hunxa" as a question about
+  // धान. Prefix matching is allowed only for Devanagari tokens, where
+  // morphemes are glued together (धानबाली, धानमा).
   Engine.prototype.detectCrops = function (text) {
-    var blob = flat(keys(text).loose);
-    var tokenKeys = Object.create(null);
-    stems(text).forEach(function (t) { tokenKeys[flat(keys(t).loose)] = true; });
+    var exact = Object.create(null);
+    tokenize(text).forEach(function (t) { exact[flat(keys(t).loose)] = true; });
+    stems(text).forEach(function (t) { exact[flat(keys(t).loose)] = true; });
+    delete exact[""];
+
+    var devaTokens = [];
+    ((text || "").match(/[\u0900-\u097F]+/g) || []).forEach(function (run) {
+      devaTokens.push(flat(keys(run).loose));
+      stems(run).forEach(function (t) { devaTokens.push(flat(keys(t).loose)); });
+    });
+    devaTokens = devaTokens.filter(Boolean);
+
     var found = [];
     var aliases = this.bundle.cropAliases;
     for (var crop in aliases) {
@@ -302,10 +316,18 @@
       for (var i = 0; i < list.length; i++) {
         var alias = list[i];
         if (alias.length < 3) continue;
-        if (tokenKeys[alias] || blob.indexOf(alias) !== -1) { found.push(crop); break; }
+        var hit = exact[alias] || devaTokens.some(function (t) { return t.indexOf(alias) === 0; });
+        if (hit) { found.push(crop); break; }
       }
     }
     return found;
+  };
+
+  // Short queries inflate cosine similarity -- "kun tarkari" scored 0.758 on
+  // two words. A question carrying almost no content has not really been
+  // asked, whatever it scores.
+  Engine.prototype.contentStems = function (text) {
+    return stems(text).filter(function (s) { return !PROTECTED[s]; });
   };
 
   Engine.prototype.rank = function (text) {
@@ -349,11 +371,15 @@
     var ranked = this.rank(text);
     var top = ranked[0];
     var margin = top.score - (ranked.length > 1 ? ranked[1].score : 0);
+    var minMargin = this.config.minMargin;
+    if (this.contentStems(text).length < (this.config.minContentStems || 0)) {
+      minMargin = Math.max(minMargin, this.config.shortQueryMargin || 0);
+    }
     return {
       entry: top.entry,
       score: top.score,
       margin: margin,
-      confident: top.score >= this.config.minScore && margin >= this.config.minMargin,
+      confident: top.score >= this.config.minScore && margin >= minMargin,
       suggestions: ranked.slice(0, 3).filter(function (r) { return r.score > 0.12; })
         .map(function (r) { return r.entry; }),
       crops: this.detectCrops(text),

@@ -641,6 +641,28 @@
     {
       "q": "काउली कुन महिनामा सार्ने",
       "expected": "kauli_banda_kheti"
+    },
+    {
+      "q": "phone ko battery kasto hunxa",
+      "expected": null,
+      "source": "real-user"
+    },
+    {
+      "q": "kun tarkari",
+      "expected": null,
+      "source": "real-user"
+    },
+    {
+      "q": "ghar ko chhana ma battery rakhda huncha",
+      "expected": null
+    },
+    {
+      "q": "kun bali",
+      "expected": null
+    },
+    {
+      "q": "धानबालीमा रोग लाग्यो",
+      "expected": "dhan_maruwa_rog"
     }
   ]
 }
