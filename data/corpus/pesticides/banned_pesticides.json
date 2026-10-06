@@ -1,0 +1,179 @@
+{
+ "source_url": "https://npponepal.gov.np/progressfiles/Restricted-Pesticides-in-Nepal_1578026564-1701158188.jpg",
+ "source_org": "PQPMC",
+ "licence": "nepal-gov",
+ "title": "नेपालमा प्रतिबन्धित भएका विषादीहरू (Restricted/banned pesticides in Nepal)",
+ "transcription": "manual, from the source image (tesseract OCR of this image was unusable)",
+ "calendar_note": "dates are Bikram Sambat",
+ "count": 24,
+ "pesticides": [
+  {
+   "name_en": "Aldrin",
+   "name_ne": "अल्ड्रिन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "BHC",
+   "name_ne": "बि.एच.सि.",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Chlordane",
+   "name_ne": "क्लोरोडेन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Dieldrin",
+   "name_ne": "डाइअल्ड्रिन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "DDT",
+   "name_ne": "डि.डि.टि.",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Endrin",
+   "name_ne": "इन्ड्रिन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Heptachlor",
+   "name_ne": "हेप्टाक्लोर",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Lindane",
+   "name_ne": "लिन्डेन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Organo Mercury Fungicides",
+   "name_ne": "अर्गानो मर्क्युरी फन्जिसाइड",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Mirex",
+   "name_ne": "मिरेक्स",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Phosphamidon",
+   "name_ne": "फस्फामाइडोन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Toxaphene",
+   "name_ne": "टोक्साफेन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Monocrotophos",
+   "name_ne": "मोनोक्रोटोफस",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Methyl Parathion",
+   "name_ne": "मिथाइल प्याराथियन",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Endosulfan",
+   "name_ne": "इन्डोसल्फान",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Phorate",
+   "name_ne": "फोरेट",
+   "status": "banned",
+   "date": null,
+   "date_note": "no phase-out date shown on poster"
+  },
+  {
+   "name_en": "Benomyl",
+   "name_ne": "बेनोमाइल",
+   "status": "phase-out",
+   "date": "2077/09/16",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Carbofuran",
+   "name_ne": "कार्बोफ्युरान",
+   "status": "phase-out",
+   "date": "2077/09/16",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Triazophos",
+   "name_ne": "ट्राइजोफस",
+   "status": "phase-out",
+   "date": "2077/09/16",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Dichlorvos",
+   "name_ne": "डाइक्लोरभस",
+   "status": "phase-out",
+   "date": "2077/09/16",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Carbaryl",
+   "name_ne": "कार्बारिल",
+   "status": "phase-out",
+   "date": "2077/09/16",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Carbosulfan",
+   "name_ne": "कार्बोसल्फान",
+   "status": "phase-out",
+   "date": "2078/04/19",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Dicofol",
+   "name_ne": "डाइकोफोल",
+   "status": "phase-out",
+   "date": "2078/04/19",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  },
+  {
+   "name_en": "Aluminium Phosphide 56% 3 g tablet",
+   "name_ne": "एलमुनियम फस्फाइड (56%) ३ ग्रामको ट्याबलेट",
+   "status": "phase-out",
+   "date": "2078/04/19",
+   "date_note": "poster says use and sale allowed until this BS date (transcribed from a low-resolution image; the day/month digits are hard to read - VERIFY against the gazette). Dates are Bikram Sambat."
+  }
+ ]
+}

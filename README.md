@@ -1,17 +1,289 @@
-# AgriChatBot
+# AgriChatBot · कृषि सहयोगी च्याटबोट
 
-1. Clone the repository.
-2. Open the directory in a terminal.
-2. Install dependencies from requirements.txt
-    * ```bash
-      pip install -r requirements.txt
-      ```
-    * If additional module is asked to install during run-time, run following command:
-      ```pip install <package-name> ``` 
-3. To run the chatbot:
-    ```bash 
-    python chatbot.py
-    ```
-4. If changes are made to ```intents.json``` or ```training.py``` run the command: 
-    ```python training.py ``` before running ```python chatbot.py```
-      
+A Nepali-language question-answering assistant for farmers in Nepal.
+
+It answers in Nepali, and it understands questions in **either script** —
+Devanagari or Roman Nepali — including the inconsistent spellings people
+actually type:
+
+```
+तपाईं: धानमा मरुवा रोग लाग्यो, के गर्ने?
+तपाईं: dhan ma maruwa rog lagyo k garne
+तपाईं: dhaan ma maruva rog lageko cha
+```
+
+All three reach the same answer.
+
+## Quick start
+
+```bash
+pip install -r requirements.txt
+
+python chatbot.py                                  # interactive CLI
+python chatbot.py "bakhra lai kun khop lagaune"    # one question
+python chatbot.py --debug "आलुमा कीरा लाग्यो"       # show match scores
+
+python web/server.py                               # web console on :8000
+```
+
+No training step. The index is built from `data/kb/*.json` at startup in
+well under a second, so editing the knowledge base takes effect on the next
+run.
+
+## Symptom triage
+
+A farmer does not type a well-formed question. They type *"मेरो बिरुवा मर्दै
+छ"* — my plant is dying. No amount of retrieval answers that well, because the
+question is underspecified: the crop, the affected part and the symptom all
+decide the answer and none of them was given.
+
+So the bot asks back, the way a plant clinic does:
+
+```
+तपाईं: mero bot marna lagyo
+बोट:   कुन बालीमा समस्या भएको हो?        → धान · मकै · आलु · गोलभेँडा …
+तपाईं: makai
+बोट:   बोटको कुन भागमा देखिएको हो?       → पात · डाँठ · जरा · मुन्टा …
+तपाईं: munta
+बोट:   [मकै · मुन्टा]  अमेरिकन फौजी कीरा …
+```
+
+The rule that keeps this from being tedious: **it never asks a question whose
+answer cannot change the outcome.** If every rule still in play points at the
+same intent, it answers immediately. `alaichi ma samasya cha` gets an answer
+with no questions at all, because every cardamom rule leads to the same place.
+Across the test conversations it averages **0.9 questions**, and a fully
+specified question like `kauli ko full ma kira lagyo` is answered with none.
+
+Triage only engages for problem reports that do not name a symptom. A how-to
+question (`कम्पोस्ट कसरी बनाउने`) and a report that does name its symptom
+(`आलुको बोट एक हप्तामै सुक्यो`) both go straight to retrieval, so the accuracy
+above is unaffected.
+
+Knowledge lives in `data/diagnostic/rules.json` — 58 rules over 21 crops, with
+the part and symptom vocabularies in both scripts. The logic in
+`agrichat/diagnostic.py` is deliberately small so the browser port stays cheap.
+
+```bash
+python eval/test_diagnostic.py     # conversations + how-to questions kept out
+```
+
+## Web console
+
+`python web/server.py` serves a review console at `http://127.0.0.1:8000`. It
+is built for reviewing the retrieval rather than just using it:
+
+- **Ask** — chat in either script. The match inspector shows the confidence
+  verdict, score and margin against their thresholds, the crop/part/symptom
+  slots triage has filled so far, the three collapsed keys the query was
+  reduced to, and the top five intents with scores. Typing a question in
+  Devanagari and again in Roman Nepali shows the two collapsing to the same
+  keys. Vague questions start a triage conversation with clickable answers.
+- **Knowledge base** — all 49 intents, filterable, with answers, pattern
+  counts and sources.
+- **Evaluation** — runs all 149 test cases in the browser and lists every
+  miss, marked confident or unsure.
+
+The page also runs as a plain static file (`web/index.html` + `web/agri.js` +
+`web/kb-bundle.js`) with no Python at all, which is how it gets hosted for
+review. `web/server.py` additionally answers from the Python engine over
+`POST /api/ask`, reading `data/kb/` live so knowledge-base edits show up on
+refresh:
+
+```bash
+curl -X POST localhost:8000/api/ask -H 'Content-Type: application/json' \
+     -d '{"q":"dhan ma maruwa rog lagyo"}'
+```
+
+### Keeping the two engines honest
+
+The browser build reimplements query collapsing and TF-IDF scoring in
+JavaScript, which is exactly the kind of duplication that drifts. Two things
+hold it in place: pattern keys are collapsed by **Python** and shipped in the
+generated bundle, so only query handling is ported; and the port is checked
+case by case against Python.
+
+```bash
+python -m agrichat.export_web                        # regenerate the bundle
+python eval/evaluate.py --dump /tmp/py.json
+python eval/test_diagnostic.py --dump /tmp/py_diag.json
+node eval/verify_web_port.js /tmp/py.json /tmp/py_diag.json   # fails on drift
+```
+
+It currently agrees with Python on 165/165 retrieval cases (maximum score
+difference 6.7e-16) and 18/18 triage transcripts, matching both the intent
+reached and the number of questions asked. Re-run it after any change to `agrichat/nepali_text.py`
+or `agrichat/engine.py`, and regenerate the bundle after any change to
+`data/kb/`.
+
+## What it knows
+
+49 intents across the topics Nepali farmers actually ask about:
+
+| Area | Covered |
+|---|---|
+| अन्नबाली | धान, मकै, गहुँ, कोदो, फापर — समय, बीउ दर, मल मात्रा, रोग, कीरा |
+| तरकारी | आलु, गोलभेँडा, काउली, बन्दा, खुर्सानी, प्याज, लसुन, बेर्ना, टनेल खेती |
+| नगदे बाली | अदुवा, बेसार, अलैंची, केरा |
+| माटो र मल | माटो परीक्षण, कम्पोस्ट, जीवामृत, रासायनिक मल, बाली फेरबदल |
+| सिँचाइ | थोपा सिँचाइ, मल्चिङ |
+| पशुपन्छी | बाख्रा, गाई–भैंसी, कुखुरा, माछा, मौरी, घाँस बाली |
+| नीति र बजार | कृषि अनुदान, बाली बीमा, कृषि ज्ञान केन्द्र, बजार मूल्य, भण्डारण |
+
+Fertiliser rates, spacing, vaccination schedules and subsidy procedures are
+grounded in Nepali extension sources (MoALD, PMAMP, NARC reporting, provincial
+agriculture directorates); each entry carries its `sources`.
+
+## Accuracy
+
+Measured on `eval/testset.json` — 165 held-out queries in both scripts,
+including 16 out-of-scope questions. Cases marked `source: real-user` came
+from someone actually using the console:
+
+```bash
+python eval/evaluate.py            # report
+python eval/evaluate.py --errors   # every mistake, with scores
+python eval/evaluate.py --tune     # grid-search the thresholds
+```
+
+The metric that matters is **confident-wrong**: how often the bot hands a
+farmer a confident answer to a question they did not ask. A low-confidence
+miss becomes "did you mean one of these?", which costs the user a line; a
+confident miss can cost them a season. The engine therefore refuses to answer
+unless both the absolute score and the margin over the runner-up clear a bar.
+
+Current numbers:
+
+```
+top-1 accuracy        94.0%   correct intent ranked first
+top-3 accuracy        98.0%   correct intent in the top 3
+coverage              89.3%   answered confidently
+answer precision      98.5%   of those, correct
+CONFIDENT-WRONG        1.3%   <-- the number that hurts farmers
+out-of-scope refused  81.2%   junk questions correctly declined
+```
+
+> **Read these as a regression guard, not a field accuracy claim.** The test
+> set was written by the same author as the knowledge base, and `--tune`
+> selects thresholds against this same set, so both the phrasing and the
+> settings are optimistic. Real farmer phrasing will be messier. Before
+> deploying, collect actual farmer questions and re-measure on those.
+
+Every run checks whether any test query has become a verbatim copy of a
+knowledge-base pattern and warns if so. Such a case is a guaranteed hit that
+silently inflates all six numbers, and they creep in easily: adding patterns
+to close a coverage gap is exactly how six of them appeared here once.
+
+### Known weakness: adjacent domains
+
+Out-of-scope refusal is the weakest number here. Questions from domains that
+*border* agriculture still slip through — a gold price matches the market-price
+intent, a bank loan matches soil testing. There is no gate asking "is this
+even about farming?", only a confidence threshold, and a neighbouring domain
+can clear it honestly. That gate is the next real piece of work.
+
+### One intent per question, not per crop
+
+The knowledge base is organised by **the question a farmer asks**, not by
+crop. This matters more than it sounds. An intent that bundles season,
+spacing, fertiliser, pests and rotation into one answer will match any
+question about that crop and then reply with all of it — so
+`kauli ko full ma kira lagyo` ("insects in my cauliflower curd") came back
+with a planting-season guide, with the pest advice buried six paragraphs
+down. Retrieval was right; the answer was not.
+
+When adding a topic, keep answers to roughly one question each, and split
+pests and disease away from cultivation. A useful smell test: if an answer
+needs more than about three section headings, it is probably two intents.
+
+## How it works
+
+The hard part is that Roman Nepali has no standard orthography — छ appears as
+`cha`, `chha`, `chh` or `xa` — and Devanagari glues postpositions onto nouns
+(`धानमा`) where Roman typists split them (`dhan ma`). So both scripts are
+pushed into one comparable space before anything else happens:
+
+```
+Devanagari ──┐                      ┌── collapse_tight   precision key
+             ├── detailed roman ────┤
+Roman ───────┘                      └── collapse_loose   recall key
+                                     └── stems           content words
+```
+
+`agrichat/nepali_text.py` does the transliteration, the lossy phonetic
+collapsing (श/ष/स → s, ब/व → b, retroflex → dental, aspiration dropped in the
+recall key) and a Nepali suffix stemmer that peels off `-मा -को -लाई -हरू` and
+verb endings — which is what makes `धानमा` and `dhan ma` meet at `dhan`.
+
+`agrichat/engine.py` indexes all three views with TF-IDF (character n-grams on
+the two phonetic keys, word n-grams on the stems), scores a query against every
+pattern, and max-pools per intent. On top of that:
+
+- **Crop-entity matching.** "धानमा कीरा" and "आलुमा कीरा" are lexically almost
+  identical; only the crop word separates them. Naming a crop boosts intents
+  about that crop and penalises intents about a different one.
+- **Explicit refusal.** Below the score or margin bar, the bot lists its best
+  guesses instead of asserting one.
+
+## Layout
+
+```
+chatbot.py                 CLI
+agrichat/nepali_text.py    transliteration, phonetic collapsing, stemming
+agrichat/kb.py             knowledge-base loading and validation
+agrichat/engine.py         retrieval, crop matching, confidence
+agrichat/diagnostic.py     symptom triage: slots, rules, question choice
+agrichat/conversation.py   multi-turn state, mode selection
+agrichat/export_web.py     generates web/kb-bundle.js
+data/kb/*.json             the knowledge base (edit this to add topics)
+data/diagnostic/rules.json symptom -> intent rules
+data/corpus/               collected source documents (see its manifest)
+web/index.html             review console
+web/agri.js                browser port of the engine
+web/kb-bundle.js           generated -- do not edit
+web/server.py              stdlib server + /api/ask
+eval/testset.json          held-out queries with gold labels
+eval/evaluate.py           metrics and threshold tuning
+eval/test_nepali_text.py   text-layer property tests
+eval/test_diagnostic.py    triage conversation tests
+eval/verify_web_port.js    checks the JS port against Python
+```
+
+### Adding a topic
+
+Append an entry to any file in `data/kb/`:
+
+```json
+{
+  "id": "unique_snake_case_id",
+  "crops": ["धान"],
+  "patterns": ["देवनागरीमा प्रश्न", "roman nepali ma prasna"],
+  "answer": "नेपालीमा जवाफ",
+  "followups": ["another_intent_id"],
+  "sources": ["https://..."]
+}
+```
+
+Give it patterns in **both** scripts — the transliterator handles spelling
+variation, but it cannot guess that a farmer says "गाभा मर्‍यो" for stem borer.
+`agrichat/kb.py` rejects duplicate ids, empty patterns and dangling
+`followups` at load time. Add a few queries to `eval/testset.json` and re-run
+the evaluation to confirm the new intent does not cannibalise an existing one.
+Then run `python -m agrichat.export_web` so the web console picks it up.
+
+## Scope and safety
+
+The bot gives general guidance. It deliberately does **not** hand out
+pesticide dose-and-spray schedules as if they were prescriptions: entries that
+touch chemicals point the farmer at the label rate, the pre-harvest interval,
+and the nearest कृषि ज्ञान केन्द्र for confirming the diagnosis first. Wrong
+agro-chemical advice is expensive at best and dangerous at worst.
+
+## Note on the previous version
+
+This replaces a Keras bag-of-words classifier (8 English intents,
+`nltk.word_tokenize` + `WordNetLemmatizer`). That pipeline could not work for
+Nepali: the lemmatizer is English-only, the tokenizer splits Devanagari badly,
+and exact word matching cannot survive Nepali morphology or Roman Nepali
+spelling variation. The TF-IDF retrieval approach here is both more accurate
+on this data and small enough to run without TensorFlow.
